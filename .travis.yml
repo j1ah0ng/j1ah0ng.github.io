@@ -8,6 +8,7 @@ cache:
 script:
   - yarn run build
 deploy:
+  fqdn: "j1ah0ng.xyz"
   strategy: git
   provider: pages
   local_dir: public
