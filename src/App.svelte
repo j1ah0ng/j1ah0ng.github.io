@@ -2,8 +2,9 @@
 	export let name;
 </script>
 
+<title>Jiahong!</title>
+
 <main>
-    <title>Jiahong!</title>
 	<h1>Hello {name}!</h1>
 </main>
 
