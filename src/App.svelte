@@ -1,5 +1,6 @@
 <script>
-	export let name;
+    import Icon from 'svelte-awesome';
+    import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 </script>
 
 <svelte:head>
@@ -7,11 +8,35 @@
     <link rel="shortcut icon"
           type="image/png"
           href="favicon.png"
+          sizes="64x64"
+    />
+    <link rel="shortcut icon"
+          type="image/png"
+          href="fav16.png"
+          sizes="16x16"
+    />
+    <link rel="shortcut icon"
+          type="image/png"
+          href="fav96.png"
+          sizes="96x96"
     />
 </svelte:head>
 
 <main>
-	<h1>Hello {name}!</h1>
+	<h1>Hi, I'm Jiahong.</h1>
+
+    This webpage is a work-in-progress! <br><br>
+
+    <nav><ul>
+        <li><a href="https://github.com/j1ah0ng" aria-label="github">
+            <Icon data={faGithub} scale="2" style="color:#5e81ac"/>
+            <br>
+        </a></li>
+        <li><a href="https://linkedin.com/in/jiahonglong" aria-label="linkedin">
+            <Icon data={faLinkedin} scale="2" style="color:#5e81ac"/>
+            <br>
+        </a></li>
+    </ul></nav>
 </main>
 
 <style>
@@ -23,11 +48,25 @@
 	}
 
 	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
+		color: #3b4252;
+		font-size: 3.5em;
 	}
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .svg {
+        color: green !important;
+    }
 
 	@media (min-width: 640px) {
 		main {
