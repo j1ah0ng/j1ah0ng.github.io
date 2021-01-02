@@ -3,7 +3,11 @@
 </script>
 
 <svelte:head>
-<title>Hi, I'm Jiahong! 👋</title>
+    <title>👋</title>
+    <link rel="shortcut icon"
+          type="image/png"
+          href="favicon.png"
+    />
 </svelte:head>
 
 <main>
