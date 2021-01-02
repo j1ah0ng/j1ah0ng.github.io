@@ -5,7 +5,7 @@
 
 <svelte:head>
     <title>👋</title>
-    <link rel="shortcut icon"
+    <link rel="icon"
           type="image/png"
           href="favicon.png"
           sizes="64x64"
