@@ -2,7 +2,9 @@
 	export let name;
 </script>
 
-<title>Jiahong!</title>
+<svelte:head>
+<title>Hi, I'm Jiahong! 👋</title>
+</svelte:head>
 
 <main>
 	<h1>Hello {name}!</h1>
