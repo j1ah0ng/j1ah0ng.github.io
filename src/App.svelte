@@ -64,10 +64,6 @@
         padding-left: 5px;
     }
 
-    .svg {
-        color: green !important;
-    }
-
 	@media (min-width: 640px) {
 		main {
 			max-width: none;
