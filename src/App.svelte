@@ -1,10 +1,18 @@
 <script>
     import Icon from 'svelte-awesome';
     import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+    import { onMount } from 'svelte';
+
+    export let title;
+    $: title = '👋';
+
+    onMount(() => {
+            if (title) document.title = title;
+    });
 </script>
 
 <svelte:head>
-    <title>👋</title>
+    <title>{title}</title>
     <link rel="icon"
           type="image/png"
           href="favicon.png"
