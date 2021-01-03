@@ -1,4 +1,5 @@
 <script>
+    import DynamicDate from './DynamicDate.svelte';
     import Icon from 'svelte-awesome';
     import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
     import { faFile } from '@fortawesome/free-solid-svg-icons';
@@ -29,9 +30,20 @@
           href="images/fav96.png"
           sizes="96x96"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 </svelte:head>
 
 <main>
+    <!-- Hamburger -->
+    <div class="menu">
+        <svg viewBox="0 0 150 120" width="40" height="40">
+            <rect width="100" height="20"></rect>
+            <rect y="30" width="100" height="20"></rect>
+            <rect y="60" width="100" height="20"></rect>
+        </svg>
+    </div>
+
     <!-- Splash -->
     <div class="splash">
 
@@ -53,6 +65,8 @@
         This webpage is a work-in-progress. <br><br>
     </div>
 
+    <div class="sep1"></div>
+
     <!-- Footer -->
     <div class="social">
         <nav><ul>
@@ -73,29 +87,48 @@
                     </svg>
             </a></li>
         </ul></nav>
+        <span class="footer">
+            <DynamicDate/>
+        </span>
     </div>
 </main>
 
 <style>
 	main {
-        margin: 0 0 0 0;
+        font-family: "IBM Plex Sans", sans-serif;
 		text-align: center;
+        overflow: auto;
+        position: relative;
+        box-sizing: border-box;
+        background-color: #eceff4;
 	}
 
 	h1 {
+        font-family: "IBM Plex Sans", sans-serif;
 		color: #3b4252;
 		font-size: 3.5em;
 	}
 
+    div.menu {
+		color: #3b4252;
+		fill: #3b4252;
+        z-index: 1;
+        position: absolute;
+        left: 5vw;
+        top: 5vw;
+    }
+
     div.splash {
         width: 100vw;
         height: 100vh;
+        max-height: 100%;
         max-width: 100%;
-        overflow: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-attachment: fixed;
+        background-image: linear-gradient(#88c0d0, #d8dee9);
     }
 
     img.pfp {
@@ -104,9 +137,14 @@
     }
 
     div.blurb {
-        position: relative;
+        color: #3b4252;
         vertical-align: middle;
         text-align: justify;
+    }
+
+    div.sep1 {
+        background-color: #a3be8c;
+        height: 50px;
     }
 
     nav ul {
@@ -122,15 +160,30 @@
         padding-left: 8px;
     }
 
+    div.social {
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+    }
+
     div.social a, div.social a:visited {
         color: #5e81ac;
         fill: #5e81ac;
+    }
+
+    .footer {
+        color: #3b4252;
+        font-size: 0.6em;
+        padding-bottom: 8px;
     }
 
 	@media (min-width: 700px) {
 		main {
 			max-width: none;
 		}
+        div.menu {
+            display: none;
+        }
         div.blurb {
             width: 600px
         }
@@ -142,6 +195,9 @@
 		}
         div.blurb {
             width: 85vw;
+        }
+        div.social {
+            display: none;
         }
 	}
 </style>
