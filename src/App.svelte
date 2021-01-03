@@ -35,14 +35,6 @@
 </svelte:head>
 
 <main>
-    <!-- Hamburger -->
-    <div class="menu">
-        <svg viewBox="0 0 150 120" width="40" height="40">
-            <rect width="100" height="20"></rect>
-            <rect y="30" width="100" height="20"></rect>
-            <rect y="60" width="100" height="20"></rect>
-        </svg>
-    </div>
 
     <!-- Splash -->
     <div class="splash">
@@ -89,6 +81,7 @@
         </ul></nav>
         <span class="footer">
             <DynamicDate/>
+            Made with 💖 in California!
         </span>
     </div>
 </main>
@@ -104,24 +97,17 @@
 	}
 
 	h1 {
+        padding-left: 10vw;
+        padding-right: 10vw;
         font-family: "IBM Plex Sans", sans-serif;
 		color: #3b4252;
 		font-size: 3.5em;
 	}
 
-    div.menu {
-		color: #3b4252;
-		fill: #3b4252;
-        z-index: 1;
-        position: absolute;
-        left: 5vw;
-        top: 5vw;
-    }
-
     div.splash {
         width: 100vw;
-        height: 100vh;
-        max-height: 100%;
+        min-height: 100vh;
+        height: min-content;
         max-width: 100%;
         display: flex;
         flex-direction: column;
@@ -181,9 +167,6 @@
 		main {
 			max-width: none;
 		}
-        div.menu {
-            display: none;
-        }
         div.blurb {
             width: 600px
         }
@@ -195,9 +178,6 @@
 		}
         div.blurb {
             width: 85vw;
-        }
-        div.social {
-            display: none;
         }
 	}
 </style>
