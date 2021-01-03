@@ -55,6 +55,9 @@
         numerical) math and computer science. <br><br> </div>
 
         This webpage is a work-in-progress. <br><br>
+
+        <!-- Spacer for mobile -->
+        <div class="spacer"></div>
     </div>
 
     <div class="sep1"></div>
@@ -129,7 +132,7 @@
     }
 
     div.sep1 {
-        background-color: #a3be8c;
+        background-color: #8fbcbb;
         height: 50px;
     }
 
@@ -160,7 +163,6 @@
     .footer {
         color: #3b4252;
         font-size: 0.6em;
-        padding-bottom: 8px;
     }
 
 	@media (min-width: 700px) {
@@ -170,6 +172,12 @@
         div.blurb {
             width: 600px
         }
+        .footer {
+            padding-bottom: 8px;
+        }
+        div.spacer {
+            display: none;
+        }
 	}
 
 	@media (max-width: 700px) {
@@ -178,6 +186,12 @@
 		}
         div.blurb {
             width: 85vw;
+        }
+        .footer {
+            padding-bottom: 10px;
+        }
+        div.spacer {
+            height: 10vh;
         }
 	}
 </style>
