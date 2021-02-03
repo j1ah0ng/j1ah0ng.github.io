@@ -62,6 +62,43 @@
 
     <div class="sep1"></div>
 
+    <!-- First resume section -->
+    <div class="sec" id="section1">
+        <div class="blurb-subhead">University of California, San Diego / <span
+                class="position" style="font-size:0.8em">B.Sc. Computer Engineering and B.Sc.
+                Mathematics—Scientific Computation</span></div>
+        <div class="blurb">
+            <span style="font-family:'IBM Plex Sans Medium'">CS
+                Coursework:</span>
+            <ul style="padding-top:-10px">
+                <li> hi </li>
+                <li> hi </li>
+                <li> hi </li>
+                <li> hi </li>
+            </ul>
+            <span style="font-family:'IBM Plex Sans Medium'">CS
+                Coursework:</span>
+            <ul>
+                <li> hi </li>
+                <li> hi </li>
+                <li> hi </li>
+                <li> hi </li>
+            </ul>
+        </div>
+        <div class="blurb-subhead">University of California, Berkeley / <span
+                class="position" style="font-size:0.8em">Beginning</span></div>
+        <div class="blurb">
+            Flavour text
+        </div>
+        <div class="blurb-subhead">Valkyrie Robotics / <span
+                class="position" style="font-size:0.8em">Beginning</span></div>
+        <div class="blurb">
+            Flavour text
+        </div>
+    </div>
+
+    <div class="sep2"></div>
+
     <!-- Footer -->
     <div class="social">
         <nav><ul>
@@ -84,7 +121,7 @@
         </ul></nav>
         <span class="footer">
             <DynamicDate/>
-            Made with 💖 in California!
+            Made with 💖 in California
         </span>
     </div>
 </main>
@@ -95,7 +132,6 @@
 		text-align: center;
         overflow: auto;
         position: relative;
-        box-sizing: border-box;
         background-color: #eceff4;
 	}
 
@@ -136,6 +172,36 @@
         height: 50px;
     }
 
+    div.sec {
+        width: 100vw;
+        min-height: 100vh;
+        height: min-content;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.blurb-subhead {
+        color: #3b4252;
+        vertical-align: middle;
+        text-align: left;
+        font-family: "IBM Plex Sans Medium", sans-serif;
+		font-size: 1.5em;
+        padding-bottom: 0.3em;
+        padding-top: 1em;
+    }
+
+    span.position {
+        font-family: "IBM Plex Sans Regular", sans-serif;
+    }
+
+    div.sep2 {
+        background-color: #d08770;
+        height: 50px;
+    }
+
     nav ul {
         display: flex;
         justify-content: center;
@@ -162,7 +228,7 @@
 
     .footer {
         color: #3b4252;
-        font-size: 0.6em;
+        font-size: 0.7em;
     }
 
 	@media (min-width: 700px) {
@@ -170,6 +236,9 @@
 			max-width: none;
 		}
         div.blurb {
+            width: 600px
+        }
+        div.blurb-subhead {
             width: 600px
         }
         .footer {
@@ -184,7 +253,7 @@
 		main {
 			max-width: none;
 		}
-        div.blurb {
+        div.blurb-subhead {
             width: 85vw;
         }
         .footer {
