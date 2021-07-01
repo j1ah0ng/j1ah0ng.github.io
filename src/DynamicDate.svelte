@@ -16,4 +16,4 @@
     }
     onMount(() => getCommitDate());
 </script>
-<p class="footer">Last updated on {date ? date : ''}{date ? '.' : 'an unkown date.'}</p>
+<p class="footer">Last updated on {date ? date : ''}{date ? '.' : 'an unknown date.'}</p>
