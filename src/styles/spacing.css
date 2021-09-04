@@ -1,164 +1,164 @@
 /* -- Margins -- */
 
 .m-s {
-    margin: 0.25em;
-}
-
-.m-m {
     margin: 0.5em;
 }
 
-.m-l {
-    margin: 0.75em;
-}
-
-.m-xl {
+.m-m {
     margin: 1em;
 }
 
-.mt-s {
-    margin-top: 0.25em;
+.m-l {
+    margin: 1.5em;
 }
 
-.mt-m {
+.m-xl {
+    margin: 2em;
+}
+
+.mt-s {
     margin-top: 0.5em;
 }
 
-.mt-l {
-    margin-top: 0.75em;
-}
-
-.mt-xl {
+.mt-m {
     margin-top: 1em;
 }
 
-.mb-s {
-    margin-bottom: 0.25em;
+.mt-l {
+    margin-top: 1.5em;
 }
 
-.mb-m {
+.mt-xl {
+    margin-top: 2em;
+}
+
+.mb-s {
     margin-bottom: 0.5em;
 }
 
-.mb-l {
-    margin-bottom: 0.75em;
-}
-
-.mb-xl {
+.mb-m {
     margin-bottom: 1em;
 }
 
-.ml-s {
-    margin-left: 0.25em;
+.mb-l {
+    margin-bottom: 1.5em;
 }
 
-.ml-m {
+.mb-xl {
+    margin-bottom: 2em;
+}
+
+.ml-s {
     margin-left: 0.5em;
 }
 
-.ml-l {
-    margin-left: 0.75em;
-}
-
-.ml-xl {
+.ml-m {
     margin-left: 1em;
 }
 
-.mr-s {
-    margin-right: 0.25em;
+.ml-l {
+    margin-left: 1.5em;
 }
 
-.mr-m {
+.ml-xl {
+    margin-left: 2em;
+}
+
+.mr-s {
     margin-right: 0.5em;
 }
 
+.mr-m {
+    margin-right: 1em;
+}
+
 .mr-l {
-    margin-right: 0.75em;
+    margin-right: 1.5em;
 }
 
 .mr-xl {
-    margin-right: 1em;
+    margin-right: 2em;
 }
 
 /* -- Padding -- */
 
 .p-s {
-    padding: 0.25em;
-}
-
-.p-m {
     padding: 0.5em;
 }
 
-.p-l {
-    padding: 0.75em;
-}
-
-.p-xl {
+.p-m {
     padding: 1em;
 }
 
-.pt-s {
-    padding-top: 0.25em;
+.p-l {
+    padding: 1.5em;
 }
 
-.pt-m {
+.p-xl {
+    padding: 2em;
+}
+
+.pt-s {
     padding-top: 0.5em;
 }
 
-.pt-l {
-    padding-top: 0.75em;
-}
-
-.pt-xl {
+.pt-m {
     padding-top: 1em;
 }
 
-.pb-s {
-    padding-bottom: 0.25em;
+.pt-l {
+    padding-top: 1.5em;
 }
 
-.pb-m {
+.pt-xl {
+    padding-top: 2em;
+}
+
+.pb-s {
     padding-bottom: 0.5em;
 }
 
-.pb-l {
-    padding-bottom: 0.75em;
-}
-
-.pb-xl {
+.pb-m {
     padding-bottom: 1em;
 }
 
-.pl-s {
-    padding-left: 0.25em;
+.pb-l {
+    padding-bottom: 1.5em;
 }
 
-.pl-m {
+.pb-xl {
+    padding-bottom: 2em;
+}
+
+.pl-s {
     padding-left: 0.5em;
 }
 
-.pl-l {
-    padding-left: 0.75em;
-}
-
-.pl-xl {
+.pl-m {
     padding-left: 1em;
 }
 
-.pr-s {
-    padding-right: 0.25em;
+.pl-l {
+    padding-left: 1.5em;
 }
 
-.pr-m {
+.pl-xl {
+    padding-left: 2em;
+}
+
+.pr-s {
     padding-right: 0.5em;
 }
 
+.pr-m {
+    padding-right: 1em;
+}
+
 .pr-l {
-    padding-right: 0.75em;
+    padding-right: 1.5em;
 }
 
 .pr-xl {
-    padding-right: 1em;
+    padding-right: 2em;
 }
 

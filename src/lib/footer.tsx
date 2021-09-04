@@ -62,7 +62,7 @@ const Footer: FC = () => {
                     </a>
                 </Li>
             </Ul></nav>
-            <span className='regular footnotesize mb-l'>
+            <span className='center regular footnotesize mb-l'>
                 Last updated on { lastUpdate }.
                 Made with Vim, React, and 💖 in California
             </span>
