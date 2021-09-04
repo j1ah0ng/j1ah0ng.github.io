@@ -24,8 +24,8 @@ const Splash: FC = () => {
             <span className='large light mt-s mb-xl'>
                 I'm <span className='italic semibold'>not</span> a web developer.
             </span>
-            <span className='light small mt-xl'>
-                This webpage is a work in progress.
+            <span className='regular small mt-xl'>
+                This webpage is a work in progress. No, the irony is not lost on me.
             </span>
         </SplashDiv>
     );
