@@ -11,7 +11,7 @@ deploy:
   fqdn: "j1ah0ng.xyz"
   strategy: git
   provider: pages
-  local_dir: public
+  local_dir: build
   github-token: $GITHUB_TOKEN
   keep_history: true
   target_branch: deploy
