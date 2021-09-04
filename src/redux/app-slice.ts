@@ -15,3 +15,5 @@ export const appSlice = createSlice({
         setRanInitFunction: state => { state.ranInitFunction = true; },
     }
 });
+
+export const setRanInitFunction = appSlice.actions.setRanInitFunction;
