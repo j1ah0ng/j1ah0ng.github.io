@@ -1,23 +1,15 @@
 import React, { FC } from 'react';
-import styled from 'styled-components';
+import { Provider } from 'react-redux';
 
 import './App.css';
-
-import Splash from './lib/splash';
-import Footer from './lib/footer';
-
-import { Sep, Color } from './lib/sep';
-
-const RootDiv = styled.div`
-`;
+import AppRoot from './lib/approot';
+import { store } from './redux/store';
 
 const App: FC = () => {
     return (
-        <RootDiv>
-            <Splash/>
-            <Sep color={Color.Orange}/>
-            <Footer/>
-        </RootDiv>
+        <Provider store={store}>
+            <AppRoot/>
+        </Provider>
     );
 };
 

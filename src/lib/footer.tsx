@@ -1,8 +1,10 @@
 import React, { FC, useEffect, useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { RootState } from '../redux/store';
 
 const Ul = styled.ul`
 display: flex;
@@ -23,31 +25,8 @@ justify-content: center;
 align-items: center;
 `;
 
-type GithubResponse = {
-    name: string,
-    commit: {
-        commit: {
-            author: {
-                date: string,
-            },
-        },
-    },
-};
-
-const getLastUpdateDate = () => 
-    axios.get<GithubResponse>('https://api.github.com/repos/j1ah0ng/j1ah0ng.github.io/branches/deploy')
-        .then(res => res.data.commit.commit.author.date)
-        .catch(err => Promise.reject(err));
-
-
 const Footer: FC = () => {
-    const [lastUpdate, setLastUpdate] = useState('an unknown date');
-    useEffect(() => {
-        getLastUpdateDate()
-            .then(s => { setLastUpdate(new Date(s).toLocaleDateString()) })
-            .catch(err => { setLastUpdate('an unknown date'); });
-    }, [lastUpdate]);
-
+    const lastUpdate = useSelector((state: RootState) => state.network.dateString);
     return (
         <Container>
             <nav><Ul>
@@ -63,7 +42,7 @@ const Footer: FC = () => {
                 </Li>
             </Ul></nav>
             <span className='center regular footnotesize mb-l'>
-                Last updated on { lastUpdate }.
+                Last updated on { new Date(Date.parse(lastUpdate)).toLocaleDateString() }.
                 Made with Vim, React, and 💖 in California
             </span>
         </Container>
