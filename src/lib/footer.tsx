@@ -41,9 +41,9 @@ const Footer: FC = () => {
                     </a>
                 </Li>
             </Ul></nav>
-            <span className='center regular footnotesize mb-l'>
+            <span className='center regular footnotesize ml-s mr-s mb-xxl'>
                 Last updated on { new Date(Date.parse(lastUpdate)).toLocaleDateString() }.
-                Made with Vim, React, and 💖 in California
+                Made with Vim, React, and 💖 in California.
             </span>
         </Container>
     );

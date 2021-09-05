@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const SplashDiv = styled.div`
 width: 100vw;
 min-height: 100vh;
+min-height: -webkit-fill-available;
 height: min-content;
 max-width: 100%;
 display: flex;
@@ -25,14 +26,14 @@ const Splash: FC = () => {
             <div className='mb-xl'>
                 <Avatar src='me.jpg' alt='Profile picture'/>
             </div>
-            <span className='large'>
+            <span className='large mr-l ml-l'>
                 <span className='light'>Hi, I'm </span>
                 <span className='regular'>Jiahong!</span>
             </span>
-            <span className='large light mt-s'>
+            <span className='large light mr-l ml-l mt-s'>
                 I'm <span className='italic semibold'>not</span> a web developer.
             </span>
-            <span className='regular small mt-xl'>
+            <span className='regular small mr-l ml-l mt-xl'>
                 This webpage is a work in progress. No, the irony is not lost on me.
             </span>
         </SplashDiv>
