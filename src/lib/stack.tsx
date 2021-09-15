@@ -209,8 +209,8 @@ const Stack: FC = () => {
             <Card Detail={ () =>
                 <ResumeCardInterior
                     name='University of California, Berkeley'
-                    flavor='Data Science, Mathematics'
-                    logistics='2020 Summer Session. Berkeley, CA'
+                    flavor='2020 Summer Session, Data Science and Mathematics'
+                    logistics='June 2020 to August 2020. Berkeley, CA'
                     Detail={ () => <>
                         Data science (DS 100), real analysis (MATH 104).
                     </> }
