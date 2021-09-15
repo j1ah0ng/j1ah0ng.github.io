@@ -124,34 +124,74 @@ const Stack: FC = () => {
                         <div>
                             <span className='medium'>Computer science coursework:</span>
                             <Ul>
-                                <li>Computer architecture (CSE 30)</li>
+                                <li>
+                                    Computer architecture (CSE 30): ARM assembly, low-level C, how data is represented
+                                    at the hardware level
+                                </li>
                                 <li>Advanced data structures (CSE 100)</li>
-                                <li>Design and analysis of algorithms (CSE 101)</li>
-                                <li>Theory of computation (CSE 105)</li>
-                                <li>Operating systems (CSE 120)</li>
+                                <li>
+                                    Design and analysis of algorithms (CSE 101): dynamic programming, NP completeness
+                                    and methods of dealing with it, greedy algorithms, rigorous proof methodologies
+                                    for algorithms
+                                </li>
+                                <li>
+                                    Theory of computation (CSE 105): Models of computation including Turing machines
+                                    and context-free grammars, the halting problem
+                                </li>
+                                <li>
+                                    Operating systems (CSE 120): Java, mutexes, race conditions, multiprogramming,
+                                    context switching
+                                </li>
                                 <li>Networked systems (CSE 124)</li>
-                                <li>Theory and implementation of programming languages (CSE 130)</li>
-                                <li>Digital design and systems (CSE 140, 140L)</li>
+                                <li>
+                                    Theory and implementation of programming languages (CSE 130): Lexers, parsers,
+                                    the functional paradigm, Haskell
+                                </li>
+                                <li>
+                                    Digital design and systems (CSE 140, 140L): SystemVerilog, CMOS logic,
+                                    Boolean algebra including Shannon expansions and Karnaugh maps
+                                </li>
                                 <li>Computer vision (CSE 152A)</li>
                             </Ul>
                         </div>
                         <div className='mt-m'>
                             <span className='medium'>Electronics engineering coursework:</span>
                             <Ul>
-                                <li>Circuits and systems (ECE 35, 45)</li>
-                                <li>Linear signals and systems (ECE 101)</li>
+                                <li>
+                                    Circuits and systems (ECE 35, 45): the continuous Fourier transform, circuit analysis
+                                    methods including loop and node, source transforms, continuous signal filters
+                                </li>
+                                <li>
+                                    Linear signals and systems (ECE 101): the discrete Fourier transform, cross-correlation
+                                    and autocorrelation, discrete signal filters, MATLAB signal processing methodologies
+                                </li>
                             </Ul>
                         </div>
                         <div className='mt-m'>
                             <span className='medium'>Mathematics coursework:</span>
                             <Ul>
-                                <li>Discrete mathematics (CSE 20, 21)</li>
-                                <li>Differential equations (MATH 20D)</li>
+                                <li>
+                                    Discrete mathematics (CSE 20, 21): naive set theory, basic proof methods,
+                                    methods of counting
+                                </li>
+                                <li>
+                                    Differential equations (MATH 20D): ordinary differential equations, direct substitutions,
+                                    undetermined coefficients, the Laplace transform
+                                </li>
                                 <li>Vector calculus (MATH 20A-E)</li>
-                                <li>Advanced linear algebra (MATH 18, 102)</li>
+                                <li>
+                                    Advanced linear algebra (MATH 18, 102): abstract vector spaces, eigendecompositions,
+                                    the singular value decomposition
+                                </li>
                                 <li>Complex analysis (MATH 120A)</li>
-                                <li>Numerical linear algebra (MATH 170A)</li>
-                                <li>Statistical methods (MATH 183)</li>
+                                <li>
+                                    Numerical linear algebra (MATH 170A): the Schur decomposition, numerical matrix rank,
+                                    low-rank approximation, basic random matrices, perturbations and matrix condition numbers
+                                </li>
+                                <li>
+                                    Statistical methods (MATH 183): normal, t, Poisson, geometric, and binomial distributions,
+                                    experiment design and analysis in R
+                                </li>
                             </Ul>
                         </div>
                         <div className='mt-m'>
