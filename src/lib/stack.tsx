@@ -25,6 +25,14 @@ margin-bottom: 5vh;
 const Ul = styled.ul`
 margin: 0;
 margin-top: 0.25rem;
+
+&:first-child {
+    padding-top: 0;
+}
+
+> li {
+    padding-top: 0.35rem;
+}
 `;
 
 const Stack: FC = () => {
