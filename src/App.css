@@ -1,6 +1,7 @@
 @import './styles/divs.css';
 @import './styles/font-styles.css';
 @import './styles/spacing.css';
+@import './styles/colors.css';
 
 .App {
   text-align: center;

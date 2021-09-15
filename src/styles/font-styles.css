@@ -55,6 +55,10 @@
     font-size: 1em;
 }
 
+.xsmall {
+    font-size: 0.8em;
+}
+
 .footnotesize {
     font-size: 0.75em;
 }
