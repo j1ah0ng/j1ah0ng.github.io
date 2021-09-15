@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFileAlt } from '@fortawesome/free-solid-svg-icons';
 import { RootState } from '../redux/store';
 
 const Ul = styled.ul`
@@ -38,6 +39,11 @@ const Footer: FC = () => {
                 <Li>
                     <a href='https://linkedin.com/in/jiahonglong' aria-label='Linkedin'>
                         <FontAwesomeIcon icon={faLinkedin} size='lg' className='icon'/>
+                    </a>
+                </Li>
+                <Li>
+                    <a href='Resume-2021-Sept.pdf' aria-label='Resume'>
+                        <FontAwesomeIcon icon={faFileAlt} size='lg' className='icon'/>
                     </a>
                 </Li>
             </Ul></nav>
