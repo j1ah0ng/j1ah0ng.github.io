@@ -44,7 +44,7 @@ const Stack: FC = () => {
             <Card
                 Detail={ () =>
                     <div>
-                        <span className='bold red'>This section is a work-in-progress!</span>
+                        <div className='bold red mb-m'>This section is a work-in-progress!</div>
                         <div>
                             <span className='medium'>Tools</span>
                             <Ul>
@@ -228,18 +228,15 @@ const Stack: FC = () => {
                     logistics='June 2021 to September 2021. Seattle, WA'
                     Detail={() => <>
                         <div>
-                            Full-stack design, implementation of a enterprise-facing SaaS management portal
-                            interfacing with existing internal AWS services to synthesise new REST endpoints serving a
-                            new
-                            React-based frontend console.
+                            Full-stack design and implementation of a B2B customer facing SaaS subscription management portal
+                            which interfaces with existing internal services to serve a React-based frontend console.
                         </div>
                         <div className='mt-m'>
                             <span className='medium'>Frontend:</span>
                             <Ul>
                                 <li>
                                     Built a React-based portal with extensibility in mind to allow it to be inserted
-                                    within
-                                    arbitrary webapp contexts
+                                    within arbitrary webapp contexts
                                 </li>
                                 <li>
                                     Stateful and Redux-based reactivity built on top of <code>react</code>, <code>
