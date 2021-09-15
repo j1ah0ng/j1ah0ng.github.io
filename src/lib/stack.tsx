@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
+import { MathComponent } from 'mathjax-react';
 
 import Card, { EmptyCard } from './card';
 
@@ -64,7 +65,11 @@ const Stack: FC = () => {
                                     General languages: <code>java</code>, <code>python</code>, <code>haskell</code>
                                 </li>
                                 <li>
-                                    Engineering languages: <code>R</code>, <code>matlab</code>, <code>octave</code>
+                                    Mathematics and engineering languages: <code>R</code>, <code>matlab</code>, <code>octave</code>,
+                                    and <MathComponent
+                                        tex={String.raw`\mathrm{\LaTeX}`}
+                                        display={ false }
+                                    /> (obviously)
                                 </li>
                             </Ul>
                         </div>

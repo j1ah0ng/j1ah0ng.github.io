@@ -47,9 +47,12 @@ const Footer: FC = () => {
                     </a>
                 </Li>
             </Ul></nav>
-            <span className='center regular footnotesize ml-s mr-s mb-xxl'>
+            <span className='center regular footnotesize ml-s mr-s'>
                 Last updated on { new Date(Date.parse(lastUpdate)).toLocaleDateString() }.
                 Made with Vim, React, and 💖 in California.
+            </span>
+            <span className='center regular footnotesize ml-s mr-s mb-xxl'>
+                Much love to <a href='https://nordtheme.com'>Arctic Ice Studio!</a>
             </span>
         </Container>
     );
