@@ -118,8 +118,10 @@ const Stack: FC = () => {
                             <li>Design and analysis of algorithms (CSE 101)</li>
                             <li>Theory of computation (CSE 105)</li>
                             <li>Operating systems (CSE 120)</li>
-                            <li>Theory and implementation of programming languages (CSE 130)</li>
                             <li>Networked systems (CSE 124)</li>
+                            <li>Theory and implementation of programming languages (CSE 130)</li>
+                            <li>Digital design and systems (CSE 140, 140L)</li>
+                            <li>Computer vision (CSE 152A)</li>
                         </Ul>
                     </div>
                     <div className='mt-m'>
