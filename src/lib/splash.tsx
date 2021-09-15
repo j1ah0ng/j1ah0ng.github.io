@@ -4,7 +4,8 @@ import styled from 'styled-components';
 const SplashDiv = styled.div`
 width: 100vw;
 min-height: 100vh;
-min-height: -webkit-fill-available;
+max-height: -webkit-fill-available;
+max-height: -moz-available;
 height: min-content;
 max-width: 100%;
 display: flex;
