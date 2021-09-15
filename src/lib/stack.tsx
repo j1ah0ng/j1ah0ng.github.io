@@ -16,9 +16,6 @@ margin-top: 5vh;
 min-width: 250px;
 max-width: 720px;
 width: 85vw;
-@media screen only and (min-width: 1600px) {
-    width: 60vw;
-}
 `;
 
 const SpacingDiv = styled.div`
