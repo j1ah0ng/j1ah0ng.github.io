@@ -39,14 +39,14 @@ const Stack: FC = () => {
     return (<StackDiv>
         <SectionDiv>
             <span className='big'>
-                Skills
+                Skills 🤹🏻‍
             </span>
             <Card
                 Detail={ () =>
                     <div>
-                        <div className='bold red mb-m'>This section is a work-in-progress!</div>
-                        <div>
-                            <span className='medium'>Tools</span>
+                        <div className='bold red'>⚠️ This section is a work-in-progress!</div>
+                        <div className='mt-m'>
+                            <span className='medium'>Tools 🛠</span>
                             <Ul>
                                 <li>
                                     Heavy user of <code>vim</code> and <code>doom-emacs</code>
@@ -61,7 +61,7 @@ const Stack: FC = () => {
                             </Ul>
                         </div>
                         <div className='mt-m'>
-                            <span className='medium'>Languages</span>
+                            <span className='medium'>Languages 💬</span>
                             <Ul>
                                 <li>
                                     Systems languages: <code>c++</code>, <code>c</code>, <code>rust</code>
@@ -79,7 +79,7 @@ const Stack: FC = () => {
                             </Ul>
                         </div>
                         <div className='mt-m'>
-                            <span className='medium'>Platforms</span>
+                            <span className='medium'>Platforms 👨🏻‍💻</span>
                             <Ul>
                                 <li>
                                     Arch Linux (personal device) with Sway/Wayland
@@ -97,7 +97,7 @@ const Stack: FC = () => {
                             </Ul>
                         </div>
                         <div className='mt-m'>
-                            <span className='medium'>Web</span>
+                            <span className='medium'>Web 🌐</span>
                             <Ul>
                                 <li>
                                     Production experience with Typescript, Javascript, and the React ecosystem
@@ -113,7 +113,7 @@ const Stack: FC = () => {
         </SectionDiv>
         <SectionDiv>
             <span className='big'>
-                Education
+                Education 🎓
             </span>
             <Card Detail={ () =>
                 <ResumeCardInterior
@@ -219,7 +219,7 @@ const Stack: FC = () => {
         </SectionDiv>
         <SectionDiv>
             <span className='big'>
-                Experience
+                Experience 🔬
             </span>
             <Card Detail={ () =>
                 <ResumeCardInterior
