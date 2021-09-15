@@ -46,7 +46,7 @@ const Stack: FC = () => {
                     <div>
                         <div className='bold red'>⚠️ This section is a work-in-progress!</div>
                         <div className='mt-m'>
-                            <span className='medium'>Tools 🛠</span>
+                            <span className='medium biggish'>Tools 🛠</span>
                             <Ul>
                                 <li>
                                     Heavy user of <code>vim</code> and <code>doom-emacs</code>
@@ -61,7 +61,7 @@ const Stack: FC = () => {
                             </Ul>
                         </div>
                         <div className='mt-m'>
-                            <span className='medium'>Languages 💬</span>
+                            <span className='medium biggish'>Languages 💬</span>
                             <Ul>
                                 <li>
                                     Systems languages: <code>c++</code>, <code>c</code>, <code>rust</code>
@@ -79,7 +79,7 @@ const Stack: FC = () => {
                             </Ul>
                         </div>
                         <div className='mt-m'>
-                            <span className='medium'>Platforms 👨🏻‍💻</span>
+                            <span className='medium biggish'>Platforms 👨🏻‍💻</span>
                             <Ul>
                                 <li>
                                     Arch Linux (personal device) with Sway/Wayland
@@ -97,7 +97,7 @@ const Stack: FC = () => {
                             </Ul>
                         </div>
                         <div className='mt-m'>
-                            <span className='medium'>Web 🌐</span>
+                            <span className='medium biggish'>Web 🌐</span>
                             <Ul>
                                 <li>
                                     Production experience with Typescript, Javascript, and the React ecosystem
