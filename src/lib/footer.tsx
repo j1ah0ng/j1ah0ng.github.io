@@ -24,6 +24,10 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+
+> * {
+  max-width: 85vw;
+}
 `;
 
 const Footer: FC = () => {
