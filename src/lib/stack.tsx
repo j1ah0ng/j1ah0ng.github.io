@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { MathComponent } from 'mathjax-react';
 
 import Card from './card';
@@ -59,8 +59,8 @@ const Stack: FC = () => {
                             header='Tools 🛠'
                             headerClass='medium biggish'
                             elements={[
-                                <> Heavy user of <code>vim</code> and <code>doom-emacs</code> </>,
-                                <> Heavy user of regex (regular expressions), <code>zsh</code>, <code>bash</code> </>,
+                                <>Heavy user of <code>vim</code> and <code>doom-emacs</code></>,
+                                <>Heavy user of regex (regular expressions), <code>zsh</code>, <code>bash</code></>,
                                 <>
                                     Professional, personal, and educational experience with the JetBrains suite including
                                     CLion, IntelliJ, and PyCharm
@@ -80,10 +80,7 @@ const Stack: FC = () => {
                                 </>,
                                 <>
                                     Mathematics and engineering languages: <code>R</code>, <code>matlab</code>, <code>octave</code>,
-                                    and <MathComponent
-                                    tex={String.raw`\mathrm{\LaTeX}`}
-                                    display={ false }
-                                /> (obviously)
+                                    and <MathComponent tex={String.raw`\mathrm{\LaTeX}`} display={ false }/> (obviously)
                                 </>,
                             ]}
                         />
@@ -136,7 +133,7 @@ const Stack: FC = () => {
                     Detail={ () => <>
                         <HeadedList
                             divClass=''
-                            header='Computer science coursework:'
+                            header='💻 Computer science coursework:'
                             headerClass='medium'
                             elements={[
                                 <>
@@ -171,7 +168,7 @@ const Stack: FC = () => {
                         />
                         <HeadedList
                             divClass='mt-m'
-                            header='Electronics engineering coursework:'
+                            header='🔌 Electronics engineering coursework:'
                             headerClass='medium'
                             elements={[
                                 <>
@@ -186,7 +183,7 @@ const Stack: FC = () => {
                         />
                         <HeadedList
                             divClass='mt-m'
-                            header='Mathematics coursework:'
+                            header='🧮 Mathematics coursework:'
                             headerClass='medium'
                             elements={[
                                 <>
@@ -208,7 +205,7 @@ const Stack: FC = () => {
                                     low-rank approximation, basic random matrices, perturbations and matrix condition numbers
                                 </>,
                                 <>
-                                    Statistical methods (MATH 183): normal, t, Poisson, geometric, and binomial distributions,
+                                    Statistical methods (MATH 183): normal, <span className='italic'>t</span>, Poisson, geometric, and binomial distributions,
                                     experiment design and analysis in R
                                 </>,
                             ]}
@@ -251,6 +248,8 @@ const Stack: FC = () => {
                         <div>
                             Full-stack design and implementation of a B2B customer facing SaaS subscription management portal
                             which interfaces with existing internal services to serve a React-based frontend console.
+                            Entered internship with little to no web development experience and was able to ship into
+                            production within twelve weeks.
                         </div>
                         <HeadedList
                             divClass='mt-m'

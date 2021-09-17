@@ -1,5 +1,6 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { MathComponent } from 'mathjax-react';
 
 const SplashDiv = styled.div`
 width: 100vw;
@@ -17,11 +18,31 @@ background-image: linear-gradient(#88c0d0, #d8dee9);
 `;
 
 const Avatar = styled.img`
-clip-path: circle(5em at center);
+clip-path: circle(5rem at center);
 width: 10em;
 `;
 
+const TIMEOUT = 900;
+
 const Splash: FC = () => {
+    /*
+    const texts = [
+        'asdf',
+        'lkjlkj',
+        '12093102',
+        'sldkjfdslkfjdslkj'
+    ];
+    const [updateToggle, setUpdateToggle] = useState(false);
+    const [flavorText, setFlavorText] = useState('initial value');
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setFlavorText(texts[Math.floor(Math.random() * texts.length)]);
+            setUpdateToggle(!updateToggle);
+        }, TIMEOUT)
+        return () => clearTimeout(timeout);
+    }, [updateToggle])
+    */
+
     return (
         <SplashDiv className='center'>
             <div className='mb-xl'>
