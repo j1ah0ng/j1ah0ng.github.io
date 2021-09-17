@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { MathComponent } from 'mathjax-react';
 
+import ButtonLink from './buttonlink';
 import Card from './card';
 import ResumeCardInterior from './resumecardinterior';
 
@@ -35,21 +36,24 @@ margin-top: 0.25rem;
 }
 `;
 
-const HeadedList: FC<{divClass: string, header: string, headerClass: string, elements: JSX.Element[]}> = ({
-    divClass, header, headerClass, elements
+const HeadedList: FC<{divClass: string, header: string, headerClass: string, elements: JSX.Element[], anchor?: boolean}> = ({
+    divClass, header, headerClass, elements, anchor
 }) => {
-    return <div className={ divClass }>
-        <span className={ headerClass }>{ header }</span>
-        <Ul>{ elements.map(e => <li>{ e }</li>)}</Ul>
-    </div>;
+    return anchor
+        ? <div className={ divClass }>
+            <ButtonLink content={ header } className={ headerClass }/>
+            <Ul>{ elements.map(e => <li>{ e }</li>)}</Ul>
+        </div>
+        : <div className={ divClass }>
+            <span className={ headerClass }>{ header }</span>
+            <Ul>{ elements.map(e => <li>{ e }</li>)}</Ul>
+        </div>;
 }
 
 const Stack: FC = () => {
     return (<StackDiv>
         <SectionDiv>
-            <span className='big'>
-                Skills 🤹🏻‍
-            </span>
+            <ButtonLink className='big' content='Skills 🤹🏻‍'/>
             <Card
                 Detail={ () =>
                     <>
@@ -58,6 +62,7 @@ const Stack: FC = () => {
                             divClass='mt-m'
                             header='Tools 🛠'
                             headerClass='medium biggish'
+                            anchor={ true }
                             elements={[
                                 <>Heavy user of <code>vim</code> and <code>doom-emacs</code></>,
                                 <>Heavy user of regex (regular expressions), <code>zsh</code>, <code>bash</code></>,
@@ -71,6 +76,7 @@ const Stack: FC = () => {
                             divClass='mt-m'
                             header='Languages 💬'
                             headerClass='medium biggish'
+                            anchor={ true }
                             elements={[
                                 <>
                                     Systems languages: <code>c++</code>, <code>c</code>, <code>rust</code>
@@ -88,6 +94,7 @@ const Stack: FC = () => {
                             divClass='mt-m'
                             header='Platforms 👨🏻‍💻'
                             headerClass='medium biggish'
+                            anchor={ true }
                             elements={[
                                 <>
                                     Arch Linux (personal device) with Sway/Wayland
@@ -108,6 +115,7 @@ const Stack: FC = () => {
                             divClass='mt-m'
                             header='Web 🌐'
                             headerClass='medium biggish'
+                            anchor={ true }
                             elements={[
                                 <>
                                     Production experience with Typescript, Javascript, and the React ecosystem
@@ -122,9 +130,7 @@ const Stack: FC = () => {
             />
         </SectionDiv>
         <SectionDiv>
-            <span className='big'>
-                Education 🎓
-            </span>
+            <ButtonLink className='big' content='Education 🎓'/>
             <Card Detail={ () =>
                 <ResumeCardInterior
                     name='University of California, San Diego'
@@ -236,9 +242,7 @@ const Stack: FC = () => {
             } />
         </SectionDiv>
         <SectionDiv>
-            <span className='big'>
-                Experience 🔬
-            </span>
+            <ButtonLink className='big' content='Experience 🔬'/>
             <Card Detail={ () =>
                 <ResumeCardInterior
                     name='Amazon'
