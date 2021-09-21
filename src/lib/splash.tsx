@@ -31,7 +31,7 @@ height: 2em;
 `;
 
 const TIMEOUT = 1500;
-const ROLES = [
+const TEXT_ROLES = [
     'moonlighting as a sysadmin.',
     'a double-major at UCSD.',
     'doing a 5K.',
@@ -44,13 +44,19 @@ const ROLES = [
     'linting dotfiles.',
     'fixing a GRUB configuration.',
     'rebuilding an initramfs.',
-    'proofing by contradiction.',
+    'proofing by induction.',
     'doing a pset.',
 ];
 
-const TEXTS = ROLES.map(e => <>
+const FANCY_ROLES = [
+    <><span key={Date.now()} className='italic'>
+        TikZing it up in <MathComponent tex={String.raw`\mathrm{\LaTeX}`} display={ false }/>
+    </span></>,
+];
+
+const ALL_ROLES_AS_FRAGMENTS = TEXT_ROLES.map(e => <>
     <span key={Date.now()} className='italic'>{e}</span>
-</>);
+</>).concat(FANCY_ROLES);
 
 const Splash: FC = () => {
     const [isFirstRun, setIsFirstRun] = useState(true);
@@ -71,9 +77,9 @@ const Splash: FC = () => {
             //timeout = TIMEOUT * 1.5;
         }
         const timeoutHandle = setTimeout(() => {
-            let newFlavorText = TEXTS[Math.floor(Math.random() * TEXTS.length)];
+            let newFlavorText = ALL_ROLES_AS_FRAGMENTS[Math.floor(Math.random() * ALL_ROLES_AS_FRAGMENTS.length)];
             while (newFlavorText === flavorText) {
-                newFlavorText = TEXTS[Math.floor(Math.random() * TEXTS.length)];
+                newFlavorText = ALL_ROLES_AS_FRAGMENTS[Math.floor(Math.random() * ALL_ROLES_AS_FRAGMENTS.length)];
             }
             setFlavorText(newFlavorText);
         }, timeout);
