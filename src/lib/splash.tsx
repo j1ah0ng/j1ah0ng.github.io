@@ -23,6 +23,13 @@ clip-path: circle(5rem at center);
 width: 10em;
 `;
 
+const SizedSpan = styled.span`
+height: 2em;
+@media only screen and (max-width: 320px) {
+  font-size: 1.5em;
+}
+`;
+
 const TIMEOUT = 1500;
 const ROLES = [
     'moonlighting as a sysadmin.',
@@ -82,12 +89,12 @@ const Splash: FC = () => {
                 <span className='light'>Hi, I'm </span>
                 <span className='regular'>Jiahong!</span>
             </span>
-            <span className='large light mr-l ml-l mt-s'>
+            <SizedSpan className='large light mr-l ml-l mt-s'>
                 <WindupChildren onFinished={onFinished} skipped={true}>
                     I'm { flavorText }
                     <Skip skip={isFirstRun}/>
                 </WindupChildren>
-            </span>
+            </SizedSpan>
         </SplashDiv>
     );
 };
