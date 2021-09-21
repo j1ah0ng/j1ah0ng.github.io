@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { MathComponent } from 'mathjax-react';
-import { WindupChildren, useRewind, useIsFinished, useSkip } from 'windups';
+import { WindupChildren, useSkip } from 'windups';
 
 const SplashDiv = styled.div`
 width: 100vw;
@@ -50,7 +50,7 @@ const TEXT_ROLES = [
 
 const FANCY_ROLES = [
     <><span key={Date.now()} className='italic'>
-        TikZing it up in <MathComponent tex={String.raw`\mathrm{\LaTeX}`} display={ false }/>
+        TikZing it up in <MathComponent tex={String.raw`\mathrm{\LaTeX}`} display={ false }/>.
     </span></>,
 ];
 
@@ -58,17 +58,17 @@ const ALL_ROLES_AS_FRAGMENTS = TEXT_ROLES.map(e => <>
     <span key={Date.now()} className='italic'>{e}</span>
 </>).concat(FANCY_ROLES);
 
+const Skip: FC<{skip: boolean}> = ({skip}) => {
+    const skipFn = useSkip();
+    if (skip) skipFn();
+    return <></>;
+};
+
 const Splash: FC = () => {
     const [isFirstRun, setIsFirstRun] = useState(true);
     const [flavorText, setFlavorText] = useState(
         <><span className='italic semibold'>not</span> a web developer.</>
     );
-
-    const Skip: FC<{skip: boolean}> = ({skip}) => {
-        const skipFn = useSkip();
-        if (skip) skipFn();
-        return <></>;
-    };
 
     const onFinished = () => {
         let timeout = TIMEOUT;
