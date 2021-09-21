@@ -61,7 +61,7 @@ const Splash: FC = () => {
         let timeout = TIMEOUT;
         if (isFirstRun) {
             setIsFirstRun(false);
-            timeout = TIMEOUT * 1.5;
+            //timeout = TIMEOUT * 1.5;
         }
         const timeoutHandle = setTimeout(() => {
             let newFlavorText = TEXTS[Math.floor(Math.random() * TEXTS.length)];
