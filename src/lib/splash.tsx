@@ -1,6 +1,7 @@
 import React, { FC, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { MathComponent } from 'mathjax-react';
+import { WindupChildren, useRewind, useIsFinished, useSkip } from 'windups';
 
 const SplashDiv = styled.div`
 width: 100vw;
@@ -22,26 +23,55 @@ clip-path: circle(5rem at center);
 width: 10em;
 `;
 
-const TIMEOUT = 900;
+const TIMEOUT = 1500;
+const ROLES = [
+    'moonlighting as a sysadmin.',
+    'a double-major at UCSD.',
+    'doing a 5K.',
+    'cycling to school.',
+    'an ex-Amazonian.',
+    'a math nerd.',
+    'probably working with Rust.',
+    'unborking my Linux install.',
+    'using Arch, btw.',
+    'linting dotfiles.',
+    'fixing a GRUB configuration.',
+    'rebuilding an initramfs.',
+    'proofing by contradiction.',
+    'doing a pset.',
+];
+
+const TEXTS = ROLES.map(e => <>
+    <span key={Date.now()} className='italic'>{e}</span>
+</>);
 
 const Splash: FC = () => {
-    /*
-    const texts = [
-        'asdf',
-        'lkjlkj',
-        '12093102',
-        'sldkjfdslkfjdslkj'
-    ];
-    const [updateToggle, setUpdateToggle] = useState(false);
-    const [flavorText, setFlavorText] = useState('initial value');
-    useEffect(() => {
-        const timeout = setTimeout(() => {
-            setFlavorText(texts[Math.floor(Math.random() * texts.length)]);
-            setUpdateToggle(!updateToggle);
-        }, TIMEOUT)
-        return () => clearTimeout(timeout);
-    }, [updateToggle])
-    */
+    const [isFirstRun, setIsFirstRun] = useState(true);
+    const [flavorText, setFlavorText] = useState(
+        <><span className='italic semibold'>not</span> a web developer.</>
+    );
+
+    const Skip: FC<{skip: boolean}> = ({skip}) => {
+        const skipFn = useSkip();
+        if (skip) skipFn();
+        return <></>;
+    };
+
+    const onFinished = () => {
+        let timeout = TIMEOUT;
+        if (isFirstRun) {
+            setIsFirstRun(false);
+            timeout = TIMEOUT * 1.5;
+        }
+        const timeoutHandle = setTimeout(() => {
+            let newFlavorText = TEXTS[Math.floor(Math.random() * TEXTS.length)];
+            while (newFlavorText === flavorText) {
+                newFlavorText = TEXTS[Math.floor(Math.random() * TEXTS.length)];
+            }
+            setFlavorText(newFlavorText);
+        }, timeout);
+        return () => clearTimeout(timeoutHandle);
+    };
 
     return (
         <SplashDiv className='center'>
@@ -53,10 +83,10 @@ const Splash: FC = () => {
                 <span className='regular'>Jiahong!</span>
             </span>
             <span className='large light mr-l ml-l mt-s'>
-                I'm <span className='italic semibold'>not</span> a web developer.
-            </span>
-            <span className='regular small mr-l ml-l mt-xl'>
-                This webpage is a work in progress. No, the irony is not lost on me.
+                <WindupChildren onFinished={onFinished} skipped={true}>
+                    I'm { flavorText }
+                    <Skip skip={isFirstRun}/>
+                </WindupChildren>
             </span>
         </SplashDiv>
     );
