@@ -36,18 +36,28 @@ margin-top: 0.25rem;
 }
 `;
 
-const HeadedList: FC<{divClass: string, header: string, headerClass: string, elements: JSX.Element[], anchor?: boolean}> = ({
+const HeadedList: FC<{divClass: string, header?: string, headerClass?: string, elements: JSX.Element[], anchor?: boolean}> = ({
     divClass, header, headerClass, elements, anchor
 }) => {
-    return anchor
-        ? <div className={ divClass }>
-            <ButtonLink content={ header } className={ headerClass }/>
-            <Ul>{ elements.map(e => <li>{ e }</li>)}</Ul>
-        </div>
-        : <div className={ divClass }>
-            <span className={ headerClass }>{ header }</span>
-            <Ul>{ elements.map(e => <li>{ e }</li>)}</Ul>
-        </div>;
+    if (header && headerClass) {
+        return anchor
+            ? <div className={divClass}>
+                <ButtonLink content={header} className={headerClass}/>
+                <Ul>{elements.map(e => <li>{e}</li>)}</Ul>
+            </div>
+            : <div className={divClass}>
+                <span className={headerClass}>{header}</span>
+                <Ul>{elements.map(e => <li>{e}</li>)}</Ul>
+            </div>;
+    } else {
+        return anchor
+            ? <div className={divClass}>
+                <Ul>{elements.map(e => <li>{e}</li>)}</Ul>
+            </div>
+            : <div className={divClass}>
+                <Ul>{elements.map(e => <li>{e}</li>)}</Ul>
+            </div>;
+    }
 }
 
 const Stack: FC = () => {
@@ -236,7 +246,25 @@ const Stack: FC = () => {
                     flavor='2020 Summer Session, Data Science and Mathematics'
                     logistics='June 2020 to August 2020. Berkeley, CA'
                     Detail={ () => <>
-                        Data science (DS 100), real analysis (MATH 104).
+                        <HeadedList
+                            divClass=''
+                            header='Miscellaneous coursework:'
+                            headerClass='medium'
+                            elements={[
+                                <>
+                                    Data science (DS 100): Data cleaning,
+                                    exploratory analysis, <code>sql</code>, <code>pandas</code>, <code>numpy</code>.
+                                    Basic probability and statistics theory, least squares, feature engineering,
+                                    scree plots.
+                                </>,
+                                <>
+                                    Real analysis (MATH 104): Sequences and subsequences, monotonicity, <MathComponent
+                                    tex={String.raw`\varepsilon`} display={false}/>-<MathComponent
+                                    tex={String.raw`\delta`} display={false}/> proofs,
+                                    the limit definition.
+                                </>
+                            ]}
+                        />
                     </> }
                 />
             } />
