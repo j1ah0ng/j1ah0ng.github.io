@@ -215,6 +215,7 @@ const Stack: FC = () => {
                                     Advanced linear algebra (MATH 18, 102): abstract vector spaces, eigendecompositions,
                                     the singular value decomposition
                                 </>,
+                                <>Modern algebra (MATH 100A): group theory</>,
                                 <>Complex analysis (MATH 120A)</>,
                                 <>
                                     Numerical linear algebra (MATH 170A): the Schur decomposition, numerical matrix rank,
@@ -235,6 +236,7 @@ const Stack: FC = () => {
                                 <>Music of the 20th century (MUS 114)</>,
                                 <>Sociolinguistics of sign language (LIGN 7)</>,
                                 <>Introduction to linguistics (LIGN 101)</>,
+                                <>Pragmatics (linguistics) (LIGN 160)</>
                             ]}
                         />
                     </> }
