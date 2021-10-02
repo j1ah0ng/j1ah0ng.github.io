@@ -1,40 +1,10 @@
-import React, { FC } from 'react';
-import styled, { keyframes } from 'styled-components';
-import { MathComponent } from 'mathjax-react';
+import React, {FC} from 'react';
+import {MathComponent} from 'mathjax-react';
 
 import ButtonLink from './buttonlink';
 import Card from './card';
 import ResumeCardInterior from './resumecardinterior';
-
-const StackDiv = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-`;
-
-const SectionDiv = styled.div`
-margin-top: 5vh;
-min-width: 250px;
-max-width: 720px;
-width: 85vw;
-`;
-
-const SpacingDiv = styled.div`
-margin-bottom: 5vh;
-`;
-
-const Ul = styled.ul`
-margin: 0;
-margin-top: 0.25rem;
-
-&:first-child {
-    padding-top: 0;
-}
-
-> li {
-    padding-top: 0.35rem;
-}
-`;
+import {SectionDiv, SpacingDiv, StackDiv, Ul} from "./styled";
 
 const HeadedList: FC<{divClass: string, header?: string, headerClass?: string, elements: JSX.Element[], anchor?: boolean}> = ({
     divClass, header, headerClass, elements, anchor
@@ -60,7 +30,7 @@ const HeadedList: FC<{divClass: string, header?: string, headerClass?: string, e
     }
 }
 
-const Stack: FC = () => {
+const Resume: FC = () => {
     return (<StackDiv>
         <SectionDiv>
             <ButtonLink className='big' content='Skills 🤹🏻‍'/>
@@ -281,7 +251,8 @@ const Stack: FC = () => {
                     Detail={() => <>
                         <div>
                             Full-stack design and implementation of a B2B customer facing SaaS subscription management portal
-                            which interfaces with existing internal services to serve a React-based frontend console.
+                            which interfaces with existing internal services to serve a React-based frontend console which,
+                            in the words of my skip-level manager, 'raises the bar for intern projects'.
                             Entered internship with little to no web development experience and was able to ship into
                             production within twelve weeks.
                         </div>
@@ -343,4 +314,4 @@ const Stack: FC = () => {
     </StackDiv>);
 };
 
-export default Stack;
+export default Resume;

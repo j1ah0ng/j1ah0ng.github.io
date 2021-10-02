@@ -1,7 +1,7 @@
-import react, { FC } from 'react';
-import styled from 'styled-components';
+import React, { FC } from 'react';
+import styled, { css } from 'styled-components';
 
-const Button = styled.button`
+const CommonCss = css`
 all: inherit;
 background: none!important;
 padding: 0!important;
@@ -12,14 +12,25 @@ color: inherit;
 }
 `;
 
+export const Button = styled.button`
+${CommonCss}
+&:hover {
+    cursor: pointer;
+}
+`;
+
+export const Link = styled.a`
+${CommonCss}
+`;
+
 const ButtonLink: FC<{content: string, className: string}> = ({content, className}) => {
-    const id = content.replace(/[^A-Z0-9]/ig, '');
+    const id = content.replace(/[^A-Z0-9]/ig, '').toLowerCase();
     return (
         <div className={ className } id={ id }>
             <Button
                 onClick={
                     () => {
-                        var loc = document.location.toString().split('#')[0];
+                        const loc = document.location.toString().split('#')[0];
                         document.location.href = loc + '#' + id;
                         return false;
                     }

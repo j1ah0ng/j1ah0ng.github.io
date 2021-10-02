@@ -59,6 +59,12 @@ const ALL_ROLES_AS_FRAGMENTS = TEXT_ROLES.map(e => <>
     <span key={Date.now()} className='italic'>{e}</span>
 </>).concat(FANCY_ROLES);
 
+const getRandomRole = () => {
+    return ALL_ROLES_AS_FRAGMENTS[
+        Math.floor(Math.random() * ALL_ROLES_AS_FRAGMENTS.length)
+    ];
+}
+
 const Skip: FC<{skip: boolean}> = ({skip}) => {
     const skipFn = useSkip();
     if (skip) skipFn();
@@ -78,9 +84,9 @@ const Splash: FC = () => {
             //timeout = TIMEOUT * 1.5;
         }
         const timeoutHandle = setTimeout(() => {
-            let newFlavorText = ALL_ROLES_AS_FRAGMENTS[Math.floor(Math.random() * ALL_ROLES_AS_FRAGMENTS.length)];
+            let newFlavorText = getRandomRole();
             while (newFlavorText === flavorText) {
-                newFlavorText = ALL_ROLES_AS_FRAGMENTS[Math.floor(Math.random() * ALL_ROLES_AS_FRAGMENTS.length)];
+                newFlavorText = getRandomRole();
             }
             setFlavorText(newFlavorText);
         }, timeout);

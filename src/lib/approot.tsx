@@ -5,9 +5,10 @@ import { store, useAppDispatch, RootState } from '../redux/store';
 import { getDateString } from '../redux/network-slice';
 import { setRanInitFunction } from '../redux/app-slice';
 
-import Splash from './splash';
-import Stack from './stack';
 import Footer from './footer';
+import Highlights from './highlights';
+import Splash from './splash';
+import Resume from './resume';
 
 import { LoadingModal } from './modals';
 import { Sep, Color } from './sep';
@@ -33,7 +34,9 @@ const App: FC = () => {
             <RootDiv>
                 <Splash/>
                 <Sep color={Color.Aqua}/>
-                <Stack/>
+                <Highlights/>
+                <Sep color={Color.Green}/>
+                <Resume/>
                 <Sep color={Color.Orange}/>
                 <Footer/>
             </RootDiv>
