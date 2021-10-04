@@ -251,8 +251,7 @@ const Resume: FC = () => {
                     Detail={() => <>
                         <div>
                             Full-stack design and implementation of a B2B customer facing SaaS subscription management portal
-                            which interfaces with existing internal services to serve a React-based frontend console which,
-                            in the words of my skip-level manager, 'raises the bar for intern projects'.
+                            which interfaces with existing internal services to serve a React-based frontend console.
                             Entered internship with little to no web development experience and was able to ship into
                             production within twelve weeks.
                         </div>
