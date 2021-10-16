@@ -47,6 +47,7 @@ const TEXT_ROLES = [
     'proofing by induction.',
     'doing a pset.',
     'a fan of metrics.',
+    'collecting Hagoromo.',
 ];
 
 const FANCY_ROLES = [

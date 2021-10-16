@@ -59,7 +59,7 @@ const Resume: FC = () => {
                             anchor={ true }
                             elements={[
                                 <>
-                                    Systems languages: <code>c++</code>, <code>c</code>, <code>rust</code>
+                                    Systems languages: <code>c++</code>, <code>c</code>, <code>rust</code>, <code>go</code>
                                 </>,
                                 <>
                                     General languages: <code>java</code>, <code>python</code>, <code>haskell</code>
