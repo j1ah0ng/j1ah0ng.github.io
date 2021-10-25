@@ -75,7 +75,7 @@ const Skip: FC<{skip: boolean}> = ({skip}) => {
 const Splash: FC = () => {
     const [isFirstRun, setIsFirstRun] = useState(true);
     const [flavorText, setFlavorText] = useState(
-        <><span className='italic semibold'>not</span> a web developer.</>
+        getRandomRole()
     );
 
     const onFinished = () => {
