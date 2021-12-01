@@ -140,7 +140,10 @@ const Resume: FC = () => {
                                     Operating systems (CSE 120): Java, mutexes, race conditions, multiprogramming,
                                     context switching
                                 </>,
-                                <>Networked systems (CSE 124)</>,
+                                <>
+                                    Networked systems (CSE 124): Go (golang), RPC, physical and logical time, Lamport clocks, 
+                                    consistent hashing, cluster-scale caching
+                                </>,
                                 <>
                                     Theory and implementation of programming languages (CSE 130): lexers, parsers,
                                     the functional paradigm, Haskell
@@ -149,7 +152,11 @@ const Resume: FC = () => {
                                     Digital design and systems (CSE 140, 140L): SystemVerilog, CMOS logic,
                                     Boolean algebra including Shannon expansions and Karnaugh maps
                                 </>,
-                                <>Computer vision (CSE 152A)</>,
+                                <>
+                                    Computer vision (CSE 152A): Epipolar geometry, intrinsic and extrinsic camera
+                                    matrices, methodologies for estimation of the fundamental matrix, eight-point
+                                    algorithm, RANSAC, Lucas-Kanade optical flow, basic neural networks
+                                </>,
                             ]}
                         />
                         <HeadedList
@@ -185,8 +192,14 @@ const Resume: FC = () => {
                                     Advanced linear algebra (MATH 18, 102): abstract vector spaces, eigendecompositions,
                                     the singular value decomposition
                                 </>,
-                                <>Modern algebra (MATH 100A): group theory</>,
-                                <>Complex analysis (MATH 120A)</>,
+                                <>
+                                    Modern algebra (MATH 100A): symmetric, alternating, and dihedral groups, group actions, 
+                                    plane and polyhedral symmetry groups, Sylow theorems
+                                </>,
+                                <>
+                                    Complex analysis (MATH 120A): Riemann spheres, complex differentiability, the Laplacian,
+                                    contour integrals
+                                </>,
                                 <>
                                     Numerical linear algebra (MATH 170A): the Schur decomposition, numerical matrix rank,
                                     low-rank approximation, basic random matrices, perturbations and matrix condition numbers

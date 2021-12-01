@@ -28,7 +28,7 @@ const Work: FC = () =>
     </Link></span> in the first quarter of 2022.
     Otherwise, I'm actively applying, interviewing, and looking for <span className='medium'>
         technical internships
-     </span> for Summer of 2022.
+     </span> for Summer through Fall of 2022.
 </div>;
 
 const Highlights: FC = () => {
