@@ -62,10 +62,30 @@ const ALL_ROLES_AS_FRAGMENTS = TEXT_ROLES.map(e => <>
     <span key={Date.now()} className='italic'>{e}</span>
 </>).concat(FANCY_ROLES);
 
-const getRandomRole = () => {
-    return ALL_ROLES_AS_FRAGMENTS[
-        Math.floor(Math.random() * ALL_ROLES_AS_FRAGMENTS.length)
-    ];
+const N_ROLES = ALL_ROLES_AS_FRAGMENTS.length;
+
+const shuffle = () => {
+    const first = ALL_ROLES_AS_FRAGMENTS[0];
+
+    let currentIndex = N_ROLES,  randomIndex;
+
+    while (currentIndex != 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        [ALL_ROLES_AS_FRAGMENTS[currentIndex], ALL_ROLES_AS_FRAGMENTS[randomIndex]] = [
+            ALL_ROLES_AS_FRAGMENTS[randomIndex],
+            ALL_ROLES_AS_FRAGMENTS[currentIndex]
+        ];
+    }
+
+    if (ALL_ROLES_AS_FRAGMENTS[0] === first) {
+        randomIndex = Math.floor(Math.random() * (N_ROLES - 1));
+        [ALL_ROLES_AS_FRAGMENTS[0], ALL_ROLES_AS_FRAGMENTS[randomIndex]] = [
+            ALL_ROLES_AS_FRAGMENTS[randomIndex],
+            ALL_ROLES_AS_FRAGMENTS[0]
+        ];
+    }
 }
 
 const Skip: FC<{skip: boolean}> = ({skip}) => {
@@ -76,8 +96,9 @@ const Skip: FC<{skip: boolean}> = ({skip}) => {
 
 const Splash: FC = () => {
     const [isFirstRun, setIsFirstRun] = useState(true);
+    const [idx, setIdx] = useState(0);
     const [flavorText, setFlavorText] = useState(
-        getRandomRole()
+         ( () => { shuffle(); return ALL_ROLES_AS_FRAGMENTS[idx]; } )()
     );
 
     const onFinished = () => {
@@ -86,11 +107,16 @@ const Splash: FC = () => {
             setIsFirstRun(false);
             //timeout = TIMEOUT * 1.5;
         }
+
+        let newIdx = idx + 1;
+        if (newIdx >= N_ROLES) {
+            newIdx = 0;
+            shuffle();
+        }
+        setIdx(newIdx);
+
         const timeoutHandle = setTimeout(() => {
-            let newFlavorText = getRandomRole();
-            while (newFlavorText === flavorText) {
-                newFlavorText = getRandomRole();
-            }
+            let newFlavorText = ALL_ROLES_AS_FRAGMENTS[idx];
             setFlavorText(newFlavorText);
         }, timeout);
         return () => clearTimeout(timeoutHandle);
