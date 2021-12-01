@@ -258,6 +258,18 @@ const Resume: FC = () => {
             <ButtonLink className='big' content='Experience 🔬'/>
             <Card Detail={ () =>
                 <ResumeCardInterior
+                    name='Bolt Financial'
+                    flavor='Software Engineering Intern'
+                    logistics='January 2022 to April 2022. San Francisco, CA'
+                    Detail={() => <>
+                        <div>
+                            Forthcoming!
+                        </div>
+                    </>}
+                />
+            } />
+            <Card Detail={ () =>
+                <ResumeCardInterior
                     name='Amazon'
                     flavor='SDE Intern, Alexa Smart Properties'
                     logistics='June 2021 to September 2021. Seattle, WA'
