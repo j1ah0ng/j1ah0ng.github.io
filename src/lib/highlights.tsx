@@ -5,6 +5,7 @@ import ButtonLink, { Link } from './buttonlink';
 
 const RIVOS_HREF: string = 'https://semianalysis.substack.com/p/rivos-inc-a-chip-off-the-old-block';
 const JS_HREF: string = 'https://www.janestreet.com';
+const BOLT_HREF: string = 'https://bolt.com';
 
 const onClickToHref = (link: string) => {
     return () => window.location.href = link;
@@ -22,9 +23,12 @@ const Coursework: FC = () =>
 
 const Work: FC = () =>
 <div className='biggish light mt-m'>
-    I'm actively applying, interviewing, and looking for <span className='medium'>
+    I'm excited to be joining <span className='medium'><Link href={ BOLT_HREF }>
+        Bolt Financial
+    </Link></span> in the first quarter of 2022.
+    Otherwise, I'm actively applying, interviewing, and looking for <span className='medium'>
         technical internships
-     </span> for January through September of 2022.
+     </span> for Summer of 2022.
 </div>;
 
 const Highlights: FC = () => {
