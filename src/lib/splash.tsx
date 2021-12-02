@@ -67,7 +67,7 @@ const N_ROLES = ALL_ROLES_AS_FRAGMENTS.length;
 const shuffle = () => {
     const first = ALL_ROLES_AS_FRAGMENTS[0];
 
-    let currentIndex = N_ROLES,  randomIndex;
+    let currentIndex = N_ROLES - 1,  randomIndex;
 
     while (currentIndex != 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
