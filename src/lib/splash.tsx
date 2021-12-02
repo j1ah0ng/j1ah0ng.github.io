@@ -116,8 +116,7 @@ const Splash: FC = () => {
         setIdx(newIdx);
 
         const timeoutHandle = setTimeout(() => {
-            let newFlavorText = ALL_ROLES_AS_FRAGMENTS[idx];
-            setFlavorText(newFlavorText);
+            setFlavorText(ALL_ROLES_AS_FRAGMENTS[newIdx]);
         }, timeout);
         return () => clearTimeout(timeoutHandle);
     };
