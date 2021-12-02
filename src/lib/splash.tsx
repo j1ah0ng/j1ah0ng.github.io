@@ -64,8 +64,8 @@ const ALL_ROLES_AS_FRAGMENTS = TEXT_ROLES.map(e => <>
 
 const N_ROLES = ALL_ROLES_AS_FRAGMENTS.length;
 
-const shuffle = () => {
-    const first = ALL_ROLES_AS_FRAGMENTS[0];
+const shuffle = (ignoreLast: boolean) => {
+    const last = ALL_ROLES_AS_FRAGMENTS[N_ROLES - 1];
 
     let currentIndex = N_ROLES - 1,  randomIndex;
 
@@ -79,7 +79,7 @@ const shuffle = () => {
         ];
     }
 
-    if (ALL_ROLES_AS_FRAGMENTS[0] === first) {
+    if (!ignoreLast && ALL_ROLES_AS_FRAGMENTS[0] === last) {
         randomIndex = Math.floor(Math.random() * (N_ROLES - 1));
         [ALL_ROLES_AS_FRAGMENTS[0], ALL_ROLES_AS_FRAGMENTS[randomIndex]] = [
             ALL_ROLES_AS_FRAGMENTS[randomIndex],
@@ -98,24 +98,22 @@ const Splash: FC = () => {
     const [isFirstRun, setIsFirstRun] = useState(true);
     const [idx, setIdx] = useState(0);
     const [flavorText, setFlavorText] = useState(
-         ( () => { shuffle(); return ALL_ROLES_AS_FRAGMENTS[idx]; } )()
+         ( () => { shuffle(true); return ALL_ROLES_AS_FRAGMENTS[0]; } )
     );
 
     const onFinished = () => {
         let timeout = TIMEOUT;
         if (isFirstRun) {
             setIsFirstRun(false);
-            //timeout = TIMEOUT * 1.5;
         }
-
-        let newIdx = idx + 1;
-        if (newIdx >= N_ROLES) {
-            newIdx = 0;
-            shuffle();
-        }
-        setIdx(newIdx);
 
         const timeoutHandle = setTimeout(() => {
+            let newIdx = idx + 1;
+            if (newIdx >= N_ROLES) {
+                newIdx = 0;
+                shuffle(false);
+            }
+            setIdx(newIdx);
             setFlavorText(ALL_ROLES_AS_FRAGMENTS[newIdx]);
         }, timeout);
         return () => clearTimeout(timeoutHandle);
