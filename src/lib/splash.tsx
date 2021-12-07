@@ -48,8 +48,10 @@ const TEXT_ROLES = [
     'doing a pset.',
     'a fan of metrics.',
     'collecting Hagoromo.',
-    'abusing First Isomorphism.',
+    'spamming First Isomorphism.',
     'verifying the Laplacian.',
+    '(re)flashing my keyboard.',
+    'abusing Docker.',
 ];
 
 const FANCY_ROLES = [
