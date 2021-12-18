@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {MathComponent} from 'mathjax-react';
 
-import ButtonLink from './buttonlink';
+import ButtonLink, { Link } from './buttonlink';
 import Card from './card';
 import ResumeCardInterior from './resumecardinterior';
 import {SectionDiv, SpacingDiv, StackDiv, Ul} from "./styled";
@@ -66,7 +66,23 @@ const Resume: FC = () => {
                                 </>,
                                 <>
                                     Mathematics and engineering languages: <code>R</code>, <code>matlab</code>, <code>octave</code>,
-                                    and <MathComponent tex={String.raw`\mathrm{\LaTeX}`} display={ false }/> (obviously)
+                                    and <span><Link href={ `https://github.com/j1ah0ng/papers` }>
+                                        <MathComponent tex={String.raw`\mathrm{\LaTeX}`} display={ false }/> (obviously)
+                                    </Link></span>
+                                </>,
+                            ]}
+                        />
+                        <HeadedList
+                            divClass='mt-m'
+                            header='Libraries 📚'
+                            headerClass='medium biggish'
+                            anchor={ true }
+                            elements={[
+                                <>
+                                    Data pipeline: <code>pandas</code>, <code>numpy</code>, <code>scipy</code>, <code>matplotlib</code>
+                                </>,
+                                <>
+                                    Machine learning: <code>statsmodels</code>, <code>cv2</code>, <code>torch</code>
                                 </>,
                             ]}
                         />
