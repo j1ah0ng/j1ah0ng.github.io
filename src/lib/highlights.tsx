@@ -5,10 +5,6 @@ import ButtonLink, { Link } from './buttonlink';
 
 const BOLT_HREF: string = 'https://bolt.com';
 
-const onClickToHref = (link: string) => {
-    return () => window.location.href = link;
-};
-
 const Coursework: FC = () =>
 <div className='biggish light'>
     I'm currently enjoying <span className='medium'>

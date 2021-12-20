@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
-import { store, useAppDispatch, RootState } from '../redux/store';
+import { useAppDispatch, RootState } from '../redux/store';
 import { getDateString } from '../redux/network-slice';
 import { setRanInitFunction } from '../redux/app-slice';
 

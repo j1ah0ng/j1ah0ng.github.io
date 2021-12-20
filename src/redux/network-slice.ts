@@ -1,5 +1,4 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { RootState } from './store';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 import { getLastUpdateDate } from '../util/data-provider';
 

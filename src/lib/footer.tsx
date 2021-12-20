@@ -1,5 +1,4 @@
 import React, { FC, useEffect, useState } from 'react';
-import axios from 'axios';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

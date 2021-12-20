@@ -1,10 +1,10 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 import {MathComponent} from 'mathjax-react';
 
 import ButtonLink, { Link } from './buttonlink';
 import Card from './card';
 import ResumeCardInterior from './resumecardinterior';
-import {SectionDiv, SpacingDiv, StackDiv, Ul} from "./styled";
+import { SectionDiv, SpacingDiv, StackDiv, Ul } from "./styled";
 
 const HeadedList: FC<{divClass: string, header?: string, headerClass?: string, elements: JSX.Element[], anchor?: boolean}> = ({
     divClass, header, headerClass, elements, anchor
