@@ -45,7 +45,7 @@ const Footer: FC = () => {
                     </a>
                 </Li>
                 <Li>
-                    <a href='Resume-2021-Sept.pdf' aria-label='Resume'>
+                    <a href='Resume.pdf' aria-label='Resume'>
                         <FontAwesomeIcon icon={faFileAlt} size='lg' className='icon'/>
                     </a>
                 </Li>
