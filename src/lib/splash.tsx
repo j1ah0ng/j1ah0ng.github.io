@@ -82,7 +82,7 @@ const shuffle = (ignoreLast: boolean) => {
     }
 
     if (!ignoreLast && ALL_ROLES_AS_FRAGMENTS[0] === last) {
-        randomIndex = Math.floor(Math.random() * (N_ROLES - 1));
+        randomIndex = Math.floor(Math.random() * (N_ROLES - 2)) + 1;
         [ALL_ROLES_AS_FRAGMENTS[0], ALL_ROLES_AS_FRAGMENTS[randomIndex]] = [
             ALL_ROLES_AS_FRAGMENTS[randomIndex],
             ALL_ROLES_AS_FRAGMENTS[0]
