@@ -4,6 +4,7 @@ import { SectionDiv, StackDiv, SpacingDiv } from './styled';
 import ButtonLink, { Link } from './buttonlink';
 
 const BOLT_HREF: string = 'https://bolt.com';
+const VALKYRIE_HREF: string = 'https://valkyrierobotics.org';
 
 const Coursework: FC = () =>
 <div className='biggish light'>
@@ -14,10 +15,20 @@ const Coursework: FC = () =>
         Computer Networks
     </span> course.
 </div>;
+    
+const Projects: FC = () =>
+<div className='biggish light'>
+    I'm currently working on <span className='medium'>
+        Wyrd
+    </span>, a proprietary <code>C++</code> robotics middleware for FIRST Robotics Competition applications
+    with my friends at <span className='medium'><Link href = { VALKYRIE_HREF }>
+        Valkyrie Robotics
+    </Link></span>!
+</div>;
 
 const Work: FC = () =>
 <div className='biggish light mt-m'>
-    I'm excited to be joining <span className='medium'><Link href={ BOLT_HREF }>
+    I'm excited to be starting a winter internship with <span className='medium'><Link href={ BOLT_HREF }>
         Bolt Financial
     </Link></span> in the first quarter of 2022!
     Otherwise, I'm actively applying, interviewing, and looking for <span className='medium'>
@@ -29,7 +40,7 @@ const Highlights: FC = () => {
     return (<StackDiv>
         <SectionDiv>
             <ButtonLink content={'📯 What\'s new?'} className='large'/>
-            <Coursework/>
+            <Projects/>
             <Work/>
         </SectionDiv>
         <SpacingDiv/>
