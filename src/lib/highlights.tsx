@@ -18,7 +18,7 @@ const Coursework: FC = () =>
     
 const Projects: FC = () =>
 <div className='biggish light'>
-    I'm currently working on <span className='medium'>
+    I'm working on <span className='medium'>
         Wyrd
     </span>, a proprietary <code>C++</code> robotics middleware for FIRST Robotics Competition applications
     with my friends at <span className='medium'><Link href = { VALKYRIE_HREF }>
@@ -28,9 +28,9 @@ const Projects: FC = () =>
 
 const Work: FC = () =>
 <div className='biggish light mt-m'>
-    I'm excited to be starting a winter internship with <span className='medium'><Link href={ BOLT_HREF }>
+    I'm also winterning with <span className='medium'><Link href={ BOLT_HREF }>
         Bolt Financial
-    </Link></span> in the first quarter of 2022!
+    </Link></span> through the first quarter of 2022!
     Otherwise, I'm actively applying, interviewing, and looking for <span className='medium'>
         technical internships
      </span> for summer 2022.

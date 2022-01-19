@@ -275,7 +275,7 @@ const Resume: FC = () => {
             <Card Detail={ () =>
                 <ResumeCardInterior
                     name='Bolt Financial'
-                    flavor='Software Engineering Intern'
+                    flavor='Software Engineering Intern, Merchant Experience'
                     logistics='January 2022 to April 2022. San Francisco, CA'
                     Detail={() => <>
                         <div>
