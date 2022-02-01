@@ -31,10 +31,13 @@ const Work: FC = () =>
     I'm also winterning with <span className='medium'><Link href={ BOLT_HREF }>
         Bolt Financial
     </Link></span> through the first quarter of 2022!
+</div>;
+
+/*
     Otherwise, I'm actively applying, interviewing, and looking for <span className='medium'>
         technical internships
      </span> for summer 2022.
-</div>;
+ */
 
 const Highlights: FC = () => {
     return (<StackDiv>
