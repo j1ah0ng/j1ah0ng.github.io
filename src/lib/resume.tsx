@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import {MathComponent} from 'mathjax-react';
+import { MathComponent } from 'mathjax-react';
 
 import ButtonLink, { Link } from './buttonlink';
 import Card from './card';
@@ -274,9 +274,21 @@ const Resume: FC = () => {
             <ButtonLink className='big' content='Experience 🔬'/>
             <Card Detail={ () =>
                 <ResumeCardInterior
+                    name='Cruise Automation'
+                    flavor='Software Engineering Intern, Maneuver Planning'
+                    logistics='June 2022 to September 2022. San Francisco, CA'
+                    Detail={() => <>
+                        <div>
+                            Forthcoming!
+                        </div>
+                    </>}
+                />
+            } />
+            <Card Detail={ () =>
+                <ResumeCardInterior
                     name='Bolt Financial'
-                    flavor='Software Engineering Intern, Merchant Experience'
-                    logistics='January 2022 to April 2022. San Francisco, CA'
+                    flavor='Software Engineering Intern, Merchant Tools'
+                    logistics='January 2022 to June 2022. San Francisco, CA'
                     Detail={() => <>
                         <div>
                             Forthcoming!
