@@ -279,7 +279,7 @@ const Resume: FC = () => {
                     logistics='June 2022 to September 2022. San Francisco, CA'
                     Detail={() => <>
                         <div>
-                            Forthcoming!
+                            Details forthcoming!
                         </div>
                     </>}
                 />
@@ -291,8 +291,19 @@ const Resume: FC = () => {
                     logistics='January 2022 to June 2022. San Francisco, CA'
                     Detail={() => <>
                         <div>
-                            Forthcoming!
+                            Details forthcoming!
                         </div>
+                        <HeadedList
+                            divClass='mt-m'
+                            header='Technologies:'
+                            headerClass='medium'
+                            elements={[
+                                <>
+                                    Golang (<code>gorm</code>)
+                                </>,
+                                <> Postgres, Elasticsearch, K8 </>,
+                            ]}
+                        />
                     </>}
                 />
             } />
@@ -308,6 +319,20 @@ const Resume: FC = () => {
                             Entered internship with little to no web development experience and was able to ship into
                             production within twelve weeks.
                         </div>
+                        <HeadedList
+                            divClass='mt-m'
+                            header='Technologies:'
+                            headerClass='medium'
+                            elements={[
+                                <>
+                                    Java (<code>spring</code>, <code>tomcat</code>)
+                                </>,
+                                <>
+                                    Typescript (<code>react</code>, <code>redux</code>, <code>axios</code>, <code>
+                                        styled-components</code>)
+                                </>
+                            ]}
+                        />
                         <HeadedList
                             divClass='mt-m'
                             header='Frontend:'
