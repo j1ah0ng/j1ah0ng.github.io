@@ -5,6 +5,7 @@ import ButtonLink, { Link } from './buttonlink';
 
 const BOLT_HREF: string = 'https://bolt.com';
 const VALKYRIE_HREF: string = 'https://valkyrierobotics.org';
+const CRUISE_HREF: string = 'https://getcruise.com';
 
 const Coursework: FC = () =>
 <div className='biggish light'>
@@ -30,7 +31,9 @@ const Work: FC = () =>
 <div className='biggish light mt-m'>
     I'm also winterning with <span className='medium'><Link href={ BOLT_HREF }>
         Bolt Financial
-    </Link></span> through the first quarter of 2022!
+    </Link></span> through the first half of 2022, and I'm excited to join <span className='medium'><Link href={ CRUISE_HREF }>
+        Cruise Automation
+    </Link></span> over the summer!
 </div>;
 
 /*
