@@ -4,5 +4,6 @@
 @import './styles/colors.css';
 
 .App {
+  background-color: white;
   text-align: center;
 }
