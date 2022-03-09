@@ -79,7 +79,7 @@ const Resume: FC = () => {
                             anchor={ true }
                             elements={[
                                 <>
-                                    Data pipeline: <code>pandas</code>, <code>numpy</code>, <code>scipy</code>, <code>matplotlib</code>
+                                    Data: <code>pandas</code>, <code>numpy</code>, <code>scipy</code>, <code>matplotlib</code>
                                 </>,
                                 <>
                                     Machine learning: <code>statsmodels</code>, <code>cv2</code>, <code>torch</code>
@@ -288,7 +288,7 @@ const Resume: FC = () => {
                 <ResumeCardInterior
                     name='Bolt Financial'
                     flavor='Software Engineering Intern, Merchant Tools'
-                    logistics='January 2022 to June 2022. San Francisco, CA'
+                    logistics='January 2022 to June 2022. Toronto, ON'
                     Detail={() => <>
                         <div>
                             Details forthcoming!
