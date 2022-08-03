@@ -130,8 +130,39 @@ const Resume: FC = () => {
             <Card Detail={ () =>
                 <ResumeCardInterior
                     name='University of California, San Diego'
+                    flavor='M.Sc. Intelligent Systems, Robotics, and Controls'
+                    logistics='September 2023 to June 2024 (projected). La Jolla, CA'
+                    Detail={() => <>
+                        <HeadedList
+                            divClass=''
+                            header='Projected coursework:'
+                            headerClass='medium'
+                            elements={[
+                                <>
+                                    Statistical learning, deep learning
+                                </>,
+                                <>
+                                    Sensing and estimation in robotics, RL in robotics
+                                </>,
+                                <>
+                                    Cooperative multi-agent systems
+                                </>,
+                                <>
+                                    Convex optimisation
+                                </>,
+                                <>
+                                    Graduate real analysis + algebra
+                                </>,
+                            ]}
+                        />
+                    </>}
+                />
+            } />
+            <Card Detail={ () =>
+                <ResumeCardInterior
+                    name='University of California, San Diego'
                     flavor='B.Sc. Computer Engineering & B.Sc. Applied Mathematics'
-                    logistics='September 2019 to June 2023 (projected). La Jolla, CA'
+                    logistics='September 2019 to June 2023. La Jolla, CA'
                     Detail={ () => <>
                         <HeadedList
                             divClass=''
@@ -161,12 +192,15 @@ const Resume: FC = () => {
                                     consistent hashing, cluster-scale caching
                                 </>,
                                 <>
-                                    Theory and implementation of programming languages (CSE 130): lexers, parsers,
-                                    the functional paradigm, Haskell
+                                    Programming languages and compilers (CSE 130, 131): lexers, parsers,
+                                    the functional paradigm, Haskell, AST lowering
                                 </>,
                                 <>
                                     Digital design and systems (CSE 140, 140L): SystemVerilog, CMOS logic,
                                     Boolean algebra including Shannon expansions and Karnaugh maps
+                                </>,
+                                <>
+                                    Computer architecture (CSE 142, 142L)
                                 </>,
                                 <>
                                     Computer vision (CSE 152A): Epipolar geometry, intrinsic and extrinsic camera
@@ -185,8 +219,14 @@ const Resume: FC = () => {
                                     methods including loop and node, source transforms, continuous signal filters
                                 </>,
                                 <>
+                                    Nonlinear circuit theory (ECE 65): op-amps, small-signal model
+                                </>,
+                                <>
                                     Linear signals and systems (ECE 101): the discrete Fourier transform, correlation
                                     and autocorrelation, discrete signal filters, MATLAB signal processing methodologies
+                                </>,
+                                <>
+                                    Digital design (ECE 111): SystemVerilog
                                 </>,
                             ]}
                         />
@@ -203,13 +243,13 @@ const Resume: FC = () => {
                                     Differential equations (MATH 20D): ordinary differential equations, direct substitutions,
                                     undetermined coefficients, the Laplace transform
                                 </>,
-                                <>Vector calculus (MATH 20A-E)</>,
+                                <>Vector calculus (MATH 20ABCE)</>,
                                 <>
                                     Advanced linear algebra (MATH 18, 102): abstract vector spaces, eigendecompositions,
                                     the singular value decomposition
                                 </>,
                                 <>
-                                    Modern algebra (MATH 100A): symmetric, alternating, and dihedral groups, group actions, 
+                                    Algebra (MATH 100A): symmetric, alternating, and dihedral groups, group actions, 
                                     plane and polyhedral symmetry groups, Sylow theorems
                                 </>,
                                 <>
@@ -217,8 +257,15 @@ const Resume: FC = () => {
                                     contour integrals
                                 </>,
                                 <>
-                                    Numerical linear algebra (MATH 170A): the Schur decomposition, numerical matrix rank,
-                                    low-rank approximation, basic random matrices, perturbations and matrix condition numbers
+                                    Real analysis (MATH 142AB)
+                                </>,
+                                <>
+                                    Numerical methods (MATH 170ABC): the Schur decomposition, numerical matrix rank,
+                                    low-rank approximation, basic random matrices, perturbations and matrix condition numbers,
+                                    iterative root-finding
+                                </>,
+                                <>
+                                    Linear and nonlinear optimisation (MATH 171AB): the simplex method
                                 </>,
                                 <>
                                     Statistical methods (MATH 183): normal, <span className='italic'>t</span>, Poisson, geometric, and binomial distributions,
@@ -275,12 +322,36 @@ const Resume: FC = () => {
             <Card Detail={ () =>
                 <ResumeCardInterior
                     name='Cruise Automation'
-                    flavor='Software Engineering Intern, Maneuver Planning'
+                    flavor='ML/Robotics Engineering Intern, Simulation'
+                    logistics='June 2023 to September 2023. San Francisco, CA'
+                    Detail={() => <>
+                        <div>
+                            Work in progress!
+                        </div>
+                    </>}
+                />
+            } />
+            <Card Detail={ () =>
+                <ResumeCardInterior
+                    name='Cruise Automation'
+                    flavor='ML/Robotics Engineering Intern, Maneuver Planning'
                     logistics='June 2022 to September 2022. San Francisco, CA'
                     Detail={() => <>
                         <div>
-                            Details forthcoming!
+                            Introduced novel error handling practices and consolidated fallback structure for a legacy nonconvex solver within maneuver planning,
+                            building out architectural changes and future best practices to improve DX and fault tolerance
                         </div>
+                        <HeadedList
+                            divClass='mt-m'
+                            header='Technologies:'
+                            headerClass='medium'
+                            elements={[
+                                <>
+                                    <code>c++</code>, <code>ROS</code>, Python, Bazel
+                                </>,
+                                <> BigQuery, miscellaneous internal tooling </>,
+                            ]}
+                        />
                     </>}
                 />
             } />
@@ -291,7 +362,11 @@ const Resume: FC = () => {
                     logistics='January 2022 to June 2022. Toronto, ON'
                     Detail={() => <>
                         <div>
-                            Details forthcoming!
+                            Scoped and delivered two projects to address tech
+                            debt in a large monorepo. Reduced developer
+                            onboarding overhead by deprecating legacy onboarding flows in favour of an
+                            internal dashboard, and fixed a longstanding database model error to
+                            correctly display refund transactions
                         </div>
                         <HeadedList
                             divClass='mt-m'
@@ -299,7 +374,7 @@ const Resume: FC = () => {
                             headerClass='medium'
                             elements={[
                                 <>
-                                    Golang (<code>gorm</code>)
+                                    Golang (<code>gorm</code>), Typescript, React
                                 </>,
                                 <> Postgres, Elasticsearch, K8 </>,
                             ]}
@@ -315,9 +390,7 @@ const Resume: FC = () => {
                     Detail={() => <>
                         <div>
                             Full-stack design and implementation of a B2B customer facing SaaS subscription management portal
-                            which interfaces with existing internal services to serve a React-based frontend console.
-                            Entered internship with little to no web development experience and was able to ship into
-                            production within twelve weeks.
+                            which interfaces with existing internal services to serve a React-based frontend console
                         </div>
                         <HeadedList
                             divClass='mt-m'
@@ -335,7 +408,7 @@ const Resume: FC = () => {
                         />
                         <HeadedList
                             divClass='mt-m'
-                            header='Frontend:'
+                            header='Details:'
                             headerClass='medium'
                             elements={[
                                 <>
@@ -347,13 +420,6 @@ const Resume: FC = () => {
                                     redux</code>, <code>axios</code>, and <code>styled-components</code> in addition to
                                     various internal technologies
                                 </>,
-                            ]}
-                        />
-                        <HeadedList
-                            divClass='mt-m'
-                            header='Backend:'
-                            headerClass='medium'
-                            elements={[
                                 <>
                                     Spun up four new REST API endpoints within a fresh Spring-based server package to
                                     both hydrate
@@ -364,22 +430,6 @@ const Resume: FC = () => {
                                     Built persistent state stores using AWS Cloudformation and DynamoDB to record
                                     a customer subscription state calculated by aggregating information from multiple
                                     internal services
-                                </>
-                            ]}
-                        />
-                        <HeadedList
-                            divClass='mt-m'
-                            header='Devops:'
-                            headerClass='medium'
-                            elements={[
-                                <>
-                                    Aided weekly deployments of services into production by writing unit and
-                                    end-to-end tests with clear and concise failure modes and by fixing issues in
-                                    beta and pre-production to completely eliminate service failures in production
-                                </>,
-                                <>
-                                    Continually documented code and process changes with inlined comments and internal
-                                    wikis while submitting long-term issues to the internal ticketing system
                                 </>
                             ]}
                         />

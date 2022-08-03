@@ -24,16 +24,14 @@ const Projects: FC = () =>
     </span>, a proprietary <code>C++</code> robotics middleware for FIRST Robotics Competition applications
     with my friends at <span className='medium'><Link href = { VALKYRIE_HREF }>
         Valkyrie Robotics
-    </Link></span>!
+    </Link></span> including IPC mechanisms, trajectory planning, and solvers!
 </div>;
 
 const Work: FC = () =>
 <div className='biggish light mt-m'>
-    I'm also winterning with <span className='medium'><Link href={ BOLT_HREF }>
-        Bolt Financial
-    </Link></span> through the first half of 2022, and I'm excited to join <span className='medium'><Link href={ CRUISE_HREF }>
+    I'm excited to return to <span className='medium'><Link href={ CRUISE_HREF }>
         Cruise Automation
-    </Link></span> over the summer!
+    </Link></span> over the summer and work on AV behaviours simulation and validation!
 </div>;
 
 /*

@@ -32,13 +32,9 @@ height: 2em;
 
 const TIMEOUT = 1500;
 const TEXT_ROLES = [
-    'moonlighting as a sysadmin.',
-    'a double-major at UCSD.',
+    'imaging my server.',
     'doing a 5K.',
     'cycling to school.',
-    'an ex-Amazonian.',
-    'a math nerd.',
-    'probably working with Rust.',
     'unborking my Linux install.',
     'using Arch, btw.',
     'linting dotfiles.',
@@ -47,16 +43,22 @@ const TEXT_ROLES = [
     'proofing by induction.',
     'doing a pset.',
     'a fan of metrics.',
+    'disabling telemetry.',
     'collecting Hagoromo.',
     'spamming First Isomorphism.',
     'verifying the Laplacian.',
     '(re)flashing my keyboard.',
     'abusing Docker.',
+    'hitting upper body pull.',
+    'a fan of public transit.',
 ];
 
 const FANCY_ROLES = [
-    <><span key={Date.now()} className='italic'>
+    <><span key={String(Math.random())} className='italic'>
         TikZing it up in <MathComponent tex={String.raw`\mathrm{\LaTeX}`} display={ false }/>.
+    </span></>,
+    <><span key={String(Math.random())} className='italic'>
+        doing more <MathComponent tex={String.raw`\varepsilon-\delta`} display={ false }/> proofs.
     </span></>,
 ];
 

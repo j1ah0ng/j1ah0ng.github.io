@@ -1,10 +1,12 @@
 name: deploy
 on: [push]
 jobs:
-  do-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
@@ -13,12 +15,19 @@ jobs:
         run: yarn install
 
       - name: build
-      - run: | 
+        run: | 
           yarn build
-          cp -r build/ /tmp && git checkout deploy && cp -r /tmp/build/* .
+          ls build
+          cp -r build ../
+          rm -rf ./*
+          rm -f .eslintrc .gitignore .yarnclean
+          rm -rf .github
+          cp -r ../build/* .
+          ls
+          git add .
 
       - name: commit
-      - run: |
+        run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git commit -m "Deploy ${{ steps.date.outputs.date }}" -a
@@ -27,7 +36,8 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          branch: "deploy"
+          force: true
 
       - name: done
         run: echo "deploy successful!"
