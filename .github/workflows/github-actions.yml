@@ -19,6 +19,7 @@ jobs:
           yarn build
           ls build
           cp -r build ../
+          cp CNAME ../build/
           rm -rf ./*
           rm -f .eslintrc .gitignore .yarnclean
           rm -rf .github
