@@ -151,7 +151,7 @@ const Resume: FC = () => {
                                     Convex optimisation
                                 </>,
                                 <>
-                                    Graduate real analysis + algebra
+                                    Parameter estimation
                                 </>,
                             ]}
                         />
