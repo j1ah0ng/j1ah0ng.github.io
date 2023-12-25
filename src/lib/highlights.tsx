@@ -20,8 +20,8 @@ const Coursework: FC = () =>
 const Projects: FC = () =>
 <div className='biggish light'>
     I'm working on <span className='medium'>
-        Wyrd
-    </span>, a proprietary <code>C++</code> robotics middleware for FIRST Robotics Competition applications
+        Hyperion
+    </span>, a proprietary <code>C++</code> robotics middleware
     with my friends at <span className='medium'><Link href = { VALKYRIE_HREF }>
         Valkyrie Robotics
     </Link></span> including IPC mechanisms, trajectory planning, and solvers!
@@ -29,9 +29,9 @@ const Projects: FC = () =>
 
 const Work: FC = () =>
 <div className='biggish light mt-m'>
-    I'm excited to return to <span className='medium'><Link href={ CRUISE_HREF }>
+    I'm also building out a unified AV behaviour validation framework at <span className='medium'><Link href={ CRUISE_HREF }>
         Cruise Automation
-    </Link></span> over the summer and work on AV behaviours simulation and validation!
+    </Link></span>, with a focus on orchestration and devex. 
 </div>;
 
 /*
