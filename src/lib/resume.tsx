@@ -37,19 +37,15 @@ const Resume: FC = () => {
             <Card
                 Detail={ () =>
                     <>
-                        <div className='bold red'>⚠️ This section is a work-in-progress!</div>
+                        <div className='bold red'>⚠️ This section is a(n eternal) work-in-progress!</div>
                         <HeadedList
                             divClass='mt-m'
                             header='Tools 🛠'
                             headerClass='medium biggish'
                             anchor={ true }
                             elements={[
-                                <>Heavy user of <code>vim</code> and <code>doom-emacs</code></>,
-                                <>Heavy user of regex (regular expressions), <code>zsh</code>, <code>bash</code></>,
-                                <>
-                                    Professional, personal, and educational experience with the JetBrains suite including
-                                    CLion, IntelliJ, and PyCharm
-                                </>,
+                                <><code>neovim</code> and <code>doom-emacs</code> enjoyer</>,
+                                <><code>(?:bash|zsh|rg)</code></>,
                             ]}
                         />
                         <HeadedList
@@ -59,13 +55,13 @@ const Resume: FC = () => {
                             anchor={ true }
                             elements={[
                                 <>
-                                    Systems languages: <code>c++</code>, <code>c</code>, <code>rust</code>, <code>go</code>
+                                    <code>c++</code>, <code>c</code>, <code>rust</code>, <code>go</code>
                                 </>,
                                 <>
-                                    General languages: <code>java</code>, <code>python</code>, <code>haskell</code>
+                                    <code>java</code>, <code>python</code>, <code>haskell</code>
                                 </>,
                                 <>
-                                    Mathematics and engineering languages: <code>R</code>, <code>matlab</code>, <code>octave</code>,
+                                    <code>R</code>, <code>matlab</code>, <code>octave</code>, <code>sql</code>,
                                     and <span><Link href={ `https://github.com/j1ah0ng/papers` }>
                                         <MathComponent tex={String.raw`\mathrm{\LaTeX}`} display={ false }/> (obviously)
                                     </Link></span>
@@ -74,15 +70,18 @@ const Resume: FC = () => {
                         />
                         <HeadedList
                             divClass='mt-m'
-                            header='Libraries 📚'
+                            header='Frameworks 📚'
                             headerClass='medium biggish'
                             anchor={ true }
                             elements={[
                                 <>
-                                    Data: <code>pandas</code>, <code>numpy</code>, <code>scipy</code>, <code>matplotlib</code>
+                                    <code>pandas</code>, <code>numpy</code>, <code>scipy</code>, <code>matplotlib</code>
                                 </>,
                                 <>
-                                    Machine learning: <code>statsmodels</code>, <code>cv2</code>, <code>torch</code>
+                                    <code>statsmodels</code>, <code>cv2</code>, <code>torch</code>, BigQuery
+                                </>,
+                                <>
+                                    <code>tsx</code>, <code>jinja2</code>
                                 </>,
                             ]}
                         />
@@ -93,31 +92,19 @@ const Resume: FC = () => {
                             anchor={ true }
                             elements={[
                                 <>
-                                    Arch Linux (personal device) with Sway/Wayland
+                                    macOS + <code>yabai</code>
                                 </>,
                                 <>
-                                    Debian (personal device) with i3wm
+                                    Arch Linux + <code>sway</code>
                                 </>,
                                 <>
-                                    Amazon Linux 2 (Fedora-based) and the AWS ecosystem
-                                    (professional)
+                                    Debian + <code>i3</code>
                                 </>,
                                 <>
-                                    CentOS (education)
-                                </>,
-                            ]}
-                        />
-                        <HeadedList
-                            divClass='mt-m'
-                            header='Web 🌐'
-                            headerClass='medium biggish'
-                            anchor={ true }
-                            elements={[
-                                <>
-                                    Production experience with Typescript, Javascript, and the React ecosystem
+                                    AL2, Ubuntu
                                 </>,
                                 <>
-                                    Production experience with the Spring Framework (Java server-side)
+                                    CentOS
                                 </>,
                             ]}
                         />
@@ -134,7 +121,12 @@ const Resume: FC = () => {
                     logistics='September 2023 to present. San Francisco, CA'
                     Detail={() => <>
                         <div>
-                            Working on unified road and simulation metrics.
+                            Working on unified road and simulation mining pipelines. Much Python consternation.
+                            Very type hinting cope. Rust rewrite soon? 
+                        </div>
+                        <div className='mt-m'>
+                            Also, please email me if you have experience justifying a Haskell rewrite of something
+                            in production.
                         </div>
                     </>}
                 />

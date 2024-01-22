@@ -32,25 +32,25 @@ height: 2em;
 
 const TIMEOUT = 1500;
 const TEXT_ROLES = [
-    'imaging my server.',
     'doing a 5K.',
-    'cycling to school.',
+    'cycling to work.',
     'unborking my Linux install.',
     'using Arch, btw.',
     'linting dotfiles.',
     'fixing a GRUB configuration.',
     'rebuilding an initramfs.',
     'proofing by induction.',
-    'doing a pset.',
     'a fan of metrics.',
     'disabling telemetry.',
     'collecting Hagoromo.',
     'spamming First Isomorphism.',
     'verifying the Laplacian.',
     '(re)flashing my keyboard.',
-    'abusing Docker.',
+    'Dockerizing router utilities.',
     'hitting upper body pull.',
     'a fan of public transit.',
+    'coping with the Python type system.',
+    ':CocInstall coc-rust-analyzer.'
 ];
 
 const FANCY_ROLES = [
@@ -129,8 +129,8 @@ const Splash: FC = () => {
                 <Avatar src='me.jpg' alt='Profile picture'/>
             </div>
             <span className='large mr-l ml-l'>
-                <span className='light'>Hi, I'm </span>
-                <span className='regular'>Jiahong!</span>
+                <span className='regular'>Hi, I'm </span>
+                <span className='bold'>Jiahong!</span>
             </span>
             <SizedSpan className='large light mr-l ml-l mt-s'>
                 <WindupChildren onFinished={onFinished} skipped={true}>
