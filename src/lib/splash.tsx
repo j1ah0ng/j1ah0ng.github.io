@@ -2,6 +2,7 @@ import React, { FC, useState } from 'react';
 import styled from 'styled-components';
 import { MathComponent } from 'mathjax-react';
 import { WindupChildren, useSkip } from 'windups';
+import { Map } from 'typescript';
 
 const SplashDiv = styled.div`
 width: 100vw;
@@ -98,6 +99,47 @@ const Skip: FC<{skip: boolean}> = ({skip}) => {
     return <></>;
 };
 
+const getVacation = (month: number, day: number): string => {
+    if (month == 3) {
+        if (day == 15) return "on a flight!";
+        if (day == 16) return "on a flight!";
+        if (day == 17) return "at Teamlabs Planets!";
+        if (day == 18) return "on a shinkansen to Sapporo!";
+        if (day == 19) return "in Sapporo!";
+        if (day == 20) return "at Noboribetsu!!";
+        if (day == 21) return "in Hokkaido!";
+        if (day == 22) return "on a shinkansen to Tokyo!";
+        if (day == 23) return "in Tokyo!";
+        if (day == 24) return "in Hakone!";
+        if (day == 25) return "in an onsen!";
+        if (day == 26) return "in Ginza!";
+        if (day == 27) return "in Shibuya!";
+        if (day == 28) return "on a shinkansen to Osaka!";
+        if (day == 29) return "in Osaka!";
+        if (day == 30) return "in Kyoto!";
+        if (day == 31) return "in Kyoto!";
+    };
+    if (month == 4) {
+        if (day == 1) return "in Hiroshima!";
+        if (day == 2) return "in Osaka!";
+        if (day == 3) return "in Osaka!";
+        if (day == 4) return "on a shinkansen to Fukuoka!";
+        if (day == 5) return "in Fukuoka!";
+        if (day == 6) return "in Kagoshima!";
+        if (day == 7) return "in Fukuoka!";
+        if (day == 8) return "on a shinkansen to Tokyo!";
+        if (day == 9) return "at the Kimi no Na Wa stairs!";
+        if (day == 10) return "in Nikko!";
+        if (day == 11) return "at Teamlabs Borderless!";
+        if (day == 12) return "in Enoshima!";
+        if (day == 13) return "at Mount Fuji!";
+        if (day == 14) return "at the imperial palace!";
+        if (day == 15) return "in Seoul!";
+        if (day == 16) return "on a flight!";
+    };
+    return "";
+};
+
 const Splash: FC = () => {
     const [isFirstRun, setIsFirstRun] = useState(true);
     const [idx, setIdx] = useState(0);
@@ -123,6 +165,11 @@ const Splash: FC = () => {
         return () => clearTimeout(timeoutHandle);
     };
 
+    const date = new Date((new Date()).getTime() + (16 * 60 * 60 * 1000));
+    const month: number = date.getMonth() + 1;
+    const day: number = date.getDate();
+    const vacation = getVacation(month, day);
+
     return (
         <SplashDiv className='center'>
             <div className='mb-xl'>
@@ -138,6 +185,14 @@ const Splash: FC = () => {
                     <Skip skip={isFirstRun}/>
                 </WindupChildren>
             </SizedSpan>
+            { vacation !== ""
+                ? <SizedSpan className='biggish light mr-l ml -l mt-s'>
+                    <span className="italic">I'm also </span><span className='medium'>
+                        {getVacation(month, day)}
+                    </span>
+                </SizedSpan>
+                : <></>
+            }
         </SplashDiv>
     );
 };
