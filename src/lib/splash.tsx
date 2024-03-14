@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 import styled from 'styled-components';
 import { MathComponent } from 'mathjax-react';
 import { WindupChildren, useSkip } from 'windups';
-import { Map } from 'typescript';
+import { Link } from './buttonlink';
 
 const SplashDiv = styled.div`
 width: 100vw;
@@ -99,10 +99,10 @@ const Skip: FC<{skip: boolean}> = ({skip}) => {
     return <></>;
 };
 
-const getVacation = (month: number, day: number): string => {
+const getVacation = (month: number, day: number): string | JSX.Element => {
     if (month == 3) {
-        if (day == 15) return "on a flight!";
-        if (day == 16) return "on a flight!";
+        if (day == 15) return <Link href="https://www.flightaware.com/live/flight/UAL875">on a flight! ✈</Link>;
+        if (day == 16) return <Link href="https://www.flightaware.com/live/flight/UAL875">on a flight! ✈</Link>;
         if (day == 17) return "at Teamlabs Planets!";
         if (day == 18) return "on a shinkansen to Sapporo!";
         if (day == 19) return "in Sapporo!";
@@ -188,7 +188,7 @@ const Splash: FC = () => {
             { vacation !== ""
                 ? <SizedSpan className='biggish light mr-l ml -l mt-s'>
                     <span className="italic">I'm also </span><span className='medium'>
-                        {getVacation(month, day)}
+                        {vacation}
                     </span>
                 </SizedSpan>
                 : <></>
