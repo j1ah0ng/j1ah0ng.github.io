@@ -41,7 +41,6 @@ const Highlights: FC = () => {
     return (<StackDiv>
         <SectionDiv>
             <ButtonLink content={'📯 What\'s new?'} className='large'/>
-            <Updates/>
             <Projects/>
             <Work/>
         </SectionDiv>
