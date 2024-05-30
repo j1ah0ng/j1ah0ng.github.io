@@ -122,9 +122,9 @@ const Resume: FC = () => {
                     Detail={() => <>
                         <div>
                             Unifying cross-modality AV behaviour metrics and
-                            improving application performance and platform robustness by hardening observability
-                            and migrating a largely Python data processing platform to C++. 
-
+                            replacing terrible and nonperformant 🐍 RTTI with monomorphisation and <code>std::visit</code>.
+                            Heavy focus on fast and clean data abstractions for closed-loop evaluation and 
+                            ground truth sourcing.
                         </div>
                         <div className='mt-m'>
                             Also, please email me if you have successfully justified a Haskell rewrite of something
