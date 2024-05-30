@@ -16,7 +16,7 @@ const Updates: FC = () =>
     
 const Projects: FC = () =>
 <div className='biggish light mt-m'>
-    Otherwise, I'm working on <span className='medium'>
+    I'm also working on <span className='medium'>
         Hyperion
     </span>, a proprietary <code>C++</code> robotics middleware
     with my friends at <span className='medium'><Link href = { VALKYRIE_HREF }>
@@ -26,9 +26,9 @@ const Projects: FC = () =>
 
 const Work: FC = () =>
 <div className='biggish light mt-m'>
-    I'm also building out a unified AV behaviour validation framework at <span className='medium'><Link href={ CRUISE_HREF }>
+    I'm building out a unified AV behaviour validation framework at <span className='medium'><Link href={ CRUISE_HREF }>
         Cruise Automation
-    </Link></span>, with a focus on correct & clean data abstractions. 
+    </Link></span>, with a focus on correct & clean data abstractions for closed-loop evaluation and training. 
 </div>;
 
 /*
@@ -41,8 +41,8 @@ const Highlights: FC = () => {
     return (<StackDiv>
         <SectionDiv>
             <ButtonLink content={'📯 What\'s new?'} className='large'/>
-            <Projects/>
             <Work/>
+            <Projects/>
         </SectionDiv>
         <SpacingDiv/>
     </StackDiv>);

@@ -121,12 +121,14 @@ const Resume: FC = () => {
                     logistics='September 2023 to present. San Francisco, CA'
                     Detail={() => <>
                         <div>
-                            Working on unified road and simulation mining pipelines. Much Python consternation.
-                            Very type hinting cope. Rust rewrite soon? 
+                            Unifying cross-modality AV behaviour metrics and
+                            improving application performance and platform robustness by hardening observability
+                            and migrating a largely Python data processing platform to C++. 
+
                         </div>
                         <div className='mt-m'>
-                            Also, please email me if you have experience justifying a Haskell rewrite of something
-                            in production.
+                            Also, please email me if you have successfully justified a Haskell rewrite of something
+                            in production. (I realize this is orthogonal to performance, but still.)
                         </div>
                     </>}
                 />
