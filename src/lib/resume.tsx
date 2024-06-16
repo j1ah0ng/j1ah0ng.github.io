@@ -118,7 +118,7 @@ const Resume: FC = () => {
                 <ResumeCardInterior
                     name='Cruise Automation'
                     flavor='ML/Robotics Engineer, Simulation'
-                    logistics='September 2023 to present. San Francisco, CA'
+                    logistics='June 2023 to present. San Francisco, CA'
                     Detail={() => <>
                         <div>
                             Unifying cross-modality AV behaviour metrics and
@@ -130,30 +130,6 @@ const Resume: FC = () => {
                             Also, please email me if you have successfully justified a Haskell rewrite of something
                             in production. (I realize this is orthogonal to performance, but still.)
                         </div>
-                    </>}
-                />
-            } />
-            <Card Detail={ () =>
-                <ResumeCardInterior
-                    name='Cruise Automation'
-                    flavor='ML/Robotics Engineering Intern, Simulation'
-                    logistics='June 2023 to September 2023. San Francisco, CA'
-                    Detail={() => <>
-                        <div>
-                            Built an automated, low barrier to entry model performance evaluation
-                            pipeline for general one-shot scenario detection models, providing ongoing accuracy/recall
-                            monitoring for production-deployed models.
-                        </div>
-                        <HeadedList
-                            divClass='mt-m'
-                            header='Technologies:'
-                            headerClass='medium'
-                            elements={[
-                                <>
-                                    Python, Bigquery, <code>starlark</code>
-                                </>,
-                            ]}
-                        />
                     </>}
                 />
             } />
