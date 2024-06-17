@@ -127,12 +127,13 @@ const Resume: FC = () => {
                             ground truth sourcing at the petabyte scale.
                         </div>
                         <div className='mt-m'>
+                            Introduced novel error handling practices and consolidated fallback structure for a legacy nonconvex
+                            solver within maneuver planning, building out architectural changes and future best practices to
+                            improve DX and fault tolerance
+                        </div>
+                        <div className='mt-m'>
                             Also, please email me if you have successfully justified a Haskell rewrite of something
                             in production. (I realize this is orthogonal to performance, but still.)
-                        </div>
-                        <div>
-                            Introduced novel error handling practices and consolidated fallback structure for a legacy nonconvex solver within maneuver planning,
-                            building out architectural changes and future best practices to improve DX and fault tolerance
                         </div>
                         <HeadedList
                             divClass='mt-m'
