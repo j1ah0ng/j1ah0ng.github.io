@@ -118,7 +118,7 @@ const Resume: FC = () => {
                 <ResumeCardInterior
                     name='Cruise Automation'
                     flavor='ML/Robotics Engineer, Manuver Planning & Simulation'
-                    logistics='June 2023 to present. San Francisco, CA'
+                    logistics='June 2022 to present. San Francisco, CA'
                     Detail={() => <>
                         <div>
                             Unifying cross-modality AV behaviour metrics and
