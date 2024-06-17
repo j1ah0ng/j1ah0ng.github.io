@@ -153,7 +153,7 @@ const Resume: FC = () => {
                 <ResumeCardInterior
                     name='Bolt Financial'
                     flavor='Software Engineering Intern, Merchant Tools'
-                    logistics='January 2022 to June 2022. Toronto, ON'
+                    logistics='January 2022 to June 2022. San Francisco, CA — Toronto, ON'
                     Detail={() => <>
                         <div>
                             Scoped and delivered two projects to address tech
