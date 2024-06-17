@@ -237,11 +237,11 @@ const Resume: FC = () => {
                 <ResumeCardInterior
                     name='University of California, San Diego'
                     flavor='M.Sc. Intelligent Systems, Robotics, and Controls'
-                    logistics='September 2023 to June 2024 (projected). La Jolla, CA'
+                    logistics='January 2022 to present (leave of absence). Not conferred. La Jolla, CA'
                     Detail={() => <>
                         <HeadedList
                             divClass=''
-                            header='Projected coursework:'
+                            header='Coursework:'
                             headerClass='medium'
                             elements={[
                                 <>
