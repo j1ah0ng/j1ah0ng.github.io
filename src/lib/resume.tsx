@@ -117,28 +117,19 @@ const Resume: FC = () => {
             <Card Detail={ () =>
                 <ResumeCardInterior
                     name='Cruise Automation'
-                    flavor='ML/Robotics Engineer, Simulation'
+                    flavor='ML/Robotics Engineer, Manuver Planning & Simulation'
                     logistics='June 2023 to present. San Francisco, CA'
                     Detail={() => <>
                         <div>
                             Unifying cross-modality AV behaviour metrics and
                             replacing terrible and nonperformant 🐍 RTTI with monomorphisation and <code>std::visit</code>.
                             Heavy focus on fast and clean data abstractions for closed-loop evaluation and 
-                            ground truth sourcing.
+                            ground truth sourcing at the petabyte scale.
                         </div>
                         <div className='mt-m'>
                             Also, please email me if you have successfully justified a Haskell rewrite of something
                             in production. (I realize this is orthogonal to performance, but still.)
                         </div>
-                    </>}
-                />
-            } />
-            <Card Detail={ () =>
-                <ResumeCardInterior
-                    name='Cruise Automation'
-                    flavor='ML/Robotics Engineering Intern, Maneuver Planning'
-                    logistics='June 2022 to September 2022. San Francisco, CA'
-                    Detail={() => <>
                         <div>
                             Introduced novel error handling practices and consolidated fallback structure for a legacy nonconvex solver within maneuver planning,
                             building out architectural changes and future best practices to improve DX and fault tolerance
@@ -149,9 +140,9 @@ const Resume: FC = () => {
                             headerClass='medium'
                             elements={[
                                 <>
-                                    <code>c++</code>, <code>ROS</code>, Python, Bazel
+                                    <code>c++</code>, <code>ROS</code>, Python, Bazel, Spark, Ray
                                 </>,
-                                <> BigQuery, miscellaneous internal tooling </>,
+                                <> BigQuery, internal tooling including orchestration and graph compute </>,
                             ]}
                         />
                     </>}
