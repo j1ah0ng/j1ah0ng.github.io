@@ -28,7 +28,7 @@ const Work: FC = () =>
 <div className='biggish light mt-m'>
     I'm building out a unified AV behaviour validation framework at <span className='medium'><Link href={ CRUISE_HREF }>
         Cruise Automation
-    </Link></span>, with a focus on correct & clean data abstractions for closed-loop evaluation and training. 
+    </Link></span>, with a focus on fast, correct, & clean data abstractions for closed-loop evaluation and training. 
 </div>;
 
 /*
