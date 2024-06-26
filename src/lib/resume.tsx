@@ -125,11 +125,20 @@ const Resume: FC = () => {
                             replacing terrible and nonperformant 🐍 RTTI with monomorphisation and <code>std::visit</code>.
                             Heavy focus on fast and clean data abstractions for closed-loop evaluation and 
                             ground truth sourcing at the petabyte scale.
+                            Plenty of architecture and performance work – built out several order-of-magnitude data pipeline
+                            speedups around rearchitecting data loading processes aligned with actual customer use cases.
+                        </div>
+                        <div className='mt-m'>
+                            Led an initiative to set, enforce, and guarantee SLAs where previously there were none,
+                            by protecting our platform scope through 
+                            flattening an overgeneralized stack and simplfying the configuration 
+                            space in line with pareto-top use cases.
                         </div>
                         <div className='mt-m'>
                             Introduced novel error handling practices and consolidated fallback structure for a legacy nonconvex
                             solver within maneuver planning, building out architectural changes and future best practices to
-                            improve DX and fault tolerance
+                            improve DX and fault tolerance under a paradigm shift from classical hand-tuned costing to learned
+                            trajectory generation and ranking.
                         </div>
                         <div className='mt-m'>
                             Also, please email me if you have successfully justified a Haskell rewrite of something
