@@ -116,9 +116,21 @@ const Resume: FC = () => {
             <ButtonLink className='big' content='Experience 🔬'/>
             <Card Detail={ () =>
                 <ResumeCardInterior
+                    name='Applied Intuition'
+                    flavor='Member of Technical Staff, Autonomy'
+                    logistics='September 2024 to present. Mountain View, CA'
+                    Detail={() => <>
+                        <div>
+                            ADAS.
+                        </div>
+                    </>}
+                />
+            } />
+            <Card Detail={ () =>
+                <ResumeCardInterior
                     name='Cruise Automation'
                     flavor='ML/Robotics Engineer, Maneuver Planning & Simulation'
-                    logistics='June 2022 to present. San Francisco, CA'
+                    logistics='June 2022 to September 2024. San Francisco, CA'
                     Detail={() => <>
                         <div>
                             Unifying cross-modality AV behaviour metrics and
@@ -141,9 +153,10 @@ const Resume: FC = () => {
                             headerClass='medium'
                             elements={[
                                 <>
-                                    <code>c++</code>, <code>ROS</code>, Python, Bazel, Spark, Ray
+                                    <code>c++</code>, <code>ROS</code>, <code>SQL</code>, Python, Bazel, Spark, Ray
                                 </>,
                                 <> BigQuery, internal tooling including orchestration and graph compute </>,
+                                <> Open source at <code>tobymao/sqlglot</code> and <code>duckdb/duckdb</code></>,
                             ]}
                         />
                     </>}
@@ -236,7 +249,7 @@ const Resume: FC = () => {
             <Card Detail={ () =>
                 <ResumeCardInterior
                     name='University of California, San Diego'
-                    flavor='M.Sc. Intelligent Systems, Robotics, and Controls'
+                    flavor='M.S. Intelligent Systems, Robotics, and Controls'
                     logistics='January 2022 to present (leave of absence). Not conferred. La Jolla, CA'
                     Detail={() => <>
                         <HeadedList
@@ -267,27 +280,14 @@ const Resume: FC = () => {
             <Card Detail={ () =>
                 <ResumeCardInterior
                     name='University of California, San Diego'
-                    flavor='B.Sc. Computer Engineering & B.Sc. Applied Mathematics'
+                    flavor='B.S. Applied Mathematics (4.00)'
                     logistics='September 2019 to June 2023. La Jolla, CA'
                     Detail={ () => <>
                         <HeadedList
                             divClass=''
-                            header='🧮 Mathematics coursework (4.00):'
+                            header='🧮 Mathematics coursework'
                             headerClass='medium'
                             elements={[
-                                <>
-                                    Discrete mathematics (CSE 20, 21): naive set theory, basic proof methods,
-                                    counting arguments
-                                </>,
-                                <>
-                                    Differential equations (MATH 20D): ordinary differential equations, direct substitutions,
-                                    undetermined coefficients, the Laplace transform
-                                </>,
-                                <>Vector calculus (MATH 20ABCE)</>,
-                                <>
-                                    Advanced linear algebra (MATH 18, 102): abstract vector spaces, eigendecompositions,
-                                    the singular value decomposition
-                                </>,
                                 <>
                                     Algebra (MATH 100A): symmetric, alternating, and dihedral groups, group actions, 
                                     plane and polyhedral symmetry groups, Sylow theorems
@@ -311,11 +311,33 @@ const Resume: FC = () => {
                                     Statistical methods (MATH 183): normal, <span className='italic'>t</span>, Poisson, geometric, and binomial distributions,
                                     experiment design and analysis in R
                                 </>,
+                                <>
+                                    Discrete mathematics (CSE 20, 21): naive set theory, basic proof methods,
+                                    counting arguments
+                                </>,
+                                <>
+                                    Differential equations (MATH 20D): ordinary differential equations, direct substitutions,
+                                    undetermined coefficients, the Laplace transform
+                                </>,
+                                <>Vector calculus (MATH 20ABCE)</>,
+                                <>
+                                    Advanced linear algebra (MATH 18, 102): abstract vector spaces, eigendecompositions,
+                                    the singular value decomposition
+                                </>,
                             ]}
                         />
+                    </> }
+                />
+            } />
+            <Card Detail={ () =>
+                <ResumeCardInterior
+                    name='University of California, San Diego'
+                    flavor='B.S. Computer Engineering (3.90)'
+                    logistics='September 2019 to June 2023. La Jolla, CA'
+                    Detail={ () => <>
                         <HeadedList
-                            divClass='mt-m'
-                            header='💻 Computer science coursework (3.90):'
+                            divClass=''
+                            header='💻 Computer science coursework:'
                             headerClass='medium'
                             elements={[
                                 <>
@@ -364,31 +386,19 @@ const Resume: FC = () => {
                             headerClass='medium'
                             elements={[
                                 <>
+                                    Linear signals and systems (ECE 101): the discrete Fourier transform, correlation
+                                    and autocorrelation, discrete signal filters, MATLAB signal processing methodologies
+                                </>,
+                                <>
+                                    Digital design (ECE 111): SystemVerilog, building a Bitcoin mining FPGA
+                                </>,
+                                <>
                                     Circuits and systems (ECE 35, 45): the continuous Fourier transform, circuit analysis
                                     methods including loop and node, source transforms, continuous signal filters
                                 </>,
                                 <>
                                     Nonlinear circuit theory (ECE 65): op-amps, small-signal model
                                 </>,
-                                <>
-                                    Linear signals and systems (ECE 101): the discrete Fourier transform, correlation
-                                    and autocorrelation, discrete signal filters, MATLAB signal processing methodologies
-                                </>,
-                                <>
-                                    Digital design (ECE 111): SystemVerilog
-                                </>,
-                            ]}
-                        />
-                        <HeadedList
-                            divClass='mt-m'
-                            header='Miscellaneous coursework:'
-                            headerClass='medium'
-                            elements={[
-                                <>Beethoven and the Beatles (MUS 9)</>,
-                                <>Music of the 20th century (MUS 114)</>,
-                                <>Sociolinguistics of sign language (LIGN 7)</>,
-                                <>Introduction to linguistics (LIGN 101)</>,
-                                <>Pragmatics (linguistics) (LIGN 160)</>
                             ]}
                         />
                     </> }

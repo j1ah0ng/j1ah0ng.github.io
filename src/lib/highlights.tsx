@@ -6,14 +6,8 @@ import ButtonLink, { Link } from './buttonlink';
 const BOLT_HREF: string = 'https://bolt.com';
 const VALKYRIE_HREF: string = 'https://valkyrierobotics.org';
 const CRUISE_HREF: string = 'https://getcruise.com';
+const APPLIED_HREF: string = 'https://applied.co';
 
-const Updates: FC = () =>
-<div className='biggish light'>
-    I'm currently on sabbatical, traveling around <span className='medium'>
-        Japan!
-    </span>
-</div>;
-    
 const Projects: FC = () =>
 <div className='biggish light mt-m'>
     I'm also working on <span className='medium'>
@@ -26,16 +20,10 @@ const Projects: FC = () =>
 
 const Work: FC = () =>
 <div className='biggish light mt-m'>
-    I'm building out a unified AV behaviour validation framework at <span className='medium'><Link href={ CRUISE_HREF }>
-        Cruise Automation
-    </Link></span>, with a focus on correct & clean data abstractions for closed-loop evaluation and training. 
+    I'm standing up a zero-to-one autonomy stack at <span className='medium'><Link href={ APPLIED_HREF }>
+        Applied Intuition
+    </Link></span>!
 </div>;
-
-/*
-    Otherwise, I'm actively applying, interviewing, and looking for <span className='medium'>
-        technical internships
-     </span> for summer 2022.
- */
 
 const Highlights: FC = () => {
     return (<StackDiv>
