@@ -121,7 +121,7 @@ const Resume: FC = () => {
                     logistics='September 2024 to present. Mountain View, CA'
                     Detail={() => <>
                         <div>
-                            Autonomy behavior, planning, routing. 
+                            Autonomy: behavior, planning, prediction, routing. 
                         </div>
                     </>}
                 />
