@@ -121,7 +121,7 @@ const Resume: FC = () => {
                     logistics='September 2024 to present. Mountain View, CA'
                     Detail={() => <>
                         <div>
-                            ADAS.
+                            Autonomy behavior, planning, routing. 
                         </div>
                     </>}
                 />
@@ -136,7 +136,7 @@ const Resume: FC = () => {
                             Unifying cross-modality AV behaviour metrics and
                             replacing terrible and nonperformant 🐍 RTTI with monomorphisation and <code>std::visit</code>.
                             Heavy focus on fast and clean data abstractions for closed-loop evaluation and 
-                            ground truth sourcing at the petabyte scale.
+                            ground truth sourcing at the petabyte scale
                         </div>
                         <div className='mt-m'>
                             Introduced novel error handling practices and consolidated fallback structure for a legacy nonconvex
