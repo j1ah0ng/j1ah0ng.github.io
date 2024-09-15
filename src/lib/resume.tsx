@@ -117,11 +117,11 @@ const Resume: FC = () => {
             <Card Detail={ () =>
                 <ResumeCardInterior
                     name='Applied Intuition'
-                    flavor='Member of Technical Staff, Autonomy'
+                    flavor='Software Engineering, Autonomy'
                     logistics='September 2024 to present. Mountain View, CA'
                     Detail={() => <>
                         <div>
-                            Autonomy: behavior, planning, prediction, routing. 
+                            Agent-ego prediction systems
                         </div>
                     </>}
                 />
