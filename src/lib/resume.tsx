@@ -121,7 +121,8 @@ const Resume: FC = () => {
                     logistics='September 2024 to present. Mountain View, CA'
                     Detail={() => <>
                         <div>
-                            Agent-ego prediction systems
+                            World prediction within sensor-to-control
+                            end-to-end autonomy
                         </div>
                     </>}
                 />
