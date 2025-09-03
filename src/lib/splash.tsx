@@ -56,12 +56,12 @@ const TEXT_ROLES = [
 ];
 
 const FANCY_ROLES = [
-    <MathJax inline={true}><span key={String(Math.random())} className='italic'>
+    <MathJax inline={true} className='italic'>
       TikZing it up in {String.raw`$\mathrm{\LaTeX}$`}.
-    </span></MathJax>,
-    <MathJax inline={true}><span key={String(Math.random())} className='italic'>
-      doing more {String.raw`$\varepsilon-\delta$`} proofs.
-    </span></MathJax>,
+    </MathJax>,
+    <MathJax inline={true} className='italic'>
+      doing {String.raw`$\varepsilon-\delta$`} proofs.
+    </MathJax>,
 ];
 
 const ALL_ROLES_AS_FRAGMENTS = TEXT_ROLES.map(e => <>

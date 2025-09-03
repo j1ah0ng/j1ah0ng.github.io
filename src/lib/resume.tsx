@@ -115,12 +115,13 @@ const Resume: FC = () => {
             <Card Detail={ () =>
                 <ResumeCardInterior
                     name='Applied Intuition'
-                    flavor='Software Engineer, Autonomy'
+                    flavor='Machine Learning Engineer, Motion Forecasting'
                     logistics='September 2024 to present. Mountain View, CA'
                     Detail={() => <>
                         <div>
                             End-to-end autonomy foundation modeling with a focus on
-                            world prediction
+                            world prediction. Founding (third) engineer on 
+                            ML trajectory planner team for L2/L3 ADAS.
                         </div>
                     </>}
                 />
