@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react';
 import styled from 'styled-components';
 import { MathJaxFormula } from 'mathjax3-react';
+
 import { WindupChildren, useSkip } from 'windups';
 import { Link } from './buttonlink';
 

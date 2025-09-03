@@ -1,13 +1,13 @@
 import React, { FC } from 'react';
-import { MathJaxFormula } from 'mathjax3-react';
-import {v4 as uuidv4} from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
+import { MathJax } from 'better-react-mathjax';
 
 import ButtonLink, { Link } from './buttonlink';
 import Card from './card';
 import ResumeCardInterior from './resumecardinterior';
 import { SectionDiv, SpacingDiv, StackDiv, Ul } from "./styled";
 
-const HeadedList: FC<{divClass: string, header?: string, headerClass?: string, elements: JSX.Element[], anchor?: boolean}> = ({
+const HeadedList: FC<{divClass: string, header?: string, headerClass?: string, elements: React.JSX.Element[], anchor?: boolean}> = ({
     divClass, header, headerClass, elements, anchor
 }) => {
     if (header && headerClass) {
@@ -62,11 +62,7 @@ const Resume: FC = () => {
                                     <code>java</code>, <code>python</code>, <code>haskell</code>
                                 </>,
                                 <>
-                                    <code>R</code>, <code>matlab</code>, <code>octave</code>, <code>sql</code>, and <span>
-                                      <Link href={ `https://github.com/j1ah0ng/papers` }>
-                                        <MathJaxFormula formula={String.raw`\mathrm{\LaTeX}`}/> (obviously)
-                                      </Link>
-                                    </span>
+                                    <code>R</code>, <code>matlab</code>, <code>octave</code>, <code>sql</code>, and <span> <Link href={ `https://github.com/j1ah0ng/papers` }> test <MathJax text={String.raw`$\mathrm{\LaTeX}$`}/> (obviously) </Link> </span>
                                 </>,
                             ]}
                         />
@@ -425,7 +421,7 @@ const Resume: FC = () => {
                                     scree plots.
                                 </>,
                                 <>
-                                  Real analysis (MATH 104): Sequences and subsequences, monotonicity, <MathJaxFormula formula={String.raw`\varepsilon`}/>-<MathJaxFormula formula={String.raw`\delta`}/> proofs,
+                                  Real analysis (MATH 104): Sequences and subsequences, monotonicity, <MathJax inline={true} text={String.raw`$$\varepsilon$$`}/>-<MathJax inline={true}>{String.raw`$$\delta$$`}</MathJax> proofs,
                                     the limit definition.
                                 </>
                             ]}
