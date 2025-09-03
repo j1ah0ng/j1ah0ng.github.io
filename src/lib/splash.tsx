@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import styled from 'styled-components';
-import { MathJaxFormula } from 'mathjax3-react';
+import { MathJax } from 'better-react-mathjax';
 
 import { WindupChildren, useSkip } from 'windups';
 import { Link } from './buttonlink';
@@ -56,12 +56,12 @@ const TEXT_ROLES = [
 ];
 
 const FANCY_ROLES = [
-    <><span key={String(Math.random())} className='italic'>
-      TikZing it up in <MathJaxFormula formula={String.raw`\mathrm{\LaTeX}`}/>.
-    </span></>,
-    <><span key={String(Math.random())} className='italic'>
-      doing more <MathJaxFormula formula={String.raw`\varepsilon-\delta`}/> proofs.
-    </span></>,
+    <MathJax inline={true}><span key={String(Math.random())} className='italic'>
+      TikZing it up in {String.raw`$\mathrm{\LaTeX}$`}.
+    </span></MathJax>,
+    <MathJax inline={true}><span key={String(Math.random())} className='italic'>
+      doing more {String.raw`$\varepsilon-\delta$`} proofs.
+    </span></MathJax>,
 ];
 
 const ALL_ROLES_AS_FRAGMENTS = TEXT_ROLES.map(e => <>
