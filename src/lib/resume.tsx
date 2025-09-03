@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
-import { MathComponent } from 'mathjax-react';
+import { MathJaxFormula } from 'mathjax3-react';
+import {v4 as uuidv4} from 'uuid';
 
 import ButtonLink, { Link } from './buttonlink';
 import Card from './card';
@@ -13,16 +14,16 @@ const HeadedList: FC<{divClass: string, header?: string, headerClass?: string, e
         return anchor
             ? <div className={divClass}>
                 <ButtonLink content={header} className={headerClass}/>
-                <Ul>{elements.map(e => <li>{e}</li>)}</Ul>
+                <Ul>{elements.map(e => <li key={uuidv4()}>{e}</li>)}</Ul>
             </div>
             : <div className={divClass}>
                 <span className={headerClass}>{header}</span>
-                <Ul>{elements.map(e => <li>{e}</li>)}</Ul>
+                <Ul>{elements.map(e => <li key={uuidv4()}>{e}</li>)}</Ul>
             </div>;
     } else {
         return anchor
             ? <div className={divClass}>
-                <Ul>{elements.map(e => <li>{e}</li>)}</Ul>
+                <Ul>{elements.map(e => <li key={uuidv4()}>{e}</li>)}</Ul>
             </div>
             : <div className={divClass}>
                 <Ul>{elements.map(e => <li>{e}</li>)}</Ul>
@@ -61,10 +62,11 @@ const Resume: FC = () => {
                                     <code>java</code>, <code>python</code>, <code>haskell</code>
                                 </>,
                                 <>
-                                    <code>R</code>, <code>matlab</code>, <code>octave</code>, <code>sql</code>,
-                                    and <span><Link href={ `https://github.com/j1ah0ng/papers` }>
-                                        <MathComponent tex={String.raw`\mathrm{\LaTeX}`} display={ false }/> (obviously)
-                                    </Link></span>
+                                    <code>R</code>, <code>matlab</code>, <code>octave</code>, <code>sql</code>, and <span>
+                                      <Link href={ `https://github.com/j1ah0ng/papers` }>
+                                        <MathJaxFormula formula={String.raw`\mathrm{\LaTeX}`}/> (obviously)
+                                      </Link>
+                                    </span>
                                 </>,
                             ]}
                         />
@@ -423,9 +425,7 @@ const Resume: FC = () => {
                                     scree plots.
                                 </>,
                                 <>
-                                    Real analysis (MATH 104): Sequences and subsequences, monotonicity, <MathComponent
-                                    tex={String.raw`\varepsilon`} display={false}/>-<MathComponent
-                                    tex={String.raw`\delta`} display={false}/> proofs,
+                                  Real analysis (MATH 104): Sequences and subsequences, monotonicity, <MathJaxFormula formula={String.raw`\varepsilon`}/>-<MathJaxFormula formula={String.raw`\delta`}/> proofs,
                                     the limit definition.
                                 </>
                             ]}

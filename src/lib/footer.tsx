@@ -30,35 +30,37 @@ align-items: center;
 `;
 
 const Footer: FC = () => {
-    const lastUpdate = useSelector((state: RootState) => state.network.dateString);
-    return (
-        <Container>
-            <nav><Ul>
-                <Li>
-                    <a href='https://github.com/j1ah0ng' aria-label='github'>
-                        <FontAwesomeIcon icon={faGithub} size='lg' className='icon'/>
-                    </a>
-                </Li>
-                <Li>
-                    <a href='https://linkedin.com/in/jiahonglong' aria-label='Linkedin'>
-                        <FontAwesomeIcon icon={faLinkedinIn} size='lg' className='icon'/>
-                    </a>
-                </Li>
-                <Li>
-                    <a href='Resume.pdf' aria-label='Resume'>
-                        <FontAwesomeIcon icon={faFileAlt} size='lg' className='icon'/>
-                    </a>
-                </Li>
-            </Ul></nav>
-            <span className='center regular footnotesize ml-s mr-s'>
-                Last updated on { new Date(Date.parse(lastUpdate)).toLocaleDateString() }.
-                Made with Neovim, React, and 💖 in California (sometimes Massachusetts).
-            </span>
-            <span className='center regular footnotesize ml-s mr-s mb-xxl'>
-                Theme inspired by <a href='https://nordtheme.com'>Nord!</a>
-            </span>
-        </Container>
-    );
+  const lastUpdate = useSelector((state: RootState) => state.network.dateString);
+  return (
+    <Container>
+      <nav><Ul>
+        <Li>
+          <a href='https://github.com/j1ah0ng' aria-label='github'>
+            <FontAwesomeIcon icon={faGithub} size='lg' className='icon'/>
+          </a>
+        </Li>
+        <Li>
+          <a href='https://linkedin.com/in/jiahonglong' aria-label='Linkedin'>
+            <FontAwesomeIcon icon={faLinkedinIn} size='lg' className='icon'/>
+          </a>
+        </Li>
+        {
+          // <Li>
+          //   <a href='Resume.pdf' aria-label='Resume'>
+          //     <FontAwesomeIcon icon={faFileAlt} size='lg' className='icon'/>
+          //   </a>
+          // </Li>
+        }
+      </Ul></nav>
+      <span className='center regular footnotesize ml-s mr-s'>
+        Last updated on { new Date(Date.parse(lastUpdate)).toLocaleDateString() }.
+        Made with Neovim, React, and 💖 in California (sometimes Massachusetts).
+      </span>
+      <span className='center regular footnotesize ml-s mr-s mb-xxl'>
+        Theme inspired by <a href='https://nordtheme.com'>Nord!</a>
+      </span>
+    </Container>
+  );
 }
 
 export default Footer;

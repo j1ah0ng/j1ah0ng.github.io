@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import styled from 'styled-components';
-import { MathComponent } from 'mathjax-react';
+import { MathJaxFormula } from 'mathjax3-react';
 import { WindupChildren, useSkip } from 'windups';
 import { Link } from './buttonlink';
 
@@ -56,10 +56,10 @@ const TEXT_ROLES = [
 
 const FANCY_ROLES = [
     <><span key={String(Math.random())} className='italic'>
-        TikZing it up in <MathComponent tex={String.raw`\mathrm{\LaTeX}`} display={ false }/>.
+      TikZing it up in <MathJaxFormula formula={String.raw`\mathrm{\LaTeX}`}/>.
     </span></>,
     <><span key={String(Math.random())} className='italic'>
-        doing more <MathComponent tex={String.raw`\varepsilon-\delta`} display={ false }/> proofs.
+      doing more <MathJaxFormula formula={String.raw`\varepsilon-\delta`}/> proofs.
     </span></>,
 ];
 
