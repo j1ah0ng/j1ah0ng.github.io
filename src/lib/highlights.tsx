@@ -19,18 +19,11 @@ const Projects: FC = () =>
     </Link></span> including fast lockless IPC, trajectory planning, and solvers!
 </div>;
 
-const _Work: FC = () =>
+const Work: FC = () =>
 <div className='biggish light mt-m'>
     I'm working on reinforcement learning techniques to build safe, responsible, and human-centered
     language models at <span className='medium'><Link href={ ANTHROPIC_HREF }>
       Anthropic
-    </Link></span>.
-</div>;
-
-const Work: FC = () =>
-<div className='biggish light mt-m'>
-    I'm working on motion forecasting ML at <span className='medium'><Link href={ APPLIED_HREF }>
-      Applied Intuition 
     </Link></span>.
 </div>;
 
