@@ -29,7 +29,10 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "npx serve@latest ./build"
+    "start": "npx serve@latest ./build",
+    "postinstall": "patch-package"
+ }
+
   },
   "eslintConfig": {
     "extends": [
