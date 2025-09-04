@@ -76,6 +76,9 @@ const Resume: FC = () => {
                                     <code>pandas</code>, <code>numpy</code>, <code>scipy</code>, <code>matplotlib</code>
                                 </>,
                                 <>
+                                    Spark, Flyte, Hudi
+                                </>,
+                                <>
                                     <code>statsmodels</code>, <code>cv2</code>, <code>torch</code>, BigQuery
                                 </>,
                                 <>
@@ -85,7 +88,7 @@ const Resume: FC = () => {
                         />
                         <HeadedList
                             divClass='mt-m'
-                            header='Platforms 👨🏻‍💻'
+                            header='Preferred window managers 👨🏻‍💻'
                             headerClass='medium biggish'
                             anchor={ true }
                             elements={[
@@ -97,12 +100,6 @@ const Resume: FC = () => {
                                 </>,
                                 <>
                                     Debian + <code>i3</code>
-                                </>,
-                                <>
-                                    AL2, Ubuntu
-                                </>,
-                                <>
-                                    CentOS
                                 </>,
                             ]}
                         />
@@ -121,7 +118,7 @@ const Resume: FC = () => {
                         <div>
                             End-to-end autonomy foundation modeling with a focus on
                             world prediction. Founding (third) engineer on 
-                            ML trajectory planner team for L2/L3 ADAS.
+                            ML planner team for L2/L3 ADAS.
                         </div>
                     </>}
                 />

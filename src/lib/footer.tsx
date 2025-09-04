@@ -54,7 +54,7 @@ const Footer: FC = () => {
       </Ul></nav>
       <span className='center regular footnotesize ml-s mr-s'>
         Last updated on { new Date(Date.parse(lastUpdate)).toLocaleDateString() }.
-        Made with Neovim, React, and 💖 in California (sometimes Massachusetts).
+        Made with Neovim, React, and 💖 near the coast.
       </span>
       <span className='center regular footnotesize ml-s mr-s mb-xxl'>
         Theme inspired by <a href='https://nordtheme.com'>Nord!</a>
