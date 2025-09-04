@@ -1,6 +1,7 @@
 {
   "name": "j1ah0ng.github.io",
   "version": "0.1.0",
+  "homepage": "https://j1ah0ng.xyz",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.0.1",
