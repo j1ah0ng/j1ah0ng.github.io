@@ -1726,7 +1726,7 @@ __metadata:
     patch-package: "npm:^8.0.0"
     react: "npm:^19.0.0"
     react-dom: "npm:^19.0.0"
-    react-hook-mathjax: "npm:^2.0.5"
+    react-hook-mathjax: "patch:react-hook-mathjax@npm%3A2.0.5#~/.yarn/patches/react-hook-mathjax-npm-2.0.5-ef70310366.patch"
     react-redux: "npm:^9.2.0"
     styled-components: "npm:^6.1.19"
     typescript: "npm:^5.9.2"
@@ -2201,10 +2201,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hook-mathjax@npm:^2.0.5":
+"react-hook-mathjax@npm:2.0.5":
   version: 2.0.5
   resolution: "react-hook-mathjax@npm:2.0.5"
   checksum: 10c0/daf2bed31344b20818a929c8a25a6db351189d91878888094ae71e025e2c0b356b3c325b2a1acedc230775b4f35828dfa232bf69a85445d9003c7275b4edb4c8
+  languageName: node
+  linkType: hard
+
+"react-hook-mathjax@patch:react-hook-mathjax@npm%3A2.0.5#~/.yarn/patches/react-hook-mathjax-npm-2.0.5-ef70310366.patch":
+  version: 2.0.5
+  resolution: "react-hook-mathjax@patch:react-hook-mathjax@npm%3A2.0.5#~/.yarn/patches/react-hook-mathjax-npm-2.0.5-ef70310366.patch::version=2.0.5&hash=1c61c6"
+  checksum: 10c0/dc53a7c69d76a98d7363632766d3243bc217dc8bac7fec083f3887f4106e14289a47e907718ebaa13a6fea73047a45dfdf8a1592dbe02ed5130a11c25c24ca85
   languageName: node
   linkType: hard
 
