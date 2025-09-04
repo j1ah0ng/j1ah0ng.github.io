@@ -13,7 +13,8 @@ node_modules/
 
 # production
 # Apparently this can't be gitignored lest the publish fails
-# /out
+/out
+/build
 
 # misc
 .DS_Store

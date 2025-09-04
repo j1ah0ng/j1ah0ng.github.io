@@ -32,7 +32,7 @@ jobs:
 
       - name: copy folder
         run: |
-          cp -r ./out ./deployment
+          cp -r ./build ./deployment
 
       - name: upload artifact
         uses: actions/upload-pages-artifact@v3
