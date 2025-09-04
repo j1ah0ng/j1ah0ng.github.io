@@ -111,9 +111,21 @@ const Resume: FC = () => {
             <ButtonLink className='big' content='Experience 🔬'/>
             <Card Detail={ () =>
                 <ResumeCardInterior
+                    name='Anthropic'
+                    flavor='Member of Technical Staff, RL Foundations'
+                    logistics='September 2025 to present. Boston, MA'
+                    Detail={() => <>
+                        <div>
+                          Selected research is available at <span className="underline"><Link href="https://anthropic.com/research">anthropic.com/research</Link></span>.
+                        </div>
+                    </>}
+                />
+            } />
+            <Card Detail={ () =>
+                <ResumeCardInterior
                     name='Applied Intuition'
                     flavor='Machine Learning Engineer, Motion Forecasting'
-                    logistics='September 2024 to present. Mountain View, CA'
+                    logistics='September 2024 to September 2025. Mountain View, CA'
                     Detail={() => <>
                         <div>
                             End-to-end autonomy foundation modeling with a focus on
@@ -163,7 +175,7 @@ const Resume: FC = () => {
                 <ResumeCardInterior
                     name='Bolt Financial'
                     flavor='Software Engineering Intern, Merchant Tools'
-                    logistics='January 2022 to June 2022. San Francisco, CA — Toronto, ON'
+                    logistics='January 2022 to June 2022. San Francisco, CA'
                     Detail={() => <>
                         <div>
                             Scoped and delivered two projects to address tech
@@ -338,8 +350,7 @@ const Resume: FC = () => {
                             headerClass='medium'
                             elements={[
                                 <>
-                                    Computer architecture (CSE 30): ARM assembly, low-level C, how data is represented
-                                    at the hardware level
+                                    Computer architecture (CSE 30): ARM assembly, low-level C
                                 </>,
                                 <>Advanced data structures (CSE 100)</>,
                                 <>

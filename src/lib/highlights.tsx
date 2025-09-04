@@ -7,6 +7,7 @@ const BOLT_HREF: string = 'https://bolt.com';
 const VALKYRIE_HREF: string = 'https://valkyrierobotics.org';
 const CRUISE_HREF: string = 'https://getcruise.com';
 const APPLIED_HREF: string = 'https://applied.co';
+const ANTHROPIC_HREF: string = 'https://anthropic.com';
 
 const Projects: FC = () =>
 <div className='biggish light mt-m'>
@@ -20,9 +21,10 @@ const Projects: FC = () =>
 
 const Work: FC = () =>
 <div className='biggish light mt-m'>
-    I'm standing up a zero-to-one autonomy stack at <span className='medium'><Link href={ APPLIED_HREF }>
-        Applied Intuition
-    </Link></span>!
+    I'm working on reinforcement learning techniques to build safe, responsible, and human-centered
+    language models at <span className='medium'><Link href={ ANTHROPIC_HREF }>
+      Anthropic
+    </Link></span>.
 </div>;
 
 const Highlights: FC = () => {

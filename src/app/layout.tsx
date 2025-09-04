@@ -9,12 +9,20 @@ export default function RootLayout({children}: any):  React.ReactNode | Promise<
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
-        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet"/>
-        <link
-          rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css"
+        <link rel="preconnect"
+          href="https://fonts.googleapis.com"
+        />
+        <link rel="preconnect"
+          href="https://fonts.gstatic.com" crossOrigin="anonymous"
+        />
+        <link rel="preconnect"
+          href="https://cdnjs.cloudflare.com" crossOrigin="anonymous"
+        />
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        />
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css"
         />
         <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
         <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme:light)" />

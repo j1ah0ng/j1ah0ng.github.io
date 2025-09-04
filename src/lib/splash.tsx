@@ -132,7 +132,7 @@ const Splash: FC = () => {
     return (
         <SplashDiv className='center'>
             <div className='mb-xl'>
-                <Avatar src='me.jpg' alt='Profile picture'/>
+                <Avatar src='me.webp' alt='Profile picture'/>
             </div>
             <span className='large mr-l ml-l'>
                 <span className='regular'>Hi, I'm </span>
