@@ -25,19 +25,10 @@ jobs:
       - name: next build
         run: yarn build
 
-      - name: echo
-        run: |
-          ls -lah
-          cat <(ls -lah)
-
-      - name: copy folder
-        run: |
-          cp -r ./build ./deployment
-
       - name: upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./deployment
+          path: ./build
 
   deploy:
     environment:
