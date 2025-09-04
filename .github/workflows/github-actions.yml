@@ -1,4 +1,4 @@
-name: gh deploy
+name: Deploy to github pages
 
 on:
   push:
@@ -24,6 +24,11 @@ jobs:
 
       - name: next build
         run: yarn build
+
+      - name: echo
+        run: |
+          ls -lah
+          cat <(ls -lah)
 
       - name: copy folder
         run: |
