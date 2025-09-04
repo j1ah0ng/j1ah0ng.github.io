@@ -25,10 +25,14 @@ jobs:
       - name: next build
         run: yarn build
 
+      - name: copy folder
+        run: |
+          cp -r ./out ./deployment
+
       - name: upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./deployment
 
   deploy:
     environment:
