@@ -12,7 +12,8 @@ node_modules/
 /coverage
 
 # production
-/out
+# Apparently this can't be gitignored lest the publish fails
+# /out
 
 # misc
 .DS_Store
