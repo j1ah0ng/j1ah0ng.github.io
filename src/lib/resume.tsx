@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { MathJax } from 'better-react-mathjax';
+import Tex2SVG from "react-hook-mathjax";
 
 import ButtonLink, { Link } from './buttonlink';
 import Card from './card';
@@ -61,9 +61,9 @@ const Resume: FC = () => {
                                 <>
                                     <code>java</code>, <code>python</code>, <code>haskell</code>
                                 </>,
-                                <MathJax inline={true}>
-                                    <code>R</code>, <code>matlab</code>, <code>octave</code>, <code>sql</code>, and <span> <Link href={ `https://github.com/j1ah0ng/papers` }>{String.raw`$\mathrm{\LaTeX}$`} (obviously) </Link> </span>
-                                </MathJax>,
+                                <>
+                                  <code>R</code>, <code>matlab</code>, <code>octave</code>, <code>sql</code>, and <span> <Link href={ `https://github.com/j1ah0ng/papers` }><Tex2SVG display="inline" latex={String.raw`\mathrm{\LaTeX}`}/> (obviously) </Link> </span>
+                                </>,
                             ]}
                         />
                         <HeadedList
@@ -421,11 +421,12 @@ const Resume: FC = () => {
                                     Basic probability and statistics theory, least squares, feature engineering,
                                     scree plots.
                                 </>,
-                                <MathJax inline={true}>
+                                <>
                                   Real analysis (MATH 104): Sequences and subsequences,
-                                  monotonicity, {String.raw`$\varepsilon$`}-{String.raw`$\delta$`} proofs,
+                                  monotonicity, <Tex2SVG display="inline" latex={String.raw`\varepsilon`}/>-
+                                  <Tex2SVG display="inline" latex={String.raw`\delta`}/> proofs,
                                   the limit definition.
-                                </MathJax>
+                                </>,
                             ]}
                         />
                     </> }

@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import styled from 'styled-components';
-import { MathJax } from 'better-react-mathjax';
+import Tex2SVG from "react-hook-mathjax";
 
 import { WindupChildren, useSkip } from 'windups';
 import { Link } from './buttonlink';
@@ -56,12 +56,12 @@ const TEXT_ROLES = [
 ];
 
 const FANCY_ROLES = [
-    <MathJax inline={true} className='italic'>
-      TikZing it up in {String.raw`$\mathrm{\LaTeX}$`}.
-    </MathJax>,
-    <MathJax inline={true} className='italic'>
-      doing {String.raw`$\varepsilon-\delta$`} proofs.
-    </MathJax>,
+    <>
+      TikZing it up in <Tex2SVG display="inline" className='italic' latex={String.raw`\mathrm{\LaTeX}`}/>.
+    </>,
+    <>
+      doing <Tex2SVG display="inline" className='italic' latex={String.raw`\varepsilon-\delta`}/> proofs.
+    </>,
 ];
 
 const ALL_ROLES_AS_FRAGMENTS = TEXT_ROLES.map(e => <>

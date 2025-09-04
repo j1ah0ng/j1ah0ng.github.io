@@ -1,8 +1,6 @@
 import React, { FC } from 'react';
 import { Provider } from 'react-redux';
-import { MathJaxProvider } from 'mathjax3-react';
-
-import { MathJax, MathJaxContext } from 'better-react-mathjax';
+import Tex2SVG, { MathJaxProvider } from "react-hook-mathjax";
 
 
 import './App.css';
@@ -12,20 +10,9 @@ import { store } from './redux/store';
 const App: FC = () => {
   return (
     <Provider store={store}>
-      <MathJaxContext renderMode="post">
-      <MathJaxProvider
-        options={{
-          tex: {
-            inlineMath: [
-              ['$', '$'],
-              ['\\(', '\\)'],
-            ],
-          },
-        }}
-      >
+      <MathJaxProvider>
         <AppRoot/>
       </MathJaxProvider>
-      </MathJaxContext>
     </Provider>
   );
 };
