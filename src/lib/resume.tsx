@@ -7,6 +7,19 @@ import Card from './card';
 import ResumeCardInterior from './resumecardinterior';
 import { SectionDiv, SpacingDiv, StackDiv, Ul } from "./styled";
 
+const disabled = <Card Detail={ () =>
+                <ResumeCardInterior
+                    name='Anthropic'
+                    flavor='Member of Technical Staff, RL Foundations'
+                    logistics='September 2025 to present. Boston, MA'
+                    Detail={() => <>
+                        <div>
+                          Selected research is available at <span className="underline"><Link href="https://anthropic.com/research">anthropic.com/research</Link></span>.
+                        </div>
+                    </>}
+                />
+            } />;
+
 const HeadedList: FC<{divClass: string, header?: string, headerClass?: string, elements: React.JSX.Element[], anchor?: boolean}> = ({
     divClass, header, headerClass, elements, anchor
 }) => {
@@ -109,18 +122,6 @@ const Resume: FC = () => {
         </SectionDiv>
         <SectionDiv>
             <ButtonLink className='big' content='Experience 🔬'/>
-            <Card Detail={ () =>
-                <ResumeCardInterior
-                    name='Anthropic'
-                    flavor='Member of Technical Staff, RL Foundations'
-                    logistics='September 2025 to present. Boston, MA'
-                    Detail={() => <>
-                        <div>
-                          Selected research is available at <span className="underline"><Link href="https://anthropic.com/research">anthropic.com/research</Link></span>.
-                        </div>
-                    </>}
-                />
-            } />
             <Card Detail={ () =>
                 <ResumeCardInterior
                     name='Applied Intuition'
