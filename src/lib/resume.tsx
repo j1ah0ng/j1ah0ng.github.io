@@ -137,7 +137,7 @@ const Resume: FC = () => {
             } />
             <Card Detail={ () =>
                 <ResumeCardInterior
-                    name='Cruise Automation'
+                    name='Cruise'
                     flavor='ML/Robotics Engineer, Maneuver Planning & Simulation'
                     logistics='June 2022 to September 2024. San Francisco, CA'
                     Detail={() => <>
