@@ -146,6 +146,33 @@ const Resume: FC = () => {
                             world prediction. Founding (third) engineer on 
                             ML planner team for L2/L3 ADAS.
                         </div>
+                        <div className='mt-m'>
+                            Led initiative to scale up ML development to 30x volume across 10x 
+                            headcount and 3x working groups, burning down model release cycle from
+                            three months to two weeks.
+                        </div>
+                        <div className='mt-m'>
+                            With team, evaluated model-based approaches to motion forecasting.
+                            Synthesized novel autoregressive architecture from literature
+                            (including KiGRAS, Wayformer, Multipath), achieving a 2x improvement
+                            in targeted evaluation performance. 
+                        </div>
+                        <div className='mt-m'>
+                            Architected and built embedded realtime runtime for motion prediction models,
+                            wrapping TensorRT. Consolidated onboard and offboard feature extraction to
+                            ensure parity by design.
+                        </div>
+                        <HeadedList
+                            divClass='mt-m'
+                            header='Technologies:'
+                            headerClass='medium'
+                            elements={[
+                                <>
+                                    <code>c++</code>, <code>ROS</code>, <code>SQL</code>, Python, Bazel, Ray
+                                </>,
+                                <> Ray, Hudi, Flyte, Spark for terabyte-scale ETL-based ML training pipelines </>,
+                            ]}
+                        />
                     </>}
                 />
             } />

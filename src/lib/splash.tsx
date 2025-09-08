@@ -36,13 +36,12 @@ const TIMEOUT = 1500;
 const TEXT_ROLES = [
     'doing a 5K.',
     'cycling to work.',
-    'unborking my Linux install.',
+    'unborking Xorg.',
     'using Arch, btw.',
     'linting dotfiles.',
     'fixing a GRUB configuration.',
     'rebuilding an initramfs.',
     'proofing by induction.',
-    'a fan of metrics.',
     'disabling telemetry.',
     'collecting Hagoromo.',
     'spamming First Isomorphism.',
@@ -52,7 +51,7 @@ const TEXT_ROLES = [
     'hitting upper body pull.',
     'a fan of public transit.',
     'coping with the Python type system.',
-    ':CocInstall coc-rust-analyzer.'
+    'developing evals.',
 ];
 
 const FANCY_ROLES = [
