@@ -60,6 +60,7 @@ const Resume: FC = () => {
                             elements={[
                                 <><code>neovim</code> and <code>doom-emacs</code> enjoyer</>,
                                 <><code>(?:bash|zsh|rg)</code></>,
+                                <>you don't need a GPU or a Chrome instance to edit code 😜</>,
                             ]}
                         />
                         <HeadedList
@@ -69,13 +70,25 @@ const Resume: FC = () => {
                             anchor={ true }
                             elements={[
                                 <>
-                                    <code>c++</code>, <code>c</code>, <code>rust</code>, <code>go</code>
+                                    <code>c++</code> (and some <code>rust</code>) for high-performance low latency robotics systems
                                 </>,
                                 <>
-                                    <code>java</code>, <code>python</code>, <code>haskell</code>
+                                    <code>python</code> for scientific computing, including machine learning,
+                                    optimization, and data science
                                 </>,
                                 <>
-                                  <code>R</code>, <code>matlab</code>, <code>octave</code>, <code>sql</code>, and <span> <Link href={ `https://github.com/j1ah0ng/papers` }><Tex2SVG display="inline" latex={String.raw`\mathrm{\LaTeX}`}/> (obviously) </Link> </span>
+                                    limited <code>haskell</code>, <code>java</code> experience
+                                </>,
+                                <>
+                                  academic experience with <code>R</code>, <code>matlab</code>
+                                  /<code>octave</code>,
+                                  and <span>
+                                    <Link
+                                      href={ `https://github.com/j1ah0ng/papers` }>
+                                      <Tex2SVG display="inline" latex={String.raw`\mathrm{\LaTeX}`}/> (obviously)
+                                    </Link>
+                                  </span>
+                                  for scientific computing
                                 </>,
                             ]}
                         />
