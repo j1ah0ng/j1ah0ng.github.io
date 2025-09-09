@@ -87,8 +87,7 @@ const Resume: FC = () => {
                                       href={ `https://github.com/j1ah0ng/papers` }>
                                       <Tex2SVG display="inline" latex={String.raw`\mathrm{\LaTeX}`}/> (obviously)
                                     </Link>
-                                  </span>
-                                  for scientific computing
+                                  </span> for scientific computing
                                 </>,
                             ]}
                         />
