@@ -144,7 +144,7 @@ const Resume: FC = () => {
                         <div>
                             End-to-end autonomy foundation modeling with a focus on
                             world prediction. Founding (third) engineer on 
-                            ML planner team for L2/L3 ADAS.
+                            ML planner team for L2/L3 ADAS
                         </div>
                         <div className='mt-m'>
                             Led initiative to scale up ML development to 30x volume across 10x 
@@ -155,12 +155,12 @@ const Resume: FC = () => {
                             With team, evaluated model-based approaches to motion forecasting.
                             Synthesized novel autoregressive architecture from literature
                             (including KiGRAS, Wayformer, Multipath), achieving a 2x improvement
-                            in targeted evaluation performance. 
+                            in targeted evaluation performance
                         </div>
                         <div className='mt-m'>
                             Architected and built embedded realtime runtime for motion prediction models,
                             wrapping TensorRT. Consolidated onboard and offboard feature extraction to
-                            ensure parity by design.
+                            ensure parity by design
                         </div>
                         <HeadedList
                             divClass='mt-m'
@@ -212,90 +212,9 @@ const Resume: FC = () => {
                     </>}
                 />
             } />
-            <Card Detail={ () =>
-                <ResumeCardInterior
-                    name='Bolt Financial'
-                    flavor='Software Engineering Intern, Merchant Tools'
-                    logistics='January 2022 to June 2022. San Francisco, CA'
-                    Detail={() => <>
-                        <div>
-                            Scoped and delivered two projects to address tech
-                            debt in a large monorepo. Reduced developer
-                            onboarding overhead by deprecating legacy onboarding flows in favour of an
-                            internal dashboard, and fixed a longstanding database model error to
-                            correctly display refund transactions
-                        </div>
-                        <HeadedList
-                            divClass='mt-m'
-                            header='Technologies:'
-                            headerClass='medium'
-                            elements={[
-                                <>
-                                    Golang (<code>gorm</code>), Typescript, React
-                                </>,
-                                <> Postgres, Elasticsearch, K8 </>,
-                            ]}
-                        />
-                    </>}
-                />
-            } />
-            <Card Detail={ () =>
-                <ResumeCardInterior
-                    name='Amazon'
-                    flavor='SDE Intern, Alexa Smart Properties'
-                    logistics='June 2021 to September 2021. Seattle, WA'
-                    Detail={() => <>
-                        <div>
-                            Full-stack design and implementation of a B2B customer facing SaaS subscription management portal
-                            which interfaces with existing internal services to serve a React-based frontend console
-                        </div>
-                        <HeadedList
-                            divClass='mt-m'
-                            header='Technologies:'
-                            headerClass='medium'
-                            elements={[
-                                <>
-                                    Java (<code>spring</code>, <code>tomcat</code>)
-                                </>,
-                                <>
-                                    Typescript (<code>react</code>, <code>redux</code>, <code>axios</code>, <code>
-                                        styled-components</code>)
-                                </>
-                            ]}
-                        />
-                        <HeadedList
-                            divClass='mt-m'
-                            header='Details:'
-                            headerClass='medium'
-                            elements={[
-                                <>
-                                    Built a React-based portal with extensibility in mind to allow it to be inserted
-                                    within arbitrary webapp contexts
-                                </>,
-                                <>
-                                    Stateful and Redux-based reactivity built on top of <code>react</code>, <code>
-                                    redux</code>, <code>axios</code>, and <code>styled-components</code> in addition to
-                                    various internal technologies
-                                </>,
-                                <>
-                                    Spun up four new REST API endpoints within a fresh Spring-based server package to
-                                    both hydrate
-                                    the frontend state and allow the frontend to submit subscription requests,
-                                    activations, etc.
-                                </>,
-                                <>
-                                    Built persistent state stores using AWS Cloudformation and DynamoDB to record
-                                    a customer subscription state calculated by aggregating information from multiple
-                                    internal services
-                                </>
-                            ]}
-                        />
-                    </>}
-                />
-            } />
         </SectionDiv>
         <SectionDiv>
-            <ButtonLink className='big' content='Education 🎓'/>
+            <ButtonLink className='big' content='Internships & Education 🎓'/>
             <Card Detail={ () =>
                 <ResumeCardInterior
                     name='University of California, San Diego'
@@ -479,6 +398,60 @@ const Resume: FC = () => {
                             ]}
                         />
                     </> }
+                />
+            } />
+            <Card Detail={ () =>
+                <ResumeCardInterior
+                    name='Bolt Financial'
+                    flavor='Software Engineering Intern, Merchant Tools'
+                    logistics='January 2022 to June 2022. San Francisco, CA'
+                    Detail={() => <>
+                        <div>
+                            Scoped and delivered two projects to address tech
+                            debt in a large monorepo. Reduced developer
+                            onboarding overhead by deprecating legacy onboarding flows in favour of an
+                            internal dashboard, and fixed a longstanding database model error to
+                            correctly display refund transactions
+                        </div>
+                        <HeadedList
+                            divClass='mt-m'
+                            header='Technologies:'
+                            headerClass='medium'
+                            elements={[
+                                <>
+                                    Golang (<code>gorm</code>), Typescript, React
+                                </>,
+                                <> Postgres, Elasticsearch, K8 </>,
+                            ]}
+                        />
+                    </>}
+                />
+            } />
+            <Card Detail={ () =>
+                <ResumeCardInterior
+                    name='Amazon'
+                    flavor='SDE Intern, Alexa Smart Properties'
+                    logistics='June 2021 to September 2021. Seattle, WA'
+                    Detail={() => <>
+                        <div>
+                            Full-stack design and implementation of a customer facing management portal
+                            interfacing with existing internal services to serve a new React-based console
+                        </div>
+                        <HeadedList
+                            divClass='mt-m'
+                            header='Technologies:'
+                            headerClass='medium'
+                            elements={[
+                                <>
+                                    Java (<code>spring</code>, <code>tomcat</code>)
+                                </>,
+                                <>
+                                    Typescript (<code>react</code>, <code>redux</code>, <code>axios</code>, <code>
+                                        styled-components</code>)
+                                </>
+                            ]}
+                        />
+                    </>}
                 />
             } />
         </SectionDiv>

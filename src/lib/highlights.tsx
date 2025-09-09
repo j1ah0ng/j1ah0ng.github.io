@@ -13,10 +13,10 @@ const Projects: FC = () =>
 <div className='biggish light mt-m'>
     I'm also working on <span className='medium'>
         Hyperion
-    </span>, a proprietary <code>C++</code> robotics middleware
-    with my friends at <span className='medium'><Link href = { VALKYRIE_HREF }>
+    </span>, a proprietary <code>c++</code> robotics middleware
+    with friends at <span className='medium'><Link href = { VALKYRIE_HREF }>
         Valkyrie Robotics
-    </Link></span> including fast lockless IPC, trajectory planning, and solvers!
+    </Link></span> including fast lockless IPC, trajectory planning, and solvers.
 </div>;
 
 const _Work: FC = () =>
@@ -29,9 +29,7 @@ const _Work: FC = () =>
 
 const Work: FC = () =>
 <div className='biggish light mt-m'>
-    I'm working on motion forecasting ML at <span className='medium'><Link href={ APPLIED_HREF }>
-      Applied Intuition 
-    </Link></span>.
+    👀 On to the next chapter!
 </div>;
 
 const Highlights: FC = () => {
