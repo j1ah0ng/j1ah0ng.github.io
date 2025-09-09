@@ -11,12 +11,10 @@ const ANTHROPIC_HREF: string = 'https://anthropic.com';
 
 const Projects: FC = () =>
 <div className='biggish light mt-m'>
-    I'm also working on <span className='medium'>
-        Hyperion
-    </span>, a proprietary <code>c++</code> robotics middleware
-    with friends at <span className='medium'><Link href = { VALKYRIE_HREF }>
+    In spare time, I'm working with friends at <span className='medium'><Link href = { VALKYRIE_HREF }>
         Valkyrie Robotics
-    </Link></span> including fast lockless IPC, trajectory planning, and solvers.
+    </Link></span> on toy robotics middleware including lockless IPC, trajectory planning, and solvers
+    in addition to foundational research on information retrieval.
 </div>;
 
 const _Work: FC = () =>
@@ -37,7 +35,9 @@ const Highlights: FC = () => {
         <SectionDiv>
             <ButtonLink content={'📯 What\'s new?'} className='large'/>
             <Work/>
-            <Projects/>
+            {
+              // <Projects/>
+            }
         </SectionDiv>
         <SpacingDiv/>
     </StackDiv>);
