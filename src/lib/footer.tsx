@@ -39,12 +39,12 @@ const Footer: FC = () => {
             <FontAwesomeIcon icon={faGithub} size='lg' className='icon'/>
           </a>
         </Li>
-        <Li>
-          <a href='https://linkedin.com/in/jiahonglong' aria-label='Linkedin'>
-            <FontAwesomeIcon icon={faLinkedinIn} size='lg' className='icon'/>
-          </a>
-        </Li>
         {
+          // <Li>
+          //   <a href='https://linkedin.com/in/jiahonglong' aria-label='Linkedin'>
+          //     <FontAwesomeIcon icon={faLinkedinIn} size='lg' className='icon'/>
+          //   </a>
+          // </Li>
           // <Li>
           //   <a href='Resume.pdf' aria-label='Resume'>
           //     <FontAwesomeIcon icon={faFileAlt} size='lg' className='icon'/>
