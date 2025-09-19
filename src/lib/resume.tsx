@@ -123,8 +123,20 @@ const Resume: FC = () => {
             <ButtonLink className='big' content='Experience 🔬'/>
             <Card Detail={ () =>
                 <ResumeCardInterior
+                    name='Stealth'
+                    flavor='MTS'
+                    logistics='September 2025 to present. United States'
+                    Detail={() => <>
+                        <div>
+                          More to come!
+                        </div>
+                    </>}
+                />
+            } />
+            <Card Detail={ () =>
+                <ResumeCardInterior
                     name='Applied Intuition'
-                    flavor='Machine Learning Engineer, Motion Forecasting'
+                    flavor='Research Engineer, Motion Forecasting'
                     logistics='September 2024 to September 2025. Mountain View, CA'
                     Detail={() => <>
                         <div>
@@ -135,7 +147,7 @@ const Resume: FC = () => {
                         <div className='mt-m'>
                             Led initiative to scale up ML development to 30x volume across 10x 
                             headcount and 3x working groups, burning down model release cycle from
-                            three months to two weeks.
+                            three months to two weeks
                         </div>
                         <div className='mt-m'>
                             With team, evaluated model-based approaches to motion forecasting.
