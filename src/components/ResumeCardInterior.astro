@@ -1,0 +1,16 @@
+---
+import ButtonLink from './ButtonLink.astro';
+
+interface Props {
+  name: string;
+  flavor: string;
+  logistics: string;
+}
+
+const { name, flavor, logistics } = Astro.props;
+---
+
+<ButtonLink content={name} class="medium biggish" />
+<div class="regular">{flavor}</div>
+<div class="mb-m mt-s xsmall light">{logistics}</div>
+<span class="regular"><slot /></span>
