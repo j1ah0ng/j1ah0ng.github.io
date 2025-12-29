@@ -26,7 +26,7 @@ const TEXT_ROLES = [
 ];
 
 const ALL_ROLES = TEXT_ROLES.map((e) => (
-  <span key={e} style={{ fontStyle: 'italic' }}>
+  <span key={e} className="italic">
     {e}
   </span>
 ));
@@ -89,18 +89,21 @@ const Splash: FC = () => {
   };
 
   return (
-    <header className="splash-section">
-      <div className="splash-header">
-        <img src="/me.webp" alt="Jiahong" className="avatar" />
-        <h1 className="splash-title">Jiahong</h1>
+    <div className="splash-div">
+      <div className="mb-xl">
+        <img src="/me.webp" alt="Profile picture" className="avatar" />
       </div>
-      <p className="splash-subtitle">
+      <span className="large mr-l ml-l">
+        <span className="regular">Hi, I'm </span>
+        <span className="bold">Jiahong!</span>
+      </span>
+      <span className="sized-span large light mr-l ml-l mt-s">
         <WindupChildren onFinished={onFinished} skipped={true}>
-          Currently {flavorText}
+          I'm {flavorText}
           <Skip skip={isFirstRun} />
         </WindupChildren>
-      </p>
-    </header>
+      </span>
+    </div>
   );
 };
 

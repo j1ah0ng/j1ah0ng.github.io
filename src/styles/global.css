@@ -1,159 +1,57 @@
-/* Tufte-inspired styles with Computer Modern (Latin Modern) */
-
-/* Latin Modern fonts - the digital Computer Modern */
-@import url('https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&display=swap&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* Base */
-html {
-  font-size: 15px;
-}
-
 body {
   margin: 0;
-  padding: 0;
-  font-family: "Computer Modern Serif", "Latin Modern Roman", "CMU Serif", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
-  background-color: #fffff8;
-  color: #111;
+  font-family: 'Rubik', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: 3.2rem;
-  margin-top: 4rem;
-  margin-bottom: 1.5rem;
-}
-
-h2 {
-  font-size: 2.2rem;
-  font-style: italic;
-  margin-top: 2.1rem;
-  margin-bottom: 1.4rem;
-}
-
-h3 {
-  font-size: 1.7rem;
-  font-style: italic;
-  margin-top: 2rem;
-  margin-bottom: 1.4rem;
-}
-
-p, li {
-  font-size: 1.4rem;
-  line-height: 2rem;
-}
-
-/* Links */
-a:link, a:visited {
-  color: inherit;
-  text-decoration: none;
-  background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(currentColor, currentColor);
-  background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-position: 0% 93%, 100% 93%, 0% 93%;
-}
-
-a:hover {
-  color: #a00000;
-}
-
-/* Code - use Computer Modern Typewriter */
 code, pre {
-  font-family: "Computer Modern Typewriter", "Latin Modern Mono", "CMU Typewriter Text", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 1.0rem;
-  line-height: 1.42;
+  font-family: 'JetBrains Mono', monospace;
 }
 
-code {
-  background-color: #f0f0f0;
-  padding: 0.1rem 0.3rem;
-  border-radius: 2px;
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
 }
 
-pre {
-  font-size: 0.9rem;
-  overflow-x: auto;
-  padding: 1rem;
-  background-color: #f0f0f0;
-}
+/* Colors (Nord theme) */
+.red { color: #bf616a; }
+.orange { color: #d08770; }
+.yellow { color: #ebcb8b; }
+.green { color: #a3be8c; }
+.purple { color: #b48ead; }
+.icon { color: #5e81ac; fill: #5e81ac; }
 
-pre code {
-  background: none;
-  padding: 0;
-}
+/* Typography */
+.justify { text-align: justify; text-justify: inter-word; }
+.underline { text-decoration: underline; }
+.center { text-align: center; }
+.italic { font-style: italic; }
 
-/* Lists */
-ul, ol {
-  padding-left: 1.5rem;
-}
+.light { font-weight: 300; }
+.regular { font-weight: 400; }
+.medium { font-weight: 500; }
+.semibold { font-weight: 600; }
+.bold { font-weight: 700; }
+.extrabold { font-weight: 800; }
+.black { font-weight: 900; }
 
-li {
-  margin-bottom: 0.5rem;
-}
+.large { font-size: 2.5em; }
+.big { font-size: 2em; }
+.biggish { font-size: 1.6em; }
+.text { font-size: 1.25em; }
+.small { font-size: 1em; }
+.xsmall { font-size: 0.8em; }
+.footnotesize { font-size: 0.75em; }
 
-/* Blockquotes */
-blockquote {
-  font-size: 1.4rem;
-  font-style: italic;
-  margin: 1.5rem 0;
-  padding-left: 1.5rem;
-  border-left: 3px solid #ccc;
-}
+/* Spacing - Margins */
+.m-s { margin: 0.5rem; }
+.m-m { margin: 1rem; }
+.m-l { margin: 1.5rem; }
+.m-xl { margin: 2rem; }
 
-/* Utility classes */
-.newthought {
-  font-variant: small-caps;
-  font-size: 1.2em;
-  letter-spacing: 0.05em;
-}
-
-.subtitle {
-  font-style: italic;
-  font-size: 1.8rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  display: block;
-}
-
-.sans {
-  font-family: "Computer Modern Sans", "Latin Modern Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
-  letter-spacing: 0.03em;
-}
-
-.danger {
-  color: #a00000;
-}
-
-.italic {
-  font-style: italic;
-}
-
-/* Layout */
-.tufte-container {
-  width: 87.5%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 12.5%;
-  max-width: 1400px;
-  box-sizing: border-box;
-}
-
-.content-width {
-  max-width: 55%;
-}
-
-.full-width {
-  max-width: 90%;
-  clear: both;
-}
-
-/* Spacing utilities */
 .mt-s { margin-top: 0.5rem; }
 .mt-m { margin-top: 1rem; }
 .mt-l { margin-top: 1.5rem; }
@@ -165,20 +63,39 @@ blockquote {
 .mb-xl { margin-bottom: 2rem; }
 .mb-xxl { margin-bottom: 2.5rem; }
 
-/* Responsive */
-@media (max-width: 760px) {
-  html {
-    font-size: 14px;
-  }
+.ml-s { margin-left: 0.5rem; }
+.ml-m { margin-left: 1rem; }
+.ml-l { margin-left: 1.5rem; }
+.ml-xl { margin-left: 2rem; }
 
-  .tufte-container {
-    width: 90%;
-    padding-left: 5%;
-    padding-right: 5%;
-  }
+.mr-s { margin-right: 0.5rem; }
+.mr-m { margin-right: 1rem; }
+.mr-l { margin-right: 1.5rem; }
+.mr-xl { margin-right: 2rem; }
 
-  .content-width,
-  .full-width {
-    max-width: 100%;
-  }
-}
+/* Spacing - Padding */
+.p-s { padding: 0.5rem; }
+.p-m { padding: 1rem; }
+.p-l { padding: 1.5rem; }
+.p-xl { padding: 2rem; }
+
+.pt-s { padding-top: 0.5rem; }
+.pt-m { padding-top: 1rem; }
+.pt-l { padding-top: 1.5rem; }
+.pt-xl { padding-top: 2rem; }
+
+.pb-s { padding-bottom: 0.5rem; }
+.pb-m { padding-bottom: 1rem; }
+.pb-l { padding-bottom: 1.5rem; }
+.pb-xl { padding-bottom: 2rem; }
+.pb-xxl { padding-bottom: 2.5rem; }
+
+.pl-s { padding-left: 0.5rem; }
+.pl-m { padding-left: 1rem; }
+.pl-l { padding-left: 1.5rem; }
+.pl-xl { padding-left: 2rem; }
+
+.pr-s { padding-right: 0.5rem; }
+.pr-m { padding-right: 1rem; }
+.pr-l { padding-right: 1.5rem; }
+.pr-xl { padding-right: 2rem; }
