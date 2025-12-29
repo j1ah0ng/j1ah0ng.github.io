@@ -28,11 +28,11 @@ const buildDate = new Date().toLocaleDateString();
 
   .footer-band {
     height: 8px;
-    background: linear-gradient(90deg, #d08770 0%, #bf616a 100%);
+    background: linear-gradient(90deg, var(--accent-orange) 0%, var(--accent) 100%);
   }
 
   .footer-content {
-    background: #eceff4;
+    background: var(--surface-alt);
     padding: 2rem;
     text-align: center;
   }
@@ -46,21 +46,19 @@ const buildDate = new Date().toLocaleDateString();
   }
 
   .icon {
-    color: #4c566a;
+    color: var(--fg-muted);
     transition: color 0.2s;
   }
 
   .icon:hover {
-    color: #5e81ac;
+    color: var(--link-hover);
   }
 
   .small-text {
-    font-size: 1.1rem;
-    color: #4c566a;
     margin: 0.5rem 0;
   }
 
   .small-text a {
-    color: #5e81ac;
+    color: var(--link-hover);
   }
 </style>

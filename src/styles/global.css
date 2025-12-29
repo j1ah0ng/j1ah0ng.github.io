@@ -1,13 +1,17 @@
-/* Computer Modern fonts with preserved typographical weight */
+/* Latin Modern fonts for full Unicode support */
 @import url('https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css');
 
 :root {
   --bg: #fff;
   --fg: #111;
   --fg-light: #555;
+  --fg-muted: #4c566a;
   --accent: #bf616a;
-  --accent-secondary: #d08770;
+  --accent-orange: #d08770;
+  --link-hover: #5e81ac;
   --border: #ddd;
+  --surface: #fafafa;
+  --surface-alt: #eceff4;
 }
 
 /* Base */
@@ -20,13 +24,13 @@ body {
   padding: 0;
   background-color: var(--bg);
   color: var(--fg);
-  font-family: "Computer Modern Serif", "Latin Modern Roman", Georgia, serif,
+  font-family: "Latin Modern Roman", "Computer Modern Serif", Georgia, serif,
                "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography - bold headers to preserve weight */
+/* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
@@ -34,29 +38,17 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.4rem;
 }
 
-h1 {
-  font-size: 3.2rem;
-  margin-top: 0;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.6rem;
-}
-
-h4 {
-  font-size: 1.4rem;
-}
+h1 { font-size: 3.2rem; margin-top: 0; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
 
 p, li, div {
   font-size: 1.4rem;
   line-height: 2rem;
 }
 
-/* Links - subtle underlines */
+/* Links */
 a {
   color: inherit;
   text-decoration: none;
@@ -69,12 +61,12 @@ a {
 }
 
 a:hover {
-  color: #5e81ac;
+  color: var(--link-hover);
 }
 
 /* Code */
 code, pre {
-  font-family: "Computer Modern Typewriter", "Latin Modern Mono", Consolas, monospace;
+  font-family: "Latin Modern Mono", "Computer Modern Typewriter", Consolas, monospace;
   font-size: 1.1rem;
   line-height: 1.42;
 }
@@ -130,35 +122,10 @@ section {
   color: var(--accent);
 }
 
-.italic {
-  font-style: italic;
-}
-
 .small-text {
   font-size: 1.1rem;
-  color: var(--fg-light);
+  color: var(--fg-muted);
 }
-
-.light {
-  color: var(--fg-light);
-}
-
-.icon {
-  color: var(--fg);
-  fill: var(--fg);
-}
-
-/* Spacing */
-.mt-s { margin-top: 0.5rem; }
-.mt-m { margin-top: 1rem; }
-.mt-l { margin-top: 1.5rem; }
-.mt-xl { margin-top: 2rem; }
-
-.mb-s { margin-bottom: 0.5rem; }
-.mb-m { margin-bottom: 1rem; }
-.mb-l { margin-bottom: 1.5rem; }
-.mb-xl { margin-bottom: 2rem; }
-.mb-xxl { margin-bottom: 2.5rem; }
 
 /* Responsive */
 @media (max-width: 760px) {
