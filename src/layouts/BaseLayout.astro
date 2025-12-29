@@ -4,7 +4,7 @@ interface Props {
   description?: string;
 }
 
-const { title = "👋", description = "Jiahong's personal site" } = Astro.props;
+const { title = "Jiahong", description = "Jiahong's personal site" } = Astro.props;
 ---
 
 <!doctype html>
@@ -13,12 +13,11 @@ const { title = "👋", description = "Jiahong's personal site" } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#fffff8" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" />
     <title>{title}</title>
   </head>
   <body>
