@@ -1,6 +1,4 @@
 ---
-import ButtonLink from './ButtonLink.astro';
-
 interface Props {
   name: string;
   flavor: string;
@@ -10,7 +8,34 @@ interface Props {
 const { name, flavor, logistics } = Astro.props;
 ---
 
-<ButtonLink content={name} class="medium biggish" />
-<div class="regular">{flavor}</div>
-<div class="mb-m mt-s xsmall light">{logistics}</div>
-<span class="regular"><slot /></span>
+<h3 class="name">{name}</h3>
+<p class="flavor">{flavor}</p>
+<p class="logistics">{logistics}</p>
+<div class="content"><slot /></div>
+
+<style>
+  .name {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 0 0 0.25rem 0;
+  }
+
+  .flavor {
+    font-style: italic;
+    margin: 0 0 0.25rem 0;
+  }
+
+  .logistics {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 0 0 1rem 0;
+  }
+
+  .content :global(p) {
+    margin: 0.75rem 0;
+  }
+
+  .content :global(p:first-child) {
+    margin-top: 0;
+  }
+</style>

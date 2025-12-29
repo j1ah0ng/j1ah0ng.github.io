@@ -26,7 +26,7 @@ const TEXT_ROLES = [
 ];
 
 const ALL_ROLES = TEXT_ROLES.map((e) => (
-  <span key={e} className="italic">
+  <span key={e} style={{ fontStyle: 'italic' }}>
     {e}
   </span>
 ));
@@ -71,7 +71,6 @@ const Splash: FC = () => {
   });
 
   const onFinished = () => {
-    const timeout = TIMEOUT;
     if (isFirstRun) {
       setIsFirstRun(false);
     }
@@ -84,26 +83,25 @@ const Splash: FC = () => {
       }
       setIdx(newIdx);
       setFlavorText(ALL_ROLES[newIdx]);
-    }, timeout);
+    }, TIMEOUT);
     return () => clearTimeout(timeoutHandle);
   };
 
   return (
-    <div className="splash-div">
-      <div className="mb-xl">
-        <img src="/me.webp" alt="Profile picture" className="avatar" />
+    <header className="splash">
+      <div className="splash-content">
+        <img src="/me.webp" alt="Jiahong" className="avatar" />
+        <div className="splash-text">
+          <h1>Jiahong</h1>
+          <p className="subtitle">
+            <WindupChildren onFinished={onFinished} skipped={true}>
+              Currently {flavorText}
+              <Skip skip={isFirstRun} />
+            </WindupChildren>
+          </p>
+        </div>
       </div>
-      <span className="large mr-l ml-l">
-        <span className="regular">Hi, I'm </span>
-        <span className="bold">Jiahong!</span>
-      </span>
-      <span className="sized-span large light mr-l ml-l mt-s">
-        <WindupChildren onFinished={onFinished} skipped={true}>
-          I'm {flavorText}
-          <Skip skip={isFirstRun} />
-        </WindupChildren>
-      </span>
-    </div>
+    </header>
   );
 };
 

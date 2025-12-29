@@ -1,246 +1,235 @@
 ---
-import ButtonLink from './ButtonLink.astro';
 import Card from './Card.astro';
 import ResumeCardInterior from './ResumeCardInterior.astro';
 import HeadedList from './HeadedList.astro';
 import Link from './Link.astro';
 ---
 
-<div class="stack-div">
-  <!-- Skills Section -->
-  <section class="section-div">
-    <ButtonLink class="big" content="Skills" />
-    <Card>
-      <div class="bold red">This section is a(n eternal) work-in-progress!</div>
-      <HeadedList class="mt-m" header="Tools" headerClass="medium biggish" anchor>
-        <li><code>neovim</code> and <code>doom-emacs</code> enjoyer</li>
-        <li><code>(?:bash|zsh|rg)</code></li>
-        <li>you don't need a GPU or a Chrome instance to edit code</li>
-      </HeadedList>
-      <HeadedList class="mt-m" header="Languages" headerClass="medium biggish" anchor>
-        <li><code>c++</code> (and some <code>rust</code>) for high-performance low latency robotics systems</li>
-        <li><code>python</code> for scientific computing, including machine learning, optimization, and data science</li>
-        <li>limited <code>haskell</code>, <code>java</code> experience</li>
-        <li>academic experience with <code>R</code>, <code>matlab</code>/<code>octave</code>, and <Link href="https://github.com/j1ah0ng/papers">LaTeX (obviously)</Link> for scientific computing</li>
-      </HeadedList>
-      <HeadedList class="mt-m" header="Frameworks" headerClass="medium biggish" anchor>
-        <li><code>pandas</code>, <code>numpy</code>, <code>scipy</code>, <code>matplotlib</code></li>
-        <li>Spark, Flyte, Hudi</li>
-        <li><code>statsmodels</code>, <code>cv2</code>, <code>torch</code>, BigQuery</li>
-        <li><code>tsx</code>, <code>jinja2</code></li>
-      </HeadedList>
-      <HeadedList class="mt-m" header="Preferred window managers" headerClass="medium biggish" anchor>
-        <li>macOS + <code>yabai</code></li>
-        <li>Arch Linux + <code>sway</code></li>
-        <li>Debian + <code>i3</code></li>
-      </HeadedList>
-    </Card>
-  </section>
+<!-- Skills Section -->
+<section>
+  <h2>Skills</h2>
+  <p class="danger">This section is a(n eternal) work-in-progress!</p>
 
-  <!-- Experience Section -->
-  <section class="section-div">
-    <ButtonLink class="big" content="Experience" />
-    <Card>
-      <ResumeCardInterior
-        name="Stealth"
-        flavor="MTS"
-        logistics="September 2025 to present. United States"
-      >
-        <div>More to come!</div>
-      </ResumeCardInterior>
-    </Card>
-    <Card>
-      <ResumeCardInterior
-        name="Applied Intuition"
-        flavor="Research Engineer, Motion Forecasting"
-        logistics="September 2024 to September 2025. Mountain View, CA"
-      >
-        <div>
-          End-to-end autonomy foundation modeling with a focus on
-          world prediction. Founding (third) engineer on
-          ML planner team for L2/L3 ADAS
-        </div>
-        <div class="mt-m">
-          Led initiative to scale up ML development to 30x volume across 10x
-          headcount and 3x working groups, burning down model release cycle from
-          three months to two weeks
-        </div>
-        <div class="mt-m">
-          With team, evaluated model-based approaches to motion forecasting.
-          Synthesized novel autoregressive architecture from literature
-          (including KiGRAS, Wayformer, Multipath), achieving a 2x improvement
-          in targeted evaluation performance
-        </div>
-        <div class="mt-m">
-          Architected and built embedded realtime runtime for motion prediction models,
-          wrapping TensorRT. Consolidated onboard and offboard feature extraction to
-          ensure parity by design
-        </div>
-        <HeadedList class="mt-m" header="Technologies:" headerClass="medium">
-          <li><code>c++</code>, <code>ROS</code>, <code>SQL</code>, Python, Bazel, Ray</li>
-          <li>Ray, Hudi, Flyte, Spark for terabyte-scale ETL-based ML training pipelines</li>
-        </HeadedList>
-      </ResumeCardInterior>
-    </Card>
-    <Card>
-      <ResumeCardInterior
-        name="Cruise"
-        flavor="ML/Robotics Engineer, Maneuver Planning & Simulation"
-        logistics="June 2022 to September 2024. San Francisco, CA"
-      >
-        <div>
-          Unifying cross-modality AV behaviour metrics and
-          replacing terrible and nonperformant Python RTTI with monomorphisation and <code>std::visit</code>.
-          Heavy focus on fast and clean data abstractions for closed-loop evaluation and
-          ground truth sourcing at the petabyte scale
-        </div>
-        <div class="mt-m">
-          Introduced novel error handling practices and consolidated fallback structure for a legacy nonconvex
-          solver within maneuver planning, building out architectural changes and future best practices to
-          improve DX and fault tolerance
-        </div>
-        <div class="mt-m">
-          Also, please email me if you have successfully justified a Haskell rewrite of something
-          in production. (I realize this is orthogonal to performance, but still.)
-        </div>
-        <HeadedList class="mt-m" header="Technologies:" headerClass="medium">
-          <li><code>c++</code>, <code>ROS</code>, <code>SQL</code>, Python, Bazel, Spark, Ray</li>
-          <li>BigQuery, internal tooling including orchestration and graph compute</li>
-          <li>Open source at <code>tobymao/sqlglot</code> and <code>duckdb/duckdb</code></li>
-        </HeadedList>
-      </ResumeCardInterior>
-    </Card>
-  </section>
+  <HeadedList header="Tools">
+    <li><code>neovim</code> and <code>doom-emacs</code> enjoyer</li>
+    <li><code>(?:bash|zsh|rg)</code></li>
+    <li>you don't need a GPU or a Chrome instance to edit code</li>
+  </HeadedList>
 
-  <!-- Education Section -->
-  <section class="section-div">
-    <ButtonLink class="big" content="Internships & Education" />
-    <Card>
-      <ResumeCardInterior
-        name="University of California, San Diego"
-        flavor="M.S. Intelligent Systems, Robotics, and Controls"
-        logistics="January 2022 to present (leave of absence). Not conferred. La Jolla, CA"
-      >
-        <HeadedList header="Coursework:" headerClass="medium">
-          <li>Statistical learning, deep learning</li>
-          <li>Sensing and estimation in robotics, RL in robotics</li>
-          <li>Cooperative multi-agent systems</li>
-          <li>Convex optimisation</li>
-          <li>Parameter estimation</li>
-        </HeadedList>
-      </ResumeCardInterior>
-    </Card>
-    <Card>
-      <ResumeCardInterior
-        name="University of California, San Diego"
-        flavor="B.S. Applied Mathematics (4.00)"
-        logistics="September 2019 to June 2023. La Jolla, CA"
-      >
-        <HeadedList header="Mathematics coursework" headerClass="medium">
-          <li>Algebra (MATH 100A): symmetric, alternating, and dihedral groups, group actions, plane and polyhedral symmetry groups, Sylow theorems</li>
-          <li>Complex analysis (MATH 120A): Riemann spheres, complex differentiability, the Laplacian, contour integrals</li>
-          <li>Real analysis (MATH 142AB)</li>
-          <li>Numerical methods (MATH 170ABC): the Schur decomposition, numerical matrix rank, low-rank approximation, basic random matrices, perturbations and matrix condition numbers, iterative root-finding</li>
-          <li>Linear and nonlinear optimisation (MATH 171AB): the simplex method</li>
-          <li>Statistical methods (MATH 183): normal, <span class="italic">t</span>, Poisson, geometric, and binomial distributions, experiment design and analysis in R</li>
-          <li>Discrete mathematics (CSE 20, 21): naive set theory, basic proof methods, counting arguments</li>
-          <li>Differential equations (MATH 20D): ordinary differential equations, direct substitutions, undetermined coefficients, the Laplace transform</li>
-          <li>Vector calculus (MATH 20ABCE)</li>
-          <li>Advanced linear algebra (MATH 18, 102): abstract vector spaces, eigendecompositions, the singular value decomposition</li>
-        </HeadedList>
-      </ResumeCardInterior>
-    </Card>
-    <Card>
-      <ResumeCardInterior
-        name="University of California, San Diego"
-        flavor="B.S. Computer Engineering (3.90)"
-        logistics="September 2019 to June 2023. La Jolla, CA"
-      >
-        <HeadedList header="Computer science coursework:" headerClass="medium">
-          <li>Computer architecture (CSE 30): ARM assembly, low-level C</li>
-          <li>Advanced data structures (CSE 100)</li>
-          <li>Design and analysis of algorithms (CSE 101): dynamic programming, NP completeness and methods of dealing with it, greedy algorithms, rigorous proof methodologies for algorithms</li>
-          <li>Theory of computation (CSE 105): models of computation including Turing machines and context-free grammars, the halting problem</li>
-          <li>Operating systems (CSE 120): Java, mutexes, race conditions, multiprogramming, context switching</li>
-          <li>Networked systems (CSE 124): Go (golang), RPC, physical and logical time, Lamport clocks, consistent hashing, cluster-scale caching</li>
-          <li>Programming languages and compilers (CSE 130, 131): lexers, parsers, the functional paradigm, Haskell, AST lowering</li>
-          <li>Digital design and systems (CSE 140, 140L): SystemVerilog, CMOS logic, Boolean algebra including Shannon expansions and Karnaugh maps</li>
-          <li>Computer architecture (CSE 142, 142L)</li>
-          <li>Computer vision (CSE 152A): Epipolar geometry, intrinsic and extrinsic camera matrices, methodologies for estimation of the fundamental matrix, eight-point algorithm, RANSAC, Lucas-Kanade optical flow, basic neural networks</li>
-        </HeadedList>
-        <HeadedList class="mt-m" header="Electronics engineering coursework:" headerClass="medium">
-          <li>Linear signals and systems (ECE 101): the discrete Fourier transform, correlation and autocorrelation, discrete signal filters, MATLAB signal processing methodologies</li>
-          <li>Digital design (ECE 111): SystemVerilog, building a Bitcoin mining FPGA</li>
-          <li>Circuits and systems (ECE 35, 45): the continuous Fourier transform, circuit analysis methods including loop and node, source transforms, continuous signal filters</li>
-          <li>Nonlinear circuit theory (ECE 65): op-amps, small-signal model</li>
-        </HeadedList>
-      </ResumeCardInterior>
-    </Card>
-    <Card>
-      <ResumeCardInterior
-        name="University of California, Berkeley"
-        flavor="2020 Summer Session, Data Science and Mathematics"
-        logistics="June 2020 to August 2020. Berkeley, CA"
-      >
-        <HeadedList header="Miscellaneous coursework:" headerClass="medium">
-          <li>Data science (DS 100): Data cleaning, exploratory analysis, <code>sql</code>, <code>pandas</code>, <code>numpy</code>. Basic probability and statistics theory, least squares, feature engineering, scree plots.</li>
-          <li>Real analysis (MATH 104): Sequences and subsequences, monotonicity, epsilon-delta proofs, the limit definition.</li>
-        </HeadedList>
-      </ResumeCardInterior>
-    </Card>
-    <Card>
-      <ResumeCardInterior
-        name="Bolt Financial"
-        flavor="Software Engineering Intern, Merchant Tools"
-        logistics="January 2022 to June 2022. San Francisco, CA"
-      >
-        <div>
-          Scoped and delivered two projects to address tech
-          debt in a large monorepo. Reduced developer
-          onboarding overhead by deprecating legacy onboarding flows in favour of an
-          internal dashboard, and fixed a longstanding database model error to
-          correctly display refund transactions
-        </div>
-        <HeadedList class="mt-m" header="Technologies:" headerClass="medium">
-          <li>Golang (<code>gorm</code>), Typescript, React</li>
-          <li>Postgres, Elasticsearch, K8</li>
-        </HeadedList>
-      </ResumeCardInterior>
-    </Card>
-    <Card>
-      <ResumeCardInterior
-        name="Amazon"
-        flavor="SDE Intern, Alexa Smart Properties"
-        logistics="June 2021 to September 2021. Seattle, WA"
-      >
-        <div>
-          Full-stack design and implementation of a customer facing management portal
-          interfacing with existing internal services to serve a new React-based console
-        </div>
-        <HeadedList class="mt-m" header="Technologies:" headerClass="medium">
-          <li>Java (<code>spring</code>, <code>tomcat</code>)</li>
-          <li>Typescript (<code>react</code>, <code>redux</code>, <code>axios</code>, <code>styled-components</code>)</li>
-        </HeadedList>
-      </ResumeCardInterior>
-    </Card>
-  </section>
+  <HeadedList header="Languages">
+    <li><code>c++</code> (and some <code>rust</code>) for high-performance low latency robotics systems</li>
+    <li><code>python</code> for scientific computing, including machine learning, optimization, and data science</li>
+    <li>limited <code>haskell</code>, <code>java</code> experience</li>
+    <li>academic experience with <code>R</code>, <code>matlab</code>/<code>octave</code>, and <Link href="https://github.com/j1ah0ng/papers">LaTeX (obviously)</Link> for scientific computing</li>
+  </HeadedList>
 
-  <div class="spacing-div"></div>
-</div>
+  <HeadedList header="Frameworks">
+    <li><code>pandas</code>, <code>numpy</code>, <code>scipy</code>, <code>matplotlib</code></li>
+    <li>Spark, Flyte, Hudi</li>
+    <li><code>statsmodels</code>, <code>cv2</code>, <code>torch</code>, BigQuery</li>
+    <li><code>tsx</code>, <code>jinja2</code></li>
+  </HeadedList>
 
-<style>
-  .stack-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .section-div {
-    margin-top: 5vh;
-    min-width: 250px;
-    max-width: 720px;
-    width: 85vw;
-  }
-  .spacing-div {
-    margin-bottom: 5vh;
-  }
-</style>
+  <HeadedList header="Preferred window managers">
+    <li>macOS + <code>yabai</code></li>
+    <li>Arch Linux + <code>sway</code></li>
+    <li>Debian + <code>i3</code></li>
+  </HeadedList>
+</section>
+
+<!-- Experience Section -->
+<section>
+  <h2>Experience</h2>
+
+  <Card>
+    <ResumeCardInterior
+      name="Stealth"
+      flavor="MTS"
+      logistics="September 2025 to present. United States"
+    >
+      <p>More to come!</p>
+    </ResumeCardInterior>
+  </Card>
+
+  <Card>
+    <ResumeCardInterior
+      name="Applied Intuition"
+      flavor="Research Engineer, Motion Forecasting"
+      logistics="September 2024 to September 2025. Mountain View, CA"
+    >
+      <p>
+        End-to-end autonomy foundation modeling with a focus on
+        world prediction. Founding (third) engineer on
+        ML planner team for L2/L3 ADAS.
+      </p>
+      <p>
+        Led initiative to scale up ML development to 30x volume across 10x
+        headcount and 3x working groups, burning down model release cycle from
+        three months to two weeks.
+      </p>
+      <p>
+        With team, evaluated model-based approaches to motion forecasting.
+        Synthesized novel autoregressive architecture from literature
+        (including KiGRAS, Wayformer, Multipath), achieving a 2x improvement
+        in targeted evaluation performance.
+      </p>
+      <p>
+        Architected and built embedded realtime runtime for motion prediction models,
+        wrapping TensorRT. Consolidated onboard and offboard feature extraction to
+        ensure parity by design.
+      </p>
+      <HeadedList header="Technologies:">
+        <li><code>c++</code>, <code>ROS</code>, <code>SQL</code>, Python, Bazel, Ray</li>
+        <li>Ray, Hudi, Flyte, Spark for terabyte-scale ETL-based ML training pipelines</li>
+      </HeadedList>
+    </ResumeCardInterior>
+  </Card>
+
+  <Card>
+    <ResumeCardInterior
+      name="Cruise"
+      flavor="ML/Robotics Engineer, Maneuver Planning & Simulation"
+      logistics="June 2022 to September 2024. San Francisco, CA"
+    >
+      <p>
+        Unifying cross-modality AV behaviour metrics and
+        replacing terrible and nonperformant Python RTTI with monomorphisation and <code>std::visit</code>.
+        Heavy focus on fast and clean data abstractions for closed-loop evaluation and
+        ground truth sourcing at the petabyte scale.
+      </p>
+      <p>
+        Introduced novel error handling practices and consolidated fallback structure for a legacy nonconvex
+        solver within maneuver planning, building out architectural changes and future best practices to
+        improve DX and fault tolerance.
+      </p>
+      <p>
+        Also, please email me if you have successfully justified a Haskell rewrite of something
+        in production. (I realize this is orthogonal to performance, but still.)
+      </p>
+      <HeadedList header="Technologies:">
+        <li><code>c++</code>, <code>ROS</code>, <code>SQL</code>, Python, Bazel, Spark, Ray</li>
+        <li>BigQuery, internal tooling including orchestration and graph compute</li>
+        <li>Open source at <code>tobymao/sqlglot</code> and <code>duckdb/duckdb</code></li>
+      </HeadedList>
+    </ResumeCardInterior>
+  </Card>
+</section>
+
+<!-- Education Section -->
+<section>
+  <h2>Internships & Education</h2>
+
+  <Card>
+    <ResumeCardInterior
+      name="University of California, San Diego"
+      flavor="M.S. Intelligent Systems, Robotics, and Controls"
+      logistics="January 2022 to present (leave of absence). Not conferred. La Jolla, CA"
+    >
+      <HeadedList header="Coursework:">
+        <li>Statistical learning, deep learning</li>
+        <li>Sensing and estimation in robotics, RL in robotics</li>
+        <li>Cooperative multi-agent systems</li>
+        <li>Convex optimisation</li>
+        <li>Parameter estimation</li>
+      </HeadedList>
+    </ResumeCardInterior>
+  </Card>
+
+  <Card>
+    <ResumeCardInterior
+      name="University of California, San Diego"
+      flavor="B.S. Applied Mathematics (4.00)"
+      logistics="September 2019 to June 2023. La Jolla, CA"
+    >
+      <HeadedList header="Mathematics coursework:">
+        <li>Algebra (MATH 100A): symmetric, alternating, and dihedral groups, group actions, plane and polyhedral symmetry groups, Sylow theorems</li>
+        <li>Complex analysis (MATH 120A): Riemann spheres, complex differentiability, the Laplacian, contour integrals</li>
+        <li>Real analysis (MATH 142AB)</li>
+        <li>Numerical methods (MATH 170ABC): the Schur decomposition, numerical matrix rank, low-rank approximation, basic random matrices, perturbations and matrix condition numbers, iterative root-finding</li>
+        <li>Linear and nonlinear optimisation (MATH 171AB): the simplex method</li>
+        <li>Statistical methods (MATH 183): normal, <em>t</em>, Poisson, geometric, and binomial distributions, experiment design and analysis in R</li>
+        <li>Discrete mathematics (CSE 20, 21): naive set theory, basic proof methods, counting arguments</li>
+        <li>Differential equations (MATH 20D): ordinary differential equations, direct substitutions, undetermined coefficients, the Laplace transform</li>
+        <li>Vector calculus (MATH 20ABCE)</li>
+        <li>Advanced linear algebra (MATH 18, 102): abstract vector spaces, eigendecompositions, the singular value decomposition</li>
+      </HeadedList>
+    </ResumeCardInterior>
+  </Card>
+
+  <Card>
+    <ResumeCardInterior
+      name="University of California, San Diego"
+      flavor="B.S. Computer Engineering (3.90)"
+      logistics="September 2019 to June 2023. La Jolla, CA"
+    >
+      <HeadedList header="Computer science coursework:">
+        <li>Computer architecture (CSE 30): ARM assembly, low-level C</li>
+        <li>Advanced data structures (CSE 100)</li>
+        <li>Design and analysis of algorithms (CSE 101): dynamic programming, NP completeness and methods of dealing with it, greedy algorithms, rigorous proof methodologies for algorithms</li>
+        <li>Theory of computation (CSE 105): models of computation including Turing machines and context-free grammars, the halting problem</li>
+        <li>Operating systems (CSE 120): Java, mutexes, race conditions, multiprogramming, context switching</li>
+        <li>Networked systems (CSE 124): Go (golang), RPC, physical and logical time, Lamport clocks, consistent hashing, cluster-scale caching</li>
+        <li>Programming languages and compilers (CSE 130, 131): lexers, parsers, the functional paradigm, Haskell, AST lowering</li>
+        <li>Digital design and systems (CSE 140, 140L): SystemVerilog, CMOS logic, Boolean algebra including Shannon expansions and Karnaugh maps</li>
+        <li>Computer architecture (CSE 142, 142L)</li>
+        <li>Computer vision (CSE 152A): Epipolar geometry, intrinsic and extrinsic camera matrices, methodologies for estimation of the fundamental matrix, eight-point algorithm, RANSAC, Lucas-Kanade optical flow, basic neural networks</li>
+      </HeadedList>
+      <HeadedList header="Electronics engineering coursework:">
+        <li>Linear signals and systems (ECE 101): the discrete Fourier transform, correlation and autocorrelation, discrete signal filters, MATLAB signal processing methodologies</li>
+        <li>Digital design (ECE 111): SystemVerilog, building a Bitcoin mining FPGA</li>
+        <li>Circuits and systems (ECE 35, 45): the continuous Fourier transform, circuit analysis methods including loop and node, source transforms, continuous signal filters</li>
+        <li>Nonlinear circuit theory (ECE 65): op-amps, small-signal model</li>
+      </HeadedList>
+    </ResumeCardInterior>
+  </Card>
+
+  <Card>
+    <ResumeCardInterior
+      name="University of California, Berkeley"
+      flavor="2020 Summer Session, Data Science and Mathematics"
+      logistics="June 2020 to August 2020. Berkeley, CA"
+    >
+      <HeadedList header="Miscellaneous coursework:">
+        <li>Data science (DS 100): Data cleaning, exploratory analysis, <code>sql</code>, <code>pandas</code>, <code>numpy</code>. Basic probability and statistics theory, least squares, feature engineering, scree plots.</li>
+        <li>Real analysis (MATH 104): Sequences and subsequences, monotonicity, epsilon-delta proofs, the limit definition.</li>
+      </HeadedList>
+    </ResumeCardInterior>
+  </Card>
+
+  <Card>
+    <ResumeCardInterior
+      name="Bolt Financial"
+      flavor="Software Engineering Intern, Merchant Tools"
+      logistics="January 2022 to June 2022. San Francisco, CA"
+    >
+      <p>
+        Scoped and delivered two projects to address tech
+        debt in a large monorepo. Reduced developer
+        onboarding overhead by deprecating legacy onboarding flows in favour of an
+        internal dashboard, and fixed a longstanding database model error to
+        correctly display refund transactions.
+      </p>
+      <HeadedList header="Technologies:">
+        <li>Golang (<code>gorm</code>), Typescript, React</li>
+        <li>Postgres, Elasticsearch, K8</li>
+      </HeadedList>
+    </ResumeCardInterior>
+  </Card>
+
+  <Card>
+    <ResumeCardInterior
+      name="Amazon"
+      flavor="SDE Intern, Alexa Smart Properties"
+      logistics="June 2021 to September 2021. Seattle, WA"
+    >
+      <p>
+        Full-stack design and implementation of a customer facing management portal
+        interfacing with existing internal services to serve a new React-based console.
+      </p>
+      <HeadedList header="Technologies:">
+        <li>Java (<code>spring</code>, <code>tomcat</code>)</li>
+        <li>Typescript (<code>react</code>, <code>redux</code>, <code>axios</code>, <code>styled-components</code>)</li>
+      </HeadedList>
+    </ResumeCardInterior>
+  </Card>
+</section>
