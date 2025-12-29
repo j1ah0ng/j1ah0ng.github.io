@@ -1,53 +1,56 @@
 .splash {
-  padding-top: 6rem;
-  padding-bottom: 4rem;
+  background: linear-gradient(180deg, #8fbcbb 0%, #d8dee9 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .splash-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  text-align: center;
+  padding: 2rem;
 }
 
 .avatar {
-  width: 7rem;
-  height: 7rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
   object-fit: cover;
-  flex-shrink: 0;
+  margin-bottom: 1.5rem;
 }
 
-.splash-text h1 {
+.splash-content h1 {
   margin: 0;
-  font-size: 3.2rem;
+  font-size: 2rem;
   font-weight: 400;
+  color: #2e3440;
 }
 
-.splash-text .subtitle {
+.splash-content h1 strong {
+  font-weight: 700;
+}
+
+.splash-content .subtitle {
   margin: 0.5rem 0 0 0;
-  font-style: italic;
   font-size: 1.4rem;
-  color: #555;
+  color: #4c566a;
   min-height: 2rem;
 }
 
 @media (max-width: 760px) {
-  .splash {
-    padding-top: 3rem;
-  }
-
-  .splash-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-  }
-
   .avatar {
     width: 5rem;
     height: 5rem;
   }
 
-  .splash-text h1 {
-    font-size: 2.4rem;
+  .splash-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .splash-content .subtitle {
+    font-size: 1.2rem;
   }
 }

@@ -91,15 +91,13 @@ const Splash: FC = () => {
     <header className="splash">
       <div className="splash-content">
         <img src="/me.webp" alt="Jiahong" className="avatar" />
-        <div className="splash-text">
-          <h1>Jiahong</h1>
-          <p className="subtitle">
-            <WindupChildren onFinished={onFinished} skipped={true}>
-              Currently {flavorText}
-              <Skip skip={isFirstRun} />
-            </WindupChildren>
-          </p>
-        </div>
+        <h1>Hi, I'm <strong>Jiahong!</strong></h1>
+        <p className="subtitle">
+          <WindupChildren onFinished={onFinished} skipped={true}>
+            I'm {flavorText}
+            <Skip skip={isFirstRun} />
+          </WindupChildren>
+        </p>
       </div>
     </header>
   );

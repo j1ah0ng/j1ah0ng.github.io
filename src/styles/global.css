@@ -1,11 +1,12 @@
-/* Tufte-inspired styles with Computer Modern */
+/* Computer Modern fonts with preserved typographical weight */
 @import url('https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css');
 
 :root {
-  --bg: #fffff8;
+  --bg: #fff;
   --fg: #111;
   --fg-light: #555;
-  --accent: #a00000;
+  --accent: #bf616a;
+  --accent-secondary: #d08770;
   --border: #ddd;
 }
 
@@ -25,9 +26,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography */
+/* Typography - bold headers to preserve weight */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.2;
   margin-top: 2.1rem;
   margin-bottom: 1.4rem;
@@ -39,18 +40,15 @@ h1 {
 }
 
 h2 {
-  font-size: 2.2rem;
-  font-style: italic;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.7rem;
-  font-style: italic;
+  font-size: 1.6rem;
 }
 
 h4 {
   font-size: 1.4rem;
-  font-style: italic;
 }
 
 p, li, div {
@@ -58,7 +56,7 @@ p, li, div {
   line-height: 2rem;
 }
 
-/* Links - Tufte style underlines */
+/* Links - subtle underlines */
 a {
   color: inherit;
   text-decoration: none;
@@ -71,7 +69,7 @@ a {
 }
 
 a:hover {
-  color: var(--accent);
+  color: #5e81ac;
 }
 
 /* Code */
@@ -109,46 +107,25 @@ li {
 }
 
 /* Layout */
-.tufte {
-  width: 87.5%;
+.content-wrapper {
+  min-width: 250px;
+  max-width: 720px;
+  width: 85vw;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 12.5%;
-  max-width: 1400px;
-  box-sizing: border-box;
 }
 
 article {
-  padding-top: 5rem;
+  padding-top: 0;
   padding-bottom: 5rem;
 }
 
 section {
-  padding-top: 3rem;
+  padding-top: 5vh;
   padding-bottom: 1rem;
 }
 
-section > p,
-section > div,
-section > ul,
-section > ol {
-  max-width: 55%;
-}
-
 /* Utilities */
-.subtitle {
-  font-style: italic;
-  font-size: 1.4rem;
-  margin-top: 0.5rem;
-  color: var(--fg-light);
-}
-
-.newthought {
-  font-variant: small-caps;
-  font-size: 1.2em;
-  letter-spacing: 0.05em;
-}
-
 .danger {
   color: var(--accent);
 }
@@ -162,12 +139,16 @@ section > ol {
   color: var(--fg-light);
 }
 
+.light {
+  color: var(--fg-light);
+}
+
 .icon {
   color: var(--fg);
   fill: var(--fg);
 }
 
-/* Spacing - kept for compatibility */
+/* Spacing */
 .mt-s { margin-top: 0.5rem; }
 .mt-m { margin-top: 1rem; }
 .mt-l { margin-top: 1.5rem; }
@@ -185,20 +166,11 @@ section > ol {
     font-size: 14px;
   }
 
-  .tufte {
+  .content-wrapper {
     width: 90%;
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-
-  section > p,
-  section > div,
-  section > ul,
-  section > ol {
-    max-width: 100%;
   }
 
   article {
-    padding-top: 3rem;
+    padding-top: 0;
   }
 }
