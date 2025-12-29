@@ -1,0 +1,30 @@
+---
+import ButtonLink from './ButtonLink.astro';
+---
+
+<div class="stack-div">
+  <section class="section-div">
+    <ButtonLink content="What's new?" class="large" />
+    <div class="biggish light mt-m">
+      On to the next chapter!
+    </div>
+  </section>
+  <div class="spacing-div"></div>
+</div>
+
+<style>
+  .stack-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-div {
+    margin-top: 5vh;
+    min-width: 250px;
+    max-width: 720px;
+    width: 85vw;
+  }
+  .spacing-div {
+    margin-bottom: 5vh;
+  }
+</style>

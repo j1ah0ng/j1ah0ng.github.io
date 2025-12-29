@@ -1,0 +1,27 @@
+---
+interface Props {
+  content: string;
+  class?: string;
+}
+
+const { content, class: className = '' } = Astro.props;
+const id = content.replace(/[^A-Z0-9]/ig, '').toLowerCase();
+---
+
+<div class={className} id={id}>
+  <a href={`#${id}`} class="button-link">{content}</a>
+</div>
+
+<style>
+  .button-link {
+    all: inherit;
+    background: none !important;
+    padding: 0 !important;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  .button-link:hover {
+    color: #5e81ac;
+  }
+</style>

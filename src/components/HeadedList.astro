@@ -1,0 +1,38 @@
+---
+import ButtonLink from './ButtonLink.astro';
+
+interface Props {
+  header?: string;
+  headerClass?: string;
+  anchor?: boolean;
+  class?: string;
+}
+
+const { header, headerClass, anchor = false, class: divClass = '' } = Astro.props;
+---
+
+<div class={divClass}>
+  {header && headerClass && (
+    anchor ? (
+      <ButtonLink content={header} class={headerClass} />
+    ) : (
+      <span class={headerClass}>{header}</span>
+    )
+  )}
+  <ul>
+    <slot />
+  </ul>
+</div>
+
+<style>
+  ul {
+    margin: 0;
+    margin-top: 0.25rem;
+  }
+  ul:first-child {
+    padding-top: 0;
+  }
+  ul > :global(li) {
+    padding-top: 0.35rem;
+  }
+</style>

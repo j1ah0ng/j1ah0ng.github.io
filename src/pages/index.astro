@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Splash from '../components/Splash';
+import Sep from '../components/Sep.astro';
+import Highlights from '../components/Highlights.astro';
+import Resume from '../components/Resume.astro';
+import Footer from '../components/Footer.astro';
+import '../components/Splash.css';
+---
+
+<BaseLayout>
+  <Splash client:load />
+  <Sep color="aqua" />
+  <Highlights />
+  <Sep color="green" />
+  <Resume />
+  <Sep color="orange" />
+  <Footer />
+</BaseLayout>
