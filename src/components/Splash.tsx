@@ -98,6 +98,7 @@ const Splash: FC = () => {
             <Skip skip={isFirstRun} />
           </WindupChildren>
         </p>
+        <a href="https://j1ah0ng.xyz/plog" className="plog-link">to the plog →</a>
       </div>
     </header>
   );

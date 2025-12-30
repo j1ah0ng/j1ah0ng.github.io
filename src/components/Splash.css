@@ -41,6 +41,17 @@
   min-height: 2.5rem;
 }
 
+.plog-link {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: #2e3440;
+  text-decoration: underline;
+}
+
+.plog-link:hover {
+  color: #5e81ac;
+}
+
 @media (max-width: 760px) {
   .avatar {
     width: 5rem;
