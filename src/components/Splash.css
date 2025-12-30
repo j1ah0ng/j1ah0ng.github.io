@@ -1,30 +1,70 @@
-.splash-div {
-  width: 100vw;
+.splash {
+  background: linear-gradient(180deg, #8fbcbb 0%, #d8dee9 100%);
   min-height: 100vh;
-  max-height: -webkit-fill-available;
-  max-height: -moz-available;
-  height: min-content;
-  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-attachment: fixed;
-  background-image: linear-gradient(#88c0d0, #d8dee9);
   text-align: center;
+  padding: 2rem;
 }
 
 .avatar {
-  clip-path: circle(5rem at center);
-  width: 10em;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
 }
 
-.sized-span {
-  height: 2em;
+.splash-content h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #2e3440;
 }
 
-@media only screen and (max-width: 320px) {
-  .sized-span {
-    font-size: 1.5em;
+.splash-content h1 strong {
+  font-style: italic;
+}
+
+.splash-content .subtitle {
+  margin: 0.75rem 0 0 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #4c566a;
+  min-height: 2.5rem;
+}
+
+.plog-link {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: #2e3440;
+  background: none;
+  text-decoration: underline;
+  text-underline-offset: 0.1em;
+}
+
+.plog-link:hover {
+  color: #5e81ac;
+}
+
+@media (max-width: 760px) {
+  .avatar {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .splash-content h1 {
+    font-size: 2rem;
+  }
+
+  .splash-content .subtitle {
+    font-size: 1.4rem;
   }
 }
