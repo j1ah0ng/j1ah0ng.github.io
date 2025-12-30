@@ -30,8 +30,7 @@
 }
 
 .splash-content h1 strong {
-  font-weight: 900;
-  -webkit-text-stroke: 0.5px currentColor;
+  font-style: italic;
 }
 
 .splash-content .subtitle {
