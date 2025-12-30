@@ -1,19 +1,17 @@
 ---
+import Card from './Card.astro';
 ---
 
 <section class="highlights">
   <h2>What's new?</h2>
-  <p>On to the next chapter!</p>
+  <Card>
+    <p>On to the next chapter!</p>
+  </Card>
 </section>
 
 <style>
   .highlights {
     margin-top: 4rem;
-    margin-bottom: 4rem;
-    padding: 1.5rem 2rem;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background: var(--surface);
   }
 
   h2 {
