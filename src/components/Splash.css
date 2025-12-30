@@ -54,6 +54,10 @@
   color: #5e81ac;
 }
 
+.plog-link + .plog-link {
+  margin-top: 0;
+}
+
 @media (max-width: 760px) {
   .avatar {
     width: 5rem;

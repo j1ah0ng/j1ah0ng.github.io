@@ -99,6 +99,7 @@ const Splash: FC = () => {
           </WindupChildren>
         </p>
         <a href="https://j1ah0ng.xyz/plog" className="plog-link">to the plog →</a>
+        <a href="https://www.instagram.com/j1ah0ng.dng/" className="plog-link">to the insta →</a>
       </div>
     </header>
   );
