@@ -26,8 +26,6 @@ body {
   color: var(--fg);
   font-family: "Latin Modern Roman", "Computer Modern Serif", Georgia, serif,
                "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Typography */
